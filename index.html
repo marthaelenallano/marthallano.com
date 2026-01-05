@@ -2,11 +2,131 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi sitio</title>
+  <title>Martha Llano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      margin-top: 3em;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2em;
+    }
+
+    nav {
+      margin-bottom: 4em;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      margin-right: 16px;
+      text-decoration: none;
+      color: #555;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    footer {
+      margin-top: 6em;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hola, mi sitio ya está vivo 🌿</h1>
-  <p>Diseño, escritura y naturaleza.</p>
+  <div class="container">
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#reserva">La reserva</a>
+      <a href="#alojamientos">Alojamientos</a>
+      <a href="#escritura">Escritura</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio">
+      <h1>Martha Llano</h1>
+      <p>
+        Diseño, escritura y territorio.<br>
+        Un espacio para habitar el tiempo con cuidado.
+      </p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mí</h2>
+      <p>
+        Diseñadora y escritora. Habito una reserva natural que cuido desde hace décadas.
+        Mi trabajo cruza arte, naturaleza y pensamiento lento.
+      </p>
+    </section>
+
+    <section id="reserva">
+      <h2>La reserva</h2>
+      <p>
+        Un territorio vivo, protegido y compartido con respeto.
+        Bosque, agua, silencio y procesos de largo aliento.
+      </p>
+    </section>
+
+    <section id="alojamientos">
+      <h2>Alojamientos</h2>
+      <p>
+        Espacios para retirarse, escribir, crear y descansar.
+        Pronto aquí cada lugar tendrá su propio relato.
+      </p>
+    </section>
+
+    <section id="escritura">
+      <h2>Escritura</h2>
+      <p>
+        Textos, bitácoras, caminatas, pensamiento.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Puedes escribirme a:<br>
+        <strong>tuemail@correo.com</strong>
+      </p>
+    </section>
+
+    <footer>
+      © Martha Llano — territorio, palabra y cuidado
+    </footer>
+
+  </div>
 </body>
 </html>
-
