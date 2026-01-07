@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    color: #222;
-    background: #fff;
-  }
-
-  .contenedor {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-
-  nav {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-  }
-
-  nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #444;
-  }
-
-  h1 {
-    margin: 0 0 30px 0;
-  }
-
-  img {
-    display: block;
-    margin: 30px auto 0 auto;
-  }
-</style>
-
+<head>
   <meta charset="UTF-8">
   <title>Martha Llano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  estoy rediseñando mi sitio...
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -56,34 +17,21 @@
       line-height: 1.7;
     }
 
-    .container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 120px 24px;
-}
-
-    <h1 style="margin:30px 0 30px 0;">Martha Llano</h1>
-
-
-    h2 {
-      font-family: 'Libre Baskerville', serif;
-      font-weight: 400;
-      margin-top: 3em;
+    .contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
     }
 
-    p {
-  font-size: 1.08rem;
-  margin-bottom: 2em;
-}
-
-
     nav {
-      margin-bottom: 4em;
+      text-align: center;
+      margin-bottom: 32px;
       font-size: 0.9rem;
+      letter-spacing: 0.05em;
     }
 
     nav a {
-      margin-right: 16px;
+      margin: 0 14px;
       text-decoration: none;
       color: #555;
     }
@@ -92,55 +40,70 @@
       color: #000;
     }
 
+    h1 {
+      margin: 0 0 24px 0;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      margin: 24px auto 40px;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      margin-top: 3em;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.8em;
+    }
+
     footer {
       margin-top: 6em;
       font-size: 0.8rem;
       color: #777;
+      text-align: center;
     }
   </style>
 </head>
 
-  
-<body style="margin:0; padding:0;">
+<body>
 
-  <a href="#inicio">Inicio</a>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#escritos">Mis Escritos</a>
-  <a href="#robledal">El Robledal</a>
-  <a href="#casa">Casa Taller Rosa de los Vientos</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+  <div class="contenedor">
 
-      
-</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#escritos">Mis Escritos</a>
+      <a href="#robledal">El Robledal</a>
+      <a href="#casa">Casa Taller</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
     <section id="inicio">
-   <section id="inicio">
-  <h1>Martha Llano</h1>
+      <h1>Martha Llano</h1>
 
-     <img
-  src="/imagenes/pepe.jpg"
-  alt="Bosque y luz"
-  style="
-    width:100%;
-    max-width:900px;
-    margin:60px auto;
-    display:block;
-  ">
-     
-  <p>
-    Escribo y capturo la luz<br>
-    del mundo que habito,
-  </p>
+      <img src="/imagenes/pepe.jpg" alt="Bosque y luz">
 
-  <p>
-    diseñando, desde la conservación,<br>
-    una huella amorosa<br>
-    para nuestro presente<br>
-    y futuro.
-  </p>
-</section>
+      <p>
+        Escribo y capturo la luz<br>
+        del mundo que habito,
+      </p>
 
-    <section id="sobre">
+      <p>
+        diseñando, desde la conservación,<br>
+        una huella amorosa<br>
+        para nuestro presente<br>
+        y futuro.
+      </p>
+    </section>
+
+    <section id="sobre-mi">
       <h2>Sobre mí</h2>
       <p>
         Diseñadora y escritora. Habito una reserva natural que cuido desde hace décadas.
@@ -148,7 +111,7 @@
       </p>
     </section>
 
-    <section id="reserva">
+    <section id="robledal">
       <h2>La reserva</h2>
       <p>
         Un territorio vivo, protegido y compartido con respeto.
@@ -160,56 +123,21 @@
       <h2>Alojamientos</h2>
       <p>
         Espacios para retirarse, escribir, crear y descansar.
-        Pronto aquí cada lugar tendrá su propio relato.
-      </p>
-    </section>
-
-    <section id="escritura">
-      <h2>Escritura</h2>
-      <p>
-        Textos, bitácoras, caminatas, pensamiento.
       </p>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
       <p>
-        Puedes escribirme a:<br>
-        <strong>martha.llano@icloud.com</strong>
+        martha.llano@icloud.com
       </p>
     </section>
 
-       </nav>
-
-    <div style="
-  text-align:center;
-  font-size:14px;
-  margin-bottom:24px;
-  color:#666;
-">
-  <a href="https://instagram.com/marthaelenallano" target="_blank" style="margin:0 12px; color:inherit; text-decoration:none;">
-    Mi IG
-  </a>
-  ·
-  <a href="https://instagram.com/reservarobledal" target="_blank" style="margin:0 12px; color:inherit; text-decoration:none;">
-   El Robledal
-  </a>
-      ·
-  <a href="https://instagram.com/casatallerosadelosvientos" target="_blank" style="margin:0 12px; color:inherit; text-decoration:none;">
-   Casa Taller
-  </a>
-
     <footer>
-      © Martha Llano — Arte, conservación & mi amor por el verde
+      © Martha Llano — Arte, conservación y amor por el verde
     </footer>
 
   </div>
-</body><div class="contenedor">
 
-  <!-- aquí va el menú -->
-  <!-- aquí va Martha Llano -->
-  <!-- aquí va la imagen -->
-
-</div>
-
+</body>
 </html>
