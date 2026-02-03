@@ -159,6 +159,84 @@ footer a:hover {
   width: 100%;
   margin: 24px auto 40px;
 }
+/* HEADER LAYOUT */
+.topbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 48px;
+  margin-bottom: 12px;
+}
+
+/* NOMBRE + IG */
+.nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: #2f5d3a;
+}
+
+.ig-link {
+  margin-top: 6px;
+  color: #2f5d3a;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.ig-link:hover {
+  opacity: 1;
+}
+
+/* MENÚ */
+.menu-bloques {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* MINI IG */
+.ig-mini {
+  color: #2f5d3a;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.ig-mini:hover {
+  opacity: 1;
+}
+
+/* MENOS ESPACIO ENTRE HEADER Y FOTO */
+#inicio img {
+  margin-top: 12px;
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+  .topbar {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    text-align: center;
+  }
+
+  .menu-bloques {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
 
 
   </style>
