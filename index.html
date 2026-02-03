@@ -236,8 +236,14 @@ footer a:hover {
     flex-wrap: wrap;
     gap: 20px;
   }
-}
 
+  /* FOTO HERO ANCHO COMPLETO SOLO EN ESCRITORIO */
+@media (min-width: 1024px) {
+  #inicio img {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(-50vw + 50%);
+  }
 
   </style>
 </head>
