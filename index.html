@@ -87,12 +87,10 @@ footer a:hover {
 }
 .topbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 48px;
-  margin-bottom: 32px;
 }
-
+    
 .nombre {
   display: flex;
   flex-direction: column;
@@ -254,15 +252,21 @@ footer a:hover {
     text-align: center;
   }
 
-  .menu-bloques {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+.menu-bloques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: nowrap; /* 👈 clave: TODO en una sola línea */
+}
+  .menu-item a {
+  white-space: nowrap;
+}
 
 /* FOTO DE INICIO A ANCHO TOTAL EN COMPUTADOR */
 @media (min-width: 1024px) {
   #inicio img.hero {
-    width: 100vw;
+    width: 75vw;
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
