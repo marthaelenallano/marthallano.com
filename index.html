@@ -23,39 +23,86 @@
       padding: 40px 24px;
     }
 
-    nav {
-      text-align: center;
-      margin-bottom: 32px;
+    /* HEADER */
+    .topbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .nombre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nombre h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      color: #2f5d3a;
+      font-family: 'Libre Baskerville', serif;
+      white-space: nowrap;
+    }
+
+    .ig-link {
+      margin-top: 6px;
+      color: #2f5d3a;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .ig-link:hover {
+      opacity: 1;
+    }
+
+    /* MENÚ */
+    .menu-bloques {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+      flex-wrap: nowrap;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .menu-item a {
+      text-decoration: none;
+      color: #555;
+      white-space: nowrap;
       font-size: 0.9rem;
       letter-spacing: 0.05em;
     }
 
-    nav a {
-      margin: 0 14px;
-      text-decoration: none;
-      color: #555;
-    }
-
-    nav a:hover {
+    .menu-item a:hover {
       color: #000;
     }
 
-    h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 2.4rem;
-  font-weight: 400;
-  margin: 0 0 24px 0;
-  text-align: center;
-  color: #2f5d3a;
-}
-
-  img {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  margin: 8px auto 28px;
+    .ig-mini {
+      color: #2f5d3a;
+      text-decoration: none;
+      opacity: 0.75;
     }
 
+    .ig-mini:hover {
+      opacity: 1;
+    }
+
+    /* IMÁGENES */
+    img {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      margin: 16px auto 28px;
+    }
+
+    /* TEXTO */
     h2 {
       font-family: 'Libre Baskerville', serif;
       font-weight: 400;
@@ -63,216 +110,40 @@
     }
 
     p {
-  font-size: 1.05rem;
-  margin-top: 0;
-  margin-bottom: 1.8em;
-
+      font-size: 1.05rem;
+      margin-bottom: 1.8em;
     }
 
+    /* FOOTER */
     footer {
-  margin-top: 6em;
-  font-size: 0.85rem;
-  color: #777;
-  text-align: center;
-  line-height: 1.8;
-}
+      margin-top: 6em;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      line-height: 1.8;
+    }
 
-footer a {
-  color: #2f5d3a;
-  text-decoration: none;
-}
+    footer a {
+      color: #2f5d3a;
+      text-decoration: none;
+    }
 
-footer a:hover {
-  text-decoration: underline;
-}
-.topbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-}
-    
-.nombre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-.topbar h1 {
-  margin: 0;
-  font-size: 2.1rem;
-}
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        gap: 20px;
+      }
 
-.topbar nav {
-  margin: 0;
-}
-.contacto-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.contacto-footer strong {
-  color: #2f5d3a;
-}
-
-.ig-link {
-  margin-top: 6px;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  color: #2f5d3a;
-}
-
-
-.ig-link:hover {
-  opacity: 0.7;
-}
-
-.menu-bloques {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 36px;
-  flex-wrap: nowrap;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.ig-mini {
-  color: #2f5d3a;
-  text-decoration: none;
-  opacity: 0.8;
-}
-
-.ig-mini:hover {
-  opacity: 1;
-}
-  
-  width: 100%;
-  margin: 24px auto 40px;
-  
-}
-    .menu-item a {
-  white-space: nowrap;
-}
-/* HEADER LAYOUT */
-
-/* NOMBRE + IG */
-.nombre {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nombre h1 {
-  margin: 0;
-  font-size: 2.4rem;
-  color: #2f5d3a;
-  white-space: nowrap;
-
-}
-
-.ig-link {
-  margin-top: 6px;
-  color: #2f5d3a;
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.ig-link:hover {
-  opacity: 1;
-}
-
-/* MENÚ */
-.menu-bloques {
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-  align-items: flex-start;
-  margin-top: 6px;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-/* MINI IG */
-.ig-mini {
-  color: #2f5d3a;
-  text-decoration: none;
-  opacity: 0.75;
-}
-
-.ig-mini:hover {
-  opacity: 1;
-}
-
-/* MENOS ESPACIO ENTRE HEADER Y FOTO */
-#inicio img {
-  margin-top: 12px;
-}
-
-  /* FOTO HERO ANCHO COMPLETO SOLO EN ESCRITORIO */
-@media (min-width: 1024px) {
-  #inicio img {
-    width: 100vw;
-    max-width: none;
-    margin-left: calc(-50vw + 50%);
-  }
-/* FOTO DE INICIO A ANCHO TOTAL EN COMPUTADOR */
-@media (min-width: 1024px) {
-
-   }
-  
-  #inicio {
-    position: relative;
-  }
-
-  #inicio img {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-  }
-  /* RESPONSIVE CELULAR */
-@media (max-width: 768px) {
-  }
-  
-  .topbar {
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-    text-align: center;
-  }
-
-.menu-bloques {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 36px;
-  flex-wrap: nowrap; /* 👈 clave: TODO en una sola línea */
-}
-  .menu-item a {
-  white-space: nowrap;
-}
-
-/* FOTO DE INICIO A ANCHO TOTAL EN COMPUTADOR */
-@media (min-width: 1024px) {
-  #inicio img.hero {
-    width: 75vw;
-    max-width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-  }
+      .menu-bloques {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
 
   </style>
 </head>
@@ -283,116 +154,62 @@ footer a:hover {
 
     <header class="topbar">
 
-  <div class="nombre">
-    <h1>Martha Llano</h1>
+      <div class="nombre">
+        <h1>Martha Llano</h1>
 
-    <a 
-      href="https://instagram.com/marthaelenallano" 
-      target="_blank"
-      class="ig-link"
-      aria-label="Instagram Martha Llano"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <circle cx="12" cy="12" r="4"></circle>
-        <circle cx="17.5" cy="6.5" r="1"></circle>
-      </svg>
-    </a>
-  </div>
+        <a href="https://instagram.com/marthaelenallano" target="_blank" class="ig-link">
+          Instagram
+        </a>
+      </div>
 
-  <nav class="menu-bloques">
+      <nav class="menu-bloques">
 
-    <div class="menu-item">
-      <a href="#inicio">Inicio</a>
-    </div>
+        <div class="menu-item">
+          <a href="#inicio">Inicio</a>
+        </div>
 
-    <div class="menu-item">
-      <a href="#sobre-mi">Sobre mí</a>
-    </div>
+        <div class="menu-item">
+          <a href="#sobre-mi">Sobre mí</a>
+        </div>
 
-    <div class="menu-item">
-      <a href="#escritos">Mis Escritos</a>
-    </div>
+        <div class="menu-item">
+          <a href="#escritos">Mis Escritos</a>
+        </div>
 
-    <div class="menu-item">
-      <a href="#robledal">El Robledal</a>
-      <a 
-        href="https://instagram.com/reservarobledal" 
-        target="_blank" 
-        class="ig-mini"
-        aria-label="Instagram El Robledal"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <circle cx="12" cy="12" r="4"></circle>
-          <circle cx="17.5" cy="6.5" r="1"></circle>
-        </svg>
-      </a>
-    </div>
+        <div class="menu-item">
+          <a href="#robledal">El Robledal</a>
+        </div>
 
-    <div class="menu-item">
-      <a href="#casa">Rosa de los Vientos</a>
-      <a 
-        href="https://instagram.com/casatallerosadelosvientos" 
-        target="_blank" 
-        class="ig-mini"
-        aria-label="Instagram Rosa de los Vientos"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <circle cx="12" cy="12" r="4"></circle>
-          <circle cx="17.5" cy="6.5" r="1"></circle>
-        </svg>
-      </a>
-    </div>
+        <div class="menu-item">
+          <a href="#casa">Rosa de los Vientos</a>
+        </div>
 
-  </nav>
+      </nav>
 
-</header>
-
+    </header>
 
     <section id="inicio">
-
-<img src="/imagenes/pepe.jpg" alt="Bosque y luz" class="hero">
+      <img src="/imagenes/pepe.jpg" alt="Bosque y luz">
 
       <p>
-        Escribo y capturo la luz del mundo que habito, diseño siempre pensando en la conservación, para dejar una huella amorosa en nuestro presente, y en el futuro de nuestras generaciones
-        y el de millones de especies.
+        Escribo y capturo la luz del mundo que habito, diseño siempre pensando en la conservación, para dejar una huella amorosa en nuestro presente, y en el futuro de nuestras generaciones y el de millones de especies.
       </p>
     </section>
 
     <section id="sobre-mi">
+      <h2>Sobre mí</h2>
 
-  <h2>Sobre mí</h2>
+      <img src="/imagenes/marthallano.jpg" alt="Martha Llano" style="max-width:420px;">
 
-  <img 
-    src="/imagenes/marthallano.jpg" 
-    alt="Martha Llano"
-    style="max-width:420px; width:100%; margin:32px auto; display:block;"
-  >
-
-  <p>
-    Sentir, siempre ha sido mi vida. Observadora del mundo natural para interpretarlo y aprender de él. 
-    Diseñadora de profesión, fotógrafa porque amo capturar la luz de los instantes y escritora
-    porque no puedo ocultar mis emociones. He vivido algunos años de mi vida en el chocó biogeográfico www.pijibalodge.com
-    y desde hace 30 años vivo con mi hijo en el Robledal, una Reserva Natural en Santa Elena, en la que hoy convivimos con otras personas
-    que optaron por hacer su vida al lado de la nuestra y de muchas especies que se desarrollan allí silenciosamente. 
-    
-    Mi trabajo siempre ha estado entre el diseño, el arte & la naturaleza. Mi vida siempre ha sido el pensamiento sistémico, escribir y sentir mis emociones.
-
-    Amo cocinar y me encanta dormir en hamaca. Los perros son parte de mi vida porque somos familia. 
-
-    Los ríos, las quebradas y las cascadas son mi forma de vida. La selva y las montañas son mi obsesión. Observar el mundo natural es lo que me da esperanza.
-  </p>
-
-</section>
-
+      <p>
+        Sentir, siempre ha sido mi vida. Observadora del mundo natural para interpretarlo y aprender de él. Diseñadora de profesión, fotógrafa porque amo capturar la luz de los instantes y escritora porque no puedo ocultar mis emociones.
+      </p>
+    </section>
 
     <section id="robledal">
       <h2>La reserva</h2>
       <p>
         Un territorio vivo, protegido y compartido con respeto.
-        Bosque, agua, silencio y procesos de largo aliento.
       </p>
     </section>
 
@@ -410,41 +227,13 @@ footer a:hover {
       </p>
     </section>
 
-  <footer>
-  <div class="contacto-footer">
-    <strong>Martha Llano</strong>
-    <span>Arte, conservación y amor por el verde</span>
-    <a href="mailto:martha.llano@icloud.com">martha.llano@icloud.com</a>
-    <a href="https://wa.me/57TU_NUMERO" target="_blank">WhatsApp</a>
-  </div>
-</footer>
+    <footer>
+      <strong>Martha Llano</strong><br>
+      Arte, conservación y amor por el verde<br>
+      <a href="mailto:martha.llano@icloud.com">martha.llano@icloud.com</a>
+    </footer>
 
   </div>
-<!-- Traductor DeepL -->
-<div style="
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  background: #fafafa;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  z-index: 9999;
-">
-  <a 
-    href="https://www.deepl.com/translator#es/en/https://marthallano.com" 
-    target="_blank"
-    style="
-      text-decoration: none;
-      color: #2f5d3a;
-      letter-spacing: 0.08em;
-      font-family: Inter, sans-serif;
-    "
-  >
-    Leer en otro idioma
-  </a>
-</div>
 
 </body>
 </html>
