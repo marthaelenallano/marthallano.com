@@ -87,8 +87,9 @@ footer a:hover {
 }
 .topbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 60px;
 }
     
 .nombre {
@@ -156,6 +157,10 @@ footer a:hover {
   
   width: 100%;
   margin: 24px auto 40px;
+  
+}
+    .menu-item a {
+  white-space: nowrap;
 }
 /* HEADER LAYOUT */
 
@@ -217,11 +222,6 @@ footer a:hover {
   margin-top: 12px;
 }
 
-  .menu-bloques {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
   /* FOTO HERO ANCHO COMPLETO SOLO EN ESCRITORIO */
 @media (min-width: 1024px) {
   #inicio img {
@@ -246,6 +246,8 @@ footer a:hover {
   }
   /* RESPONSIVE CELULAR */
 @media (max-width: 768px) {
+  }
+  
   .topbar {
     grid-template-columns: 1fr;
     row-gap: 24px;
