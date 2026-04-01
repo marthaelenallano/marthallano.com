@@ -5,25 +5,24 @@
   <title>Martha Llano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       background: #fafafa;
-      color: #222;
       font-family: 'Inter', sans-serif;
+      color: #222;
       line-height: 1.7;
     }
 
     .contenedor {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
       padding: 30px 24px;
     }
 
-    /* HEADER EN UNA LÍNEA */
+    /* HEADER */
     .topbar {
       display: flex;
       justify-content: center;
@@ -38,34 +37,23 @@
       gap: 10px;
     }
 
-    .nombre h1 {
+    h1 {
       margin: 0;
-      font-size: 2.2rem;
-      color: #2f5d3a;
       font-family: 'Libre Baskerville', serif;
+      color: #2f5d3a;
+      font-size: 2.2rem;
       white-space: nowrap;
     }
 
-    .ig-link {
-      color: #2f5d3a;
-      opacity: 0.8;
-    }
-
-    .ig-link:hover {
-      opacity: 1;
-    }
-
-    /* MENÚ */
     .menu-bloques {
       display: flex;
-      align-items: center;
       gap: 28px;
-      flex-wrap: nowrap;
+      align-items: center;
     }
 
     .menu-item {
       display: flex;
-      align-items: center; /* 👈 esto mantiene icono al lado */
+      align-items: center;
       gap: 6px;
     }
 
@@ -73,7 +61,6 @@
       text-decoration: none;
       color: #555;
       font-size: 0.9rem;
-      letter-spacing: 0.05em;
       white-space: nowrap;
     }
 
@@ -81,16 +68,15 @@
       color: #000;
     }
 
-    .ig-mini {
+    .ig-mini, .ig-link {
       color: #2f5d3a;
       opacity: 0.8;
     }
 
-    .ig-mini:hover {
+    .ig-mini:hover, .ig-link:hover {
       opacity: 1;
     }
 
-    /* IMAGEN */
     img {
       display: block;
       width: 85%;
@@ -98,10 +84,8 @@
       margin: 30px auto 40px;
     }
 
-    /* TEXTO */
     h2 {
       font-family: 'Libre Baskerville', serif;
-      font-weight: 400;
       margin-top: 3em;
     }
 
@@ -110,31 +94,17 @@
       margin-bottom: 1.8em;
     }
 
-    /* FOOTER */
     footer {
       margin-top: 6em;
+      text-align: center;
       font-size: 0.85rem;
       color: #777;
-      text-align: center;
-      line-height: 1.8;
     }
 
-    footer a {
-      color: #2f5d3a;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .topbar {
         flex-direction: column;
-        gap: 20px;
       }
-
       .menu-bloques {
         flex-wrap: wrap;
         justify-content: center;
@@ -151,50 +121,25 @@
 
   <div class="nombre">
     <h1>Martha Llano</h1>
-
     <a href="https://instagram.com/marthaelenallano" target="_blank" class="ig-link">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
-        <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-        <circle cx="12" cy="12" r="4"></circle>
-        <circle cx="17.5" cy="6.5" r="1"></circle>
-      </svg>
+      ⭘
     </a>
   </div>
 
   <nav class="menu-bloques">
 
-    <div class="menu-item">
-      <a href="#inicio">Inicio</a>
-    </div>
-
-    <div class="menu-item">
-      <a href="#sobre-mi">Sobre mí</a>
-    </div>
-
-    <div class="menu-item">
-      <a href="#escritos">Mis Escritos</a>
-    </div>
+    <div class="menu-item"><a href="#inicio">Inicio</a></div>
+    <div class="menu-item"><a href="#sobre-mi">Sobre mí</a></div>
+    <div class="menu-item"><a href="#escritos">Mis Escritos</a></div>
 
     <div class="menu-item">
       <a href="#robledal">El Robledal</a>
-      <a href="https://instagram.com/reservarobledal" target="_blank" class="ig-mini">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6">
-          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-          <circle cx="12" cy="12" r="4"></circle>
-          <circle cx="17.5" cy="6.5" r="1"></circle>
-        </svg>
-      </a>
+      <a href="https://instagram.com/reservarobledal" target="_blank" class="ig-mini">⭘</a>
     </div>
 
     <div class="menu-item">
       <a href="#casa">Rosa de los Vientos</a>
-      <a href="https://instagram.com/casatallerosadelosvientos" target="_blank" class="ig-mini">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6">
-          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-          <circle cx="12" cy="12" r="4"></circle>
-          <circle cx="17.5" cy="6.5" r="1"></circle>
-        </svg>
-      </a>
+      <a href="https://instagram.com/casatallerosadelosvientos" target="_blank" class="ig-mini">⭘</a>
     </div>
 
   </nav>
@@ -202,27 +147,39 @@
 </header>
 
 <section id="inicio">
-  <img src="/imagenes/pepe.jpg" alt="Bosque y luz">
-
+  <img src="/imagenes/pepe.jpg">
   <p>
-    Escribo y capturo la luz del mundo que habito, diseño siempre pensando en la conservación, para dejar una huella amorosa en nuestro presente y en el futuro de nuestras generaciones y el de millones de especies.
+    Escribo y capturo la luz del mundo que habito...
   </p>
 </section>
 
 <section id="sobre-mi">
   <h2>Sobre mí</h2>
-
   <img src="/imagenes/marthallano.jpg" style="max-width:420px;">
-
   <p>
-    Sentir, siempre ha sido mi vida. Observadora del mundo natural para interpretarlo y aprender de él.
+    Sentir, siempre ha sido mi vida...
+  </p>
+</section>
+
+<section id="robledal">
+  <h2>La reserva</h2>
+  <p>
+    Un territorio vivo, protegido y compartido con respeto.
+    Bosque, agua, silencio y procesos de largo aliento.
+  </p>
+</section>
+
+<section id="casa">
+  <h2>Rosa de los Vientos</h2>
+  <p>
+    Espacios para retirarse, escribir, crear y descansar.
   </p>
 </section>
 
 <footer>
   <strong>Martha Llano</strong><br>
   Arte, conservación y amor por el verde<br>
-  <a href="mailto:martha.llano@icloud.com">martha.llano@icloud.com</a>
+  martha.llano@icloud.com
 </footer>
 
 </div>
