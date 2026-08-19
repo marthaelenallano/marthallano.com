@@ -1,2 +1,2 @@
 # marthallano.com
-Un sitio web para mis escritos, la Reserva Natural El Robledal y sus casas en alojamiento
+Lo que siento y escribo; El Robledal, mi lugar en el mundo que conservo para el presente y las futuras generaciones; Rosa de los Vientos, Ancestral y Entrezarros, casa para alojamiento.
