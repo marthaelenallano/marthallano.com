@@ -31,7 +31,7 @@
     }
 
     /* =========================
-       CABECERA
+       ENCABEZADO
        ========================= */
 
     .topbar {
@@ -40,7 +40,6 @@
       align-items: flex-start;
       gap: 22px;
       padding: 8px 0 28px;
-      border-bottom: 1px solid #e8e8e8;
       position: sticky;
       top: 0;
       background: rgba(250,250,250,0.96);
@@ -85,10 +84,6 @@
       color: #2f5d3a;
     }
 
-    /* =========================
-       SEPARADORES DEL MENÚ
-       ========================= */
-
     .separador {
       color: #b5b5b5;
       font-size: 0.42rem;
@@ -97,7 +92,7 @@
     }
 
     /* =========================
-       REDES SOCIALES
+       ICONOS REDES
        ========================= */
 
     .social-icon {
@@ -129,7 +124,7 @@
        ========================= */
 
     .hero {
-      padding: 0 0 95px;
+      padding: 0 0 70px;
     }
 
     .hero-image {
@@ -144,8 +139,8 @@
        ========================= */
 
     section {
-      padding: 110px 0;
-      border-top: 1px solid #e8e8e8;
+      padding: 0 0 110px;
+      border-top: none;
     }
 
     h2 {
@@ -154,8 +149,18 @@
       font-size: clamp(2rem, 4vw, 3.4rem);
       line-height: 1.2;
       color: #2f5d3a;
-      margin: 0 0 35px;
+
+      margin: 0;
+      padding: 0 0 55px;
+
+      border-bottom: 1px solid #e8e8e8;
     }
+
+    /*
+      El título queda después de la foto.
+      El aire superior lo proporciona el hero.
+      La línea queda inmediatamente debajo del título.
+    */
 
     h3 {
       font-family: 'Libre Baskerville', serif;
@@ -170,6 +175,7 @@
       max-width: 760px;
       font-size: 1.18rem;
       color: #444;
+      margin-top: 55px;
     }
 
     .texto {
@@ -182,7 +188,7 @@
     }
 
     /* =========================
-       ESPACIOS PARA IMÁGENES
+       IMÁGENES
        ========================= */
 
     .imagen-placeholder {
@@ -190,13 +196,16 @@
       min-height: 320px;
       margin: 55px 0;
       border: 1px dashed #c8c8c8;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       color: #999;
       font-size: 0.85rem;
       letter-spacing: 0.04em;
       text-align: center;
+
       background: #f4f4f2;
     }
 
@@ -213,16 +222,18 @@
     }
 
     /* =========================
-       FRASES / PAUSAS
+       FRASES
        ========================= */
 
     .frase {
       max-width: 850px;
       margin: 90px auto;
       padding: 30px 0;
+
       font-family: 'Libre Baskerville', serif;
       font-size: clamp(1.5rem, 3vw, 2.4rem);
       line-height: 1.45;
+
       color: #2f5d3a;
       text-align: center;
     }
@@ -237,6 +248,7 @@
 
     .contacto {
       max-width: 700px;
+      margin-top: 55px;
     }
 
     .contacto a {
@@ -249,7 +261,7 @@
     }
 
     /* =========================
-       FOOTER
+       PIE
        ========================= */
 
     footer {
@@ -284,7 +296,7 @@
       }
 
       .hero {
-        padding: 35px 0 75px;
+        padding: 35px 0 70px;
       }
 
       .hero-image {
@@ -292,7 +304,11 @@
       }
 
       section {
-        padding: 80px 0;
+        padding: 0 0 80px;
+      }
+
+      h2 {
+        padding-bottom: 45px;
       }
 
       .galeria {
@@ -306,13 +322,12 @@
   </style>
 </head>
 
-
 <body>
 
 <div class="contenedor">
 
   <!-- =========================
-       CABECERA
+       ENCABEZADO
        ========================= -->
 
   <header class="topbar">
@@ -347,6 +362,8 @@
 
         <a href="#contacto">Contacto</a>
 
+        <!-- Instagram -->
+
         <a
           class="social-icon"
           href="https://www.instagram.com/marthaelenallano/"
@@ -361,6 +378,8 @@
             <circle cx="17.5" cy="6.5" r="1"></circle>
           </svg>
         </a>
+
+        <!-- LinkedIn -->
 
         <a
           class="social-icon"
@@ -386,10 +405,14 @@
 
 
   <!-- =========================
-       PORTADA
+       CONTENIDO
        ========================= -->
 
   <main>
+
+    <!-- =========================
+         PORTADA
+         ========================= -->
 
     <div class="hero">
 
@@ -401,19 +424,19 @@
 
 
     <!-- =========================
-         EL MUNDO QUE ESTOY DEJANDO
+         1. EL MUNDO QUE ESTOY DEJANDO
          ========================= -->
 
     <section id="mundo">
 
-      <h2>
-        El mundo que estoy dejando
-      </h2>
+      <h2>El mundo que estoy dejando</h2>
 
       <div class="texto">
 
         <p>
-          De pequeña me veía siendo una escritora...
+          De pequeña me veía siendo una escritora; tenía tantas emociones
+          en mi interior que mentalmente, mientras todo transcurría, yo iba
+          escribiendo esas historias mentalmente.
         </p>
 
         <div class="imagen-placeholder">
@@ -421,16 +444,18 @@
         </div>
 
         <p>
-          Aquí irá el texto completo de esta sección,
-          respetando la versión escrita por Martha.
+          Aquí irá el texto completo de esta sección, respetando la versión
+          escrita por Martha.
         </p>
 
       </div>
 
       <div class="frase">
+
         El mundo que estoy dejando no es solamente
         el mundo que habité. Es el mundo que quiero
         que otros puedan encontrar.
+
       </div>
 
       <div class="imagen-placeholder">
@@ -441,23 +466,20 @@
 
 
     <!-- =========================
-         ENTRE DOS MUNDOS
+         2. ENTRE DOS MUNDOS
          ========================= -->
 
     <section id="dos-mundos">
 
-      <h2>
-        Entre dos mundos
-      </h2>
+      <h2>Entre dos mundos</h2>
 
       <p class="intro">
         Dos territorios importantes desde dos perspectivas:
         El Robledal y la casa en el río.
       </p>
 
-      <h3>
-        El Robledal
-      </h3>
+
+      <h3>El Robledal</h3>
 
       <div class="imagen-placeholder">
         FOTO — ROBLEDAL
@@ -467,11 +489,12 @@
 
         <p>
           Aquí irá el texto completo sobre El Robledal,
-          los robles centenarios, la conservación,
-          las semillas y la historia del bosque.
+          los robles centenarios, la conservación, las semillas
+          y la historia del bosque.
         </p>
 
       </div>
+
 
       <div class="galeria">
 
@@ -494,9 +517,7 @@
       </div>
 
 
-      <h3>
-        Las casas dentro del bosque
-      </h3>
+      <h3>Las casas dentro del bosque</h3>
 
       <p class="intro">
         Las casas forman parte de una manera de sostener
@@ -516,13 +537,12 @@
       </div>
 
 
-      <h3>
-        La casa en el río
-      </h3>
+      <h3>La casa en el río</h3>
 
       <div class="imagen-placeholder">
         FOTO — CASA / QUEBRADAS / CASCADAS
       </div>
+
 
       <div class="galeria">
 
@@ -545,9 +565,7 @@
       </div>
 
 
-      <h3>
-        La que ve más
-      </h3>
+      <h3>La que ve más</h3>
 
       <p class="intro">
         iNaturalist · Merlin · eBird · Happywhale
@@ -561,21 +579,18 @@
 
 
     <!-- =========================
-         GESTIONANDO MIS EMOCIONES
+         3. GESTIONANDO MIS EMOCIONES
          ========================= -->
 
     <section id="emociones">
 
-      <h2>
-        Gestionando mis emociones
-      </h2>
+      <h2>Gestionando mis emociones</h2>
 
       <div class="texto">
 
         <p>
-          Eso es justamente. Así le doy trámite a lo que veo
-          y siento. A lo que vibra en mi interior y sale de
-          alguna forma.
+          Eso es justamente. Así le doy trámite a lo que veo y siento.
+          A lo que vibra en mi interior y sale de alguna forma.
         </p>
 
         <div class="imagen-placeholder">
@@ -591,9 +606,7 @@
       </div>
 
 
-      <h3>
-        Mis novelas
-      </h3>
+      <h3>Mis novelas</h3>
 
       <div class="galeria">
 
@@ -608,27 +621,21 @@
       </div>
 
 
-      <h3>
-        Cuando mi cuerpo me habla
-      </h3>
+      <h3>Cuando mi cuerpo me habla</h3>
 
       <div class="imagen-placeholder">
         PORTADA DEL LIBRO
       </div>
 
 
-      <h3>
-        Escritos con sabor a bosque y selva
-      </h3>
+      <h3>Escritos con sabor a bosque y selva</h3>
 
       <div class="imagen-placeholder">
         AUDIO / PODCAST
       </div>
 
 
-      <h3>
-        Mi voz
-      </h3>
+      <h3>Mi voz</h3>
 
       <p class="intro">
         World Pulse forma parte de esta historia de recuperar
@@ -640,9 +647,7 @@
       </div>
 
 
-      <h3>
-        Blog
-      </h3>
+      <h3>Blog</h3>
 
       <div class="imagen-placeholder">
         ENTRADAS DEL BLOG
@@ -652,14 +657,12 @@
 
 
     <!-- =========================
-         DISEÑAR PARA INTERPRETAR
+         4. DISEÑAR PARA INTERPRETAR
          ========================= -->
 
     <section id="diseno">
 
-      <h2>
-        Diseñar para interpretar
-      </h2>
+      <h2>Diseñar para interpretar</h2>
 
       <div class="texto">
 
@@ -681,27 +684,21 @@
       </div>
 
 
-      <h3>
-        SENTIR
-      </h3>
+      <h3>SENTIR</h3>
 
       <div class="imagen-placeholder">
         MATERIAL HISTÓRICO — SENTIR
       </div>
 
 
-      <h3>
-        Acuario Explora
-      </h3>
+      <h3>Acuario Explora</h3>
 
       <div class="imagen-placeholder">
         FOTO / DOCUMENTO — MUSEOGRAFÍA
       </div>
 
 
-      <h3>
-        Parque Arví
-      </h3>
+      <h3>Parque Arví</h3>
 
       <div class="galeria">
 
@@ -727,27 +724,24 @@
 
 
     <!-- =========================
-         CAPTANDO LA LUZ QUE VEO
+         5. CAPTANDO LA LUZ QUE VEO
          ========================= -->
 
     <section id="luz">
 
-      <h2>
-        Captando la luz que veo
-      </h2>
+      <h2>Captando la luz que veo</h2>
 
       <p class="intro">
         Todo lo que veo tiene luz.
       </p>
+
 
       <div class="imagen-placeholder">
         FOTO DE APERTURA — LUZ
       </div>
 
 
-      <h3>
-        Naturaleza
-      </h3>
+      <h3>Naturaleza</h3>
 
       <div class="galeria">
 
@@ -770,36 +764,28 @@
       </div>
 
 
-      <h3>
-        Ballenas
-      </h3>
+      <h3>Ballenas</h3>
 
       <div class="imagen-placeholder">
         GALERÍA — BALLENAS JOROBADAS
       </div>
 
 
-      <h3>
-        Territorios y comunidades
-      </h3>
+      <h3>Territorios y comunidades</h3>
 
       <div class="imagen-placeholder">
         GALERÍA — TERRITORIOS
       </div>
 
 
-      <h3>
-        Fotografía de aventura
-      </h3>
+      <h3>Fotografía de aventura</h3>
 
       <div class="imagen-placeholder">
         GALERÍA — AVENTURA
       </div>
 
 
-      <h3>
-        Exposiciones
-      </h3>
+      <h3>Exposiciones</h3>
 
       <div class="galeria">
 
@@ -825,14 +811,12 @@
 
 
     <!-- =========================
-         CONTACTO
+         6. CONTACTO
          ========================= -->
 
     <section id="contacto">
 
-      <h2>
-        Contacto
-      </h2>
+      <h2>Contacto</h2>
 
       <div class="contacto">
 
@@ -858,7 +842,7 @@
 
 
   <!-- =========================
-       PIE
+       PIE DE PÁGINA
        ========================= -->
 
   <footer>
