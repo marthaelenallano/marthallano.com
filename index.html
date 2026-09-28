@@ -133,14 +133,34 @@
        ========================= */
 
     .hero {
-      padding: 0 0 68px;
+      padding: 34px 0 68px;
     }
+
+    /*
+      IMPORTANTE:
+      La portada ya NO hereda los márgenes
+      de .imagen-placeholder.
+    */
 
     .hero-image {
       width: 100%;
-      height: min(72vh, 720px);
+      height: 420px;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       object-fit: cover;
-      display: block;
+
+      border: 1px dashed #c8c8c8;
+      background: #f4f4f2;
+
+      color: #999;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-align: center;
     }
 
 
@@ -155,7 +175,7 @@
 
 
     /* =========================
-       TÍTULO DE SECCIÓN
+       TÍTULO + RAYA
        ========================= */
 
     .titulo-seccion {
@@ -165,7 +185,6 @@
 
     .titulo-seccion h2 {
       margin: 0;
-      padding: 0;
 
       font-family: 'Libre Baskerville', serif;
       font-weight: 400;
@@ -175,15 +194,12 @@
       color: #2f5d3a;
     }
 
-
-    /* =========================
-       RAYA
-       ========================= */
-
     .raya-seccion {
       width: 100%;
       height: 1px;
+
       background: #dcdcdc;
+
       margin-top: 55px;
       margin-bottom: 0;
     }
@@ -197,8 +213,10 @@
       font-family: 'Libre Baskerville', serif;
       font-weight: 400;
       font-size: 1.6rem;
+
       margin-top: 65px;
       margin-bottom: 20px;
+
       color: #333;
     }
 
@@ -225,12 +243,13 @@
 
 
     /* =========================
-       IMÁGENES
+       IMÁGENES INTERIORES
        ========================= */
 
     .imagen-placeholder {
       width: 100%;
       min-height: 320px;
+
       margin: 55px 0;
 
       border: 1px dashed #c8c8c8;
@@ -247,10 +266,16 @@
       background: #f4f4f2;
     }
 
+
+    /* =========================
+       GALERÍAS
+       ========================= */
+
     .galeria {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
+
       margin: 50px 0;
     }
 
@@ -266,6 +291,7 @@
 
     .frase {
       max-width: 850px;
+
       margin: 90px auto;
       padding: 30px 0;
 
@@ -307,8 +333,11 @@
 
     footer {
       padding-top: 60px;
+
       border-top: 1px solid #e8e8e8;
+
       text-align: center;
+
       font-size: 0.8rem;
       color: #777;
     }
@@ -338,11 +367,12 @@
       }
 
       .hero {
-        padding: 35px 0 65px;
+        padding: 30px 0 60px;
       }
 
       .hero-image {
         height: 55vh;
+        min-height: 280px;
       }
 
       section {
@@ -498,7 +528,7 @@
 
   <div class="hero">
 
-    <div class="imagen-placeholder hero-image">
+    <div class="hero-image">
       FOTO DE PORTADA
     </div>
 
