@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -29,6 +30,7 @@
       margin: auto;
       padding: 28px 28px 60px;
     }
+
 
     /* =========================
        ENCABEZADO
@@ -56,6 +58,11 @@
       letter-spacing: -0.045em;
       white-space: nowrap;
     }
+
+
+    /* =========================
+       NAVEGACIÓN
+       ========================= */
 
     nav {
       display: flex;
@@ -91,6 +98,7 @@
       line-height: 1;
     }
 
+
     /* =========================
        ICONOS REDES
        ========================= */
@@ -119,12 +127,13 @@
       color: #2f5d3a !important;
     }
 
+
     /* =========================
        PORTADA
        ========================= */
 
     .hero {
-      padding: 0 0 70px;
+      padding: 0 0 68px;
     }
 
     .hero-image {
@@ -133,6 +142,7 @@
       object-fit: cover;
       display: block;
     }
+
 
     /* =========================
        SECCIONES
@@ -155,12 +165,6 @@
 
       border-bottom: 1px solid #e8e8e8;
     }
-
-    /*
-      El título queda después de la foto.
-      El aire superior lo proporciona el hero.
-      La línea queda inmediatamente debajo del título.
-    */
 
     h3 {
       font-family: 'Libre Baskerville', serif;
@@ -187,6 +191,7 @@
       margin-bottom: 1.8em;
     }
 
+
     /* =========================
        IMÁGENES
        ========================= */
@@ -195,6 +200,7 @@
       width: 100%;
       min-height: 320px;
       margin: 55px 0;
+
       border: 1px dashed #c8c8c8;
 
       display: flex;
@@ -221,6 +227,7 @@
       min-height: 260px;
     }
 
+
     /* =========================
        FRASES
        ========================= */
@@ -237,6 +244,7 @@
       color: #2f5d3a;
       text-align: center;
     }
+
 
     /* =========================
        CONTACTO
@@ -260,8 +268,9 @@
       text-decoration: underline;
     }
 
+
     /* =========================
-       PIE
+       PIE DE PÁGINA
        ========================= */
 
     footer {
@@ -271,6 +280,7 @@
       font-size: 0.8rem;
       color: #777;
     }
+
 
     /* =========================
        MÓVIL
@@ -296,7 +306,7 @@
       }
 
       .hero {
-        padding: 35px 0 70px;
+        padding: 35px 0 65px;
       }
 
       .hero-image {
@@ -319,12 +329,15 @@
         min-height: 240px;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
 <div class="contenedor">
+
 
   <!-- =========================
        ENCABEZADO
@@ -336,33 +349,47 @@
       <h1>MARTHA LLANO</h1>
     </div>
 
+
     <nav>
 
       <div class="menu-principal">
 
-        <a href="#mundo">El mundo que estoy dejando</a>
+        <a href="#mundo">
+          El mundo que estoy dejando
+        </a>
 
         <span class="separador">◆</span>
 
-        <a href="#dos-mundos">Entre dos mundos</a>
+        <a href="#dos-mundos">
+          Entre dos mundos
+        </a>
 
         <span class="separador">◆</span>
 
-        <a href="#emociones">Gestionando mis emociones</a>
+        <a href="#emociones">
+          Gestionando mis emociones
+        </a>
 
         <span class="separador">◆</span>
 
-        <a href="#diseno">Diseñar para interpretar</a>
+        <a href="#diseno">
+          Diseñar para interpretar
+        </a>
 
         <span class="separador">◆</span>
 
-        <a href="#luz">Captando la luz que veo</a>
+        <a href="#luz">
+          Captando la luz que veo
+        </a>
 
         <span class="separador">◆</span>
 
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto">
+          Contacto
+        </a>
 
-        <!-- Instagram -->
+
+        <!-- INSTAGRAM -->
 
         <a
           class="social-icon"
@@ -372,14 +399,35 @@
           aria-label="Instagram"
           title="Instagram"
         >
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-            <circle cx="12" cy="12" r="4"></circle>
-            <circle cx="17.5" cy="6.5" r="1"></circle>
+
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5">
+            </rect>
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4">
+            </circle>
+
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1">
+            </circle>
+
           </svg>
+
         </a>
 
-        <!-- LinkedIn -->
+
+        <!-- LINKEDIN -->
 
         <a
           class="social-icon"
@@ -389,12 +437,19 @@
           aria-label="LinkedIn"
           title="LinkedIn"
         >
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
+
             <path d="M5 8.5V19"></path>
+
             <path d="M5 5.5V5.5"></path>
+
             <path d="M10 19V11"></path>
+
             <path d="M10 14.5C10 12.5 11.3 11 13.2 11C15.3 11 16 12.5 16 14.5V19"></path>
+
           </svg>
+
         </a>
 
       </div>
@@ -405,455 +460,508 @@
 
 
   <!-- =========================
-       CONTENIDO
+       PORTADA
        ========================= -->
 
-  <main>
+  <div class="hero">
 
-    <!-- =========================
-         PORTADA
-         ========================= -->
+    <div class="imagen-placeholder hero-image">
+      FOTO DE PORTADA
+    </div>
 
-    <div class="hero">
+  </div>
 
-      <div class="imagen-placeholder hero-image">
-        FOTO DE PORTADA
+
+
+  <!-- =========================
+       1. EL MUNDO QUE ESTOY DEJANDO
+       ========================= -->
+
+  <section id="mundo">
+
+    <h2>
+      El mundo que estoy dejando
+    </h2>
+
+    <div class="texto">
+
+      <p>
+        De pequeña me veía siendo una escritora; tenía tantas emociones
+        en mi interior que mentalmente, mientras todo transcurría, yo iba
+        escribiendo esas historias mentalmente.
+      </p>
+
+      <div class="imagen-placeholder">
+        FOTO / ILUSTRACIÓN — LA SILLITA AZUL
+      </div>
+
+      <p>
+        Aquí irá el texto completo de esta sección, respetando la versión
+        escrita por Martha.
+      </p>
+
+    </div>
+
+
+    <div class="frase">
+
+      El mundo que estoy dejando no es solamente
+      el mundo que habité. Es el mundo que quiero
+      que otros puedan encontrar.
+
+    </div>
+
+
+    <div class="imagen-placeholder">
+      FOTO — EL ROBLEDAL / BOSQUE / HORIZONTE
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       2. ENTRE DOS MUNDOS
+       ========================= -->
+
+  <section id="dos-mundos">
+
+    <h2>
+      Entre dos mundos
+    </h2>
+
+    <p class="intro">
+      Dos territorios importantes desde dos perspectivas:
+      El Robledal y la casa en el río.
+    </p>
+
+
+    <h3>
+      El Robledal
+    </h3>
+
+    <div class="imagen-placeholder">
+      FOTO — ROBLEDAL
+    </div>
+
+    <div class="texto">
+
+      <p>
+        Aquí irá el texto completo sobre El Robledal,
+        los robles centenarios, la conservación, las semillas
+        y la historia del bosque.
+      </p>
+
+    </div>
+
+
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        ROBLES
+      </div>
+
+      <div class="imagen-placeholder">
+        SEMILLAS
+      </div>
+
+      <div class="imagen-placeholder">
+        ANTUROS
+      </div>
+
+      <div class="imagen-placeholder">
+        ORQUÍDEAS
       </div>
 
     </div>
 
 
-    <!-- =========================
-         1. EL MUNDO QUE ESTOY DEJANDO
-         ========================= -->
+    <h3>
+      Las casas dentro del bosque
+    </h3>
 
-    <section id="mundo">
+    <p class="intro">
+      Las casas forman parte de una manera de sostener
+      y conservar este territorio.
+    </p>
 
-      <h2>El mundo que estoy dejando</h2>
 
-      <div class="texto">
+    <div class="imagen-placeholder">
+      FOTO — ROSA DE LOS VIENTOS
+    </div>
 
-        <p>
-          De pequeña me veía siendo una escritora; tenía tantas emociones
-          en mi interior que mentalmente, mientras todo transcurría, yo iba
-          escribiendo esas historias mentalmente.
-        </p>
+    <div class="imagen-placeholder">
+      FOTO — CASA DE MADERA
+    </div>
 
-        <div class="imagen-placeholder">
-          FOTO / ILUSTRACIÓN — LA SILLITA AZUL
-        </div>
+    <div class="imagen-placeholder">
+      FOTO — ENTREZARROS
+    </div>
 
-        <p>
-          Aquí irá el texto completo de esta sección, respetando la versión
-          escrita por Martha.
-        </p>
 
-      </div>
+    <h3>
+      La casa en el río
+    </h3>
 
-      <div class="frase">
+    <div class="imagen-placeholder">
+      FOTO — CASA / QUEBRADAS / CASCADAS
+    </div>
 
-        El mundo que estoy dejando no es solamente
-        el mundo que habité. Es el mundo que quiero
-        que otros puedan encontrar.
 
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        GODOYA ANTIOQUENSIS
       </div>
 
       <div class="imagen-placeholder">
-        FOTO — EL ROBLEDAL / BOSQUE / HORIZONTE
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         2. ENTRE DOS MUNDOS
-         ========================= -->
-
-    <section id="dos-mundos">
-
-      <h2>Entre dos mundos</h2>
-
-      <p class="intro">
-        Dos territorios importantes desde dos perspectivas:
-        El Robledal y la casa en el río.
-      </p>
-
-
-      <h3>El Robledal</h3>
-
-      <div class="imagen-placeholder">
-        FOTO — ROBLEDAL
-      </div>
-
-      <div class="texto">
-
-        <p>
-          Aquí irá el texto completo sobre El Robledal,
-          los robles centenarios, la conservación, las semillas
-          y la historia del bosque.
-        </p>
-
-      </div>
-
-
-      <div class="galeria">
-
-        <div class="imagen-placeholder">
-          ROBLES
-        </div>
-
-        <div class="imagen-placeholder">
-          SEMILLAS
-        </div>
-
-        <div class="imagen-placeholder">
-          ANTUROS
-        </div>
-
-        <div class="imagen-placeholder">
-          ORQUÍDEAS
-        </div>
-
-      </div>
-
-
-      <h3>Las casas dentro del bosque</h3>
-
-      <p class="intro">
-        Las casas forman parte de una manera de sostener
-        y conservar este territorio.
-      </p>
-
-      <div class="imagen-placeholder">
-        FOTO — ROSA DE LOS VIENTOS
+        PHRAGMIPEDIUM SCHLIMII
       </div>
 
       <div class="imagen-placeholder">
-        FOTO — CASA DE MADERA
+        GALLINAS
       </div>
 
       <div class="imagen-placeholder">
-        FOTO — ENTREZARROS
+        VIDA COTIDIANA
       </div>
 
+    </div>
 
-      <h3>La casa en el río</h3>
 
-      <div class="imagen-placeholder">
-        FOTO — CASA / QUEBRADAS / CASCADAS
-      </div>
+    <h3>
+      La que ve más
+    </h3>
 
+    <p class="intro">
+      iNaturalist · Merlin · eBird · Happywhale
+    </p>
 
-      <div class="galeria">
 
-        <div class="imagen-placeholder">
-          GODOYA ANTIOQUENSIS
-        </div>
+    <div class="frase">
+      Solo podemos conservar aquello que conocemos y amamos.
+    </div>
 
-        <div class="imagen-placeholder">
-          PHRAGMIPEDIUM SCHLIMII
-        </div>
+  </section>
 
-        <div class="imagen-placeholder">
-          GALLINAS
-        </div>
-
-        <div class="imagen-placeholder">
-          VIDA COTIDIANA
-        </div>
-
-      </div>
-
-
-      <h3>La que ve más</h3>
-
-      <p class="intro">
-        iNaturalist · Merlin · eBird · Happywhale
-      </p>
-
-      <div class="frase">
-        Solo podemos conservar aquello que conocemos y amamos.
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         3. GESTIONANDO MIS EMOCIONES
-         ========================= -->
-
-    <section id="emociones">
-
-      <h2>Gestionando mis emociones</h2>
-
-      <div class="texto">
-
-        <p>
-          Eso es justamente. Así le doy trámite a lo que veo y siento.
-          A lo que vibra en mi interior y sale de alguna forma.
-        </p>
-
-        <div class="imagen-placeholder">
-          FOTO — MANUSCRITOS / ESCRITURA
-        </div>
-
-        <p>
-          Aquí irá el texto completo de Martha sobre escribir,
-          sus relatos, sus novelas y la manera en que la escritura
-          se convirtió en una forma de darle trámite a lo que vive.
-        </p>
-
-      </div>
-
-
-      <h3>Mis novelas</h3>
-
-      <div class="galeria">
-
-        <div class="imagen-placeholder">
-          MARÍA FLORES
-        </div>
-
-        <div class="imagen-placeholder">
-          LA HE VISTO
-        </div>
-
-      </div>
-
-
-      <h3>Cuando mi cuerpo me habla</h3>
-
-      <div class="imagen-placeholder">
-        PORTADA DEL LIBRO
-      </div>
-
-
-      <h3>Escritos con sabor a bosque y selva</h3>
-
-      <div class="imagen-placeholder">
-        AUDIO / PODCAST
-      </div>
-
-
-      <h3>Mi voz</h3>
-
-      <p class="intro">
-        World Pulse forma parte de esta historia de recuperar
-        y sacar la propia voz.
-      </p>
-
-      <div class="imagen-placeholder">
-        IMAGEN / ENLACE WORLD PULSE
-      </div>
-
-
-      <h3>Blog</h3>
-
-      <div class="imagen-placeholder">
-        ENTRADAS DEL BLOG
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         4. DISEÑAR PARA INTERPRETAR
-         ========================= -->
-
-    <section id="diseno">
-
-      <h2>Diseñar para interpretar</h2>
-
-      <div class="texto">
-
-        <p>
-          Al graduarme de la universidad, comencé a sentir
-          mi proyecto casi de vida.
-        </p>
-
-        <div class="imagen-placeholder">
-          FOTO / DOCUMENTO — SENTIR
-        </div>
-
-        <p>
-          Aquí irá el texto completo sobre SENTIR,
-          Fundación SENTIR y los proyectos de interpretación,
-          diseño y divulgación.
-        </p>
-
-      </div>
-
-
-      <h3>SENTIR</h3>
-
-      <div class="imagen-placeholder">
-        MATERIAL HISTÓRICO — SENTIR
-      </div>
-
-
-      <h3>Acuario Explora</h3>
-
-      <div class="imagen-placeholder">
-        FOTO / DOCUMENTO — MUSEOGRAFÍA
-      </div>
-
-
-      <h3>Parque Arví</h3>
-
-      <div class="galeria">
-
-        <div class="imagen-placeholder">
-          SENDEROS
-        </div>
-
-        <div class="imagen-placeholder">
-          GUÍAS
-        </div>
-
-        <div class="imagen-placeholder">
-          SEÑALÉTICA
-        </div>
-
-        <div class="imagen-placeholder">
-          PROYECTO FINLANDIA
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         5. CAPTANDO LA LUZ QUE VEO
-         ========================= -->
-
-    <section id="luz">
-
-      <h2>Captando la luz que veo</h2>
-
-      <p class="intro">
-        Todo lo que veo tiene luz.
-      </p>
-
-
-      <div class="imagen-placeholder">
-        FOTO DE APERTURA — LUZ
-      </div>
-
-
-      <h3>Naturaleza</h3>
-
-      <div class="galeria">
-
-        <div class="imagen-placeholder">
-          BOSQUES
-        </div>
-
-        <div class="imagen-placeholder">
-          ÁRBOLES
-        </div>
-
-        <div class="imagen-placeholder">
-          ORQUÍDEAS
-        </div>
-
-        <div class="imagen-placeholder">
-          RÍOS
-        </div>
-
-      </div>
-
-
-      <h3>Ballenas</h3>
-
-      <div class="imagen-placeholder">
-        GALERÍA — BALLENAS JOROBADAS
-      </div>
-
-
-      <h3>Territorios y comunidades</h3>
-
-      <div class="imagen-placeholder">
-        GALERÍA — TERRITORIOS
-      </div>
-
-
-      <h3>Fotografía de aventura</h3>
-
-      <div class="imagen-placeholder">
-        GALERÍA — AVENTURA
-      </div>
-
-
-      <h3>Exposiciones</h3>
-
-      <div class="galeria">
-
-        <div class="imagen-placeholder">
-          PARALELOS A UN MISMO EJE MÓVIL
-        </div>
-
-        <div class="imagen-placeholder">
-          TOCANDO TIERRA
-        </div>
-
-        <div class="imagen-placeholder">
-          ECOSISTEMAS ENTRAMADOS
-        </div>
-
-        <div class="imagen-placeholder">
-          DIVERSAS POR NATURALEZA
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         6. CONTACTO
-         ========================= -->
-
-    <section id="contacto">
-
-      <h2>Contacto</h2>
-
-      <div class="contacto">
-
-        <p>
-          Escríbeme.
-        </p>
-
-        <p>
-          <a href="mailto:martha.llano@icloud.com">
-            martha.llano@icloud.com
-          </a>
-        </p>
-
-        <div class="imagen-placeholder">
-          FOTO FINAL — HORIZONTE / BOSQUE / PUERTA ABIERTA
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
 
 
   <!-- =========================
-       PIE DE PÁGINA
+       3. GESTIONANDO MIS EMOCIONES
        ========================= -->
 
-  <footer>
+  <section id="emociones">
 
-    <strong>MARTHA LLANO</strong>
+    <h2>
+      Gestionando mis emociones
+    </h2>
 
-    <br><br>
+    <div class="texto">
 
-    Escribir · Diseñar · Fotografiar · Conservar
+      <p>
+        Eso es justamente. Así le doy trámite a lo que veo y siento.
+        A lo que vibra en mi interior y sale de alguna forma.
+      </p>
 
-  </footer>
+      <div class="imagen-placeholder">
+        FOTO — MANUSCRITOS / ESCRITURA
+      </div>
+
+      <p>
+        Aquí irá el texto completo de Martha sobre escribir,
+        sus relatos, sus novelas y la manera en que la escritura
+        se convirtió en una forma de darle trámite a lo que vive.
+      </p>
+
+    </div>
+
+
+    <h3>
+      Mis novelas
+    </h3>
+
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        MARÍA FLORES
+      </div>
+
+      <div class="imagen-placeholder">
+        LA HE VISTO
+      </div>
+
+    </div>
+
+
+    <h3>
+      Cuando mi cuerpo me habla
+    </h3>
+
+    <div class="imagen-placeholder">
+      PORTADA DEL LIBRO
+    </div>
+
+
+    <h3>
+      Escritos con sabor a bosque y selva
+    </h3>
+
+    <div class="imagen-placeholder">
+      AUDIO / PODCAST
+    </div>
+
+
+    <h3>
+      Mi voz
+    </h3>
+
+    <p class="intro">
+      World Pulse forma parte de esta historia de recuperar
+      y sacar la propia voz.
+    </p>
+
+    <div class="imagen-placeholder">
+      IMAGEN / ENLACE WORLD PULSE
+    </div>
+
+
+    <h3>
+      Blog
+    </h3>
+
+    <div class="imagen-placeholder">
+      ENTRADAS DEL BLOG
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       4. DISEÑAR PARA INTERPRETAR
+       ========================= -->
+
+  <section id="diseno">
+
+    <h2>
+      Diseñar para interpretar
+    </h2>
+
+    <div class="texto">
+
+      <p>
+        Al graduarme de la universidad, comencé a sentir
+        mi proyecto casi de vida.
+      </p>
+
+      <div class="imagen-placeholder">
+        FOTO / DOCUMENTO — SENTIR
+      </div>
+
+      <p>
+        Aquí irá el texto completo sobre SENTIR,
+        Fundación SENTIR y los proyectos de interpretación,
+        diseño y divulgación.
+      </p>
+
+    </div>
+
+
+    <h3>
+      SENTIR
+    </h3>
+
+    <div class="imagen-placeholder">
+      MATERIAL HISTÓRICO — SENTIR
+    </div>
+
+
+    <h3>
+      Acuario Explora
+    </h3>
+
+    <div class="imagen-placeholder">
+      FOTO / DOCUMENTO — MUSEOGRAFÍA
+    </div>
+
+
+    <h3>
+      Parque Arví
+    </h3>
+
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        SENDEROS
+      </div>
+
+      <div class="imagen-placeholder">
+        GUÍAS
+      </div>
+
+      <div class="imagen-placeholder">
+        SEÑALÉTICA
+      </div>
+
+      <div class="imagen-placeholder">
+        PROYECTO FINLANDIA
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       5. CAPTANDO LA LUZ QUE VEO
+       ========================= -->
+
+  <section id="luz">
+
+    <h2>
+      Captando la luz que veo
+    </h2>
+
+    <p class="intro">
+      Todo lo que veo tiene luz.
+    </p>
+
+
+    <div class="imagen-placeholder">
+      FOTO DE APERTURA — LUZ
+    </div>
+
+
+    <h3>
+      Naturaleza
+    </h3>
+
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        BOSQUES
+      </div>
+
+      <div class="imagen-placeholder">
+        ÁRBOLES
+      </div>
+
+      <div class="imagen-placeholder">
+        ORQUÍDEAS
+      </div>
+
+      <div class="imagen-placeholder">
+        RÍOS
+      </div>
+
+    </div>
+
+
+    <h3>
+      Ballenas
+    </h3>
+
+    <div class="imagen-placeholder">
+      GALERÍA — BALLENAS JOROBADAS
+    </div>
+
+
+    <h3>
+      Territorios y comunidades
+    </h3>
+
+    <div class="imagen-placeholder">
+      GALERÍA — TERRITORIOS
+    </div>
+
+
+    <h3>
+      Fotografía de aventura
+    </h3>
+
+    <div class="imagen-placeholder">
+      GALERÍA — AVENTURA
+    </div>
+
+
+    <h3>
+      Exposiciones
+    </h3>
+
+    <div class="galeria">
+
+      <div class="imagen-placeholder">
+        PARALELOS A UN MISMO EJE MÓVIL
+      </div>
+
+      <div class="imagen-placeholder">
+        TOCANDO TIERRA
+      </div>
+
+      <div class="imagen-placeholder">
+        ECOSISTEMAS ENTRAMADOS
+      </div>
+
+      <div class="imagen-placeholder">
+        DIVERSAS POR NATURALEZA
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       6. CONTACTO
+       ========================= -->
+
+  <section id="contacto">
+
+    <h2>
+      Contacto
+    </h2>
+
+    <div class="contacto">
+
+      <p>
+        Escríbeme.
+      </p>
+
+      <p>
+        <a href="mailto:martha.llano@icloud.com">
+          martha.llano@icloud.com
+        </a>
+      </p>
+
+      <div class="imagen-placeholder">
+        FOTO FINAL — HORIZONTE / BOSQUE / PUERTA ABIERTA
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     PIE DE PÁGINA
+     ========================= -->
+
+<footer>
+
+  <strong>MARTHA LLANO</strong>
+
+  <br><br>
+
+  Escribir · Diseñar · Fotografiar · Conservar
+
+</footer>
+
 
 </div>
 
