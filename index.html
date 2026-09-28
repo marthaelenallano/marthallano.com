@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -30,11 +31,803 @@
       padding: 28px 28px 60px;
     }
 
+
     /* =========================
        CABECERA
        ========================= */
 
     .topbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 10px 0 28px;
+      border-bottom: 1px solid #e8e8e8;
+      position: sticky;
+      top: 0;
+      background: rgba(250,250,250,0.96);
+      z-index: 10;
+    }
+
+    .nombre h1 {
+      margin: 0;
+      font-family: "Goudy Old Style", "Goudy Oldstyle", "Goudy", Georgia, serif;
+      color: #2f5d3a;
+      font-size: 2rem;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: 0.86rem;
+      letter-spacing: 0.02em;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #2f5d3a;
+    }
+
+
+    /* =========================
+       PORTADA
+       ========================= */
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 90px 0 110px;
+    }
+
+    .hero h2 {
+      max-width: 850px;
+      margin: 0 0 30px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: #2f5d3a;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.15rem;
+      color: #555;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-height: 620px;
+      object-fit: cover;
+      margin-top: 45px;
+    }
+
+
+    /* =========================
+       SECCIONES
+       ========================= */
+
+    section {
+      padding: 110px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .numero {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.2;
+      color: #2f5d3a;
+      margin: 0 0 35px;
+    }
+
+    h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-top: 65px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .intro {
+      max-width: 760px;
+      font-size: 1.18rem;
+      color: #444;
+    }
+
+    .texto {
+      max-width: 760px;
+    }
+
+    .texto p {
+      font-size: 1.05rem;
+      margin-bottom: 1.8em;
+    }
+
+
+    /* =========================
+       ESPACIOS PARA IMÁGENES
+       ========================= */
+
+    .imagen-placeholder {
+      width: 100%;
+      min-height: 320px;
+      margin: 55px 0;
+      border: 1px dashed #c8c8c8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+      background: #f4f4f2;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 50px 0;
+    }
+
+    .galeria .imagen-placeholder {
+      margin: 0;
+      min-height: 260px;
+    }
+
+
+    /* =========================
+       FRASES / PAUSAS
+       ========================= */
+
+    .frase {
+      max-width: 850px;
+      margin: 90px auto;
+      padding: 30px 0;
+      font-family: 'Libre Baskerville', serif;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      line-height: 1.45;
+      color: #2f5d3a;
+      text-align: center;
+    }
+
+
+    /* =========================
+       CONTACTO
+       ========================= */
+
+    #contacto {
+      padding-bottom: 70px;
+    }
+
+    .contacto {
+      max-width: 700px;
+    }
+
+    .contacto a {
+      color: #2f5d3a;
+      text-decoration: none;
+    }
+
+    .contacto a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      padding-top: 60px;
+      border-top: 1px solid #e8e8e8;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+
+    /* =========================
+       MÓVIL
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .topbar {
+        position: static;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      nav {
+        justify-content: flex-start;
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 0 90px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+
+      .imagen-placeholder {
+        min-height: 240px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="contenedor">
+
+  <!-- =========================
+       CABECERA
+       ========================= -->
+
+  <header class="topbar">
+
+    <div class="nombre">
+      <h1>Martha Llano</h1>
+    </div>
+
+    <nav>
+      <a href="#mundo">El mundo que estoy dejando</a>
+      <a href="#dos-mundos">Entre dos mundos</a>
+      <a href="#emociones">Gestionando mis emociones</a>
+      <a href="#diseno">Diseñar para interpretar</a>
+      <a href="#luz">Captando la luz que veo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       PORTADA
+       ========================= -->
+
+  <main>
+
+    <div class="hero">
+
+      <h2>
+        El mundo que estoy dejando
+      </h2>
+
+      <p>
+        Escribo para entender lo que vivo.
+        Fotografío para detener lo que veo.
+        Conservo para que pueda continuar.
+      </p>
+
+      <div class="imagen-placeholder hero-image">
+        FOTO DE PORTADA
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         1. EL MUNDO QUE ESTOY DEJANDO
+         ========================= -->
+
+    <section id="mundo">
+
+      <div class="numero">01</div>
+
+      <h2>
+        El mundo que estoy dejando
+      </h2>
+
+      <div class="texto">
+
+        <p>
+          De pequeña me veía siendo una escritora...
+        </p>
+
+        <div class="imagen-placeholder">
+          FOTO / ILUSTRACIÓN — LA SILLITA AZUL
+        </div>
+
+        <p>
+          Aquí irá el texto completo de esta sección,
+          respetando la versión escrita por Martha.
+        </p>
+
+      </div>
+
+      <div class="frase">
+        El mundo que estoy dejando no es solamente
+        el mundo que habité. Es el mundo que quiero
+        que otros puedan encontrar.
+      </div>
+
+      <div class="imagen-placeholder">
+        FOTO — EL ROBLEDAL / BOSQUE / HORIZONTE
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         2. ENTRE DOS MUNDOS
+         ========================= -->
+
+    <section id="dos-mundos">
+
+      <div class="numero">02</div>
+
+      <h2>
+        Entre dos mundos
+      </h2>
+
+      <p class="intro">
+        Dos territorios importantes desde dos perspectivas:
+        El Robledal y la casa en el río.
+      </p>
+
+      <h3>
+        El Robledal
+      </h3>
+
+      <div class="imagen-placeholder">
+        FOTO — ROBLEDAL
+      </div>
+
+      <div class="texto">
+
+        <p>
+          Aquí irá el texto completo sobre El Robledal,
+          los robles centenarios, la conservación,
+          las semillas y la historia del bosque.
+        </p>
+
+      </div>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          ROBLES
+        </div>
+
+        <div class="imagen-placeholder">
+          SEMILLAS
+        </div>
+
+        <div class="imagen-placeholder">
+          ANTUROS
+        </div>
+
+        <div class="imagen-placeholder">
+          ORQUÍDEAS
+        </div>
+
+      </div>
+
+
+      <h3>
+        Las casas dentro del bosque
+      </h3>
+
+      <p class="intro">
+        Las casas forman parte de una manera de sostener
+        y conservar este territorio.
+      </p>
+
+      <div class="imagen-placeholder">
+        FOTO — ROSA DE LOS VIENTOS
+      </div>
+
+      <div class="imagen-placeholder">
+        FOTO — CASA DE MADERA
+      </div>
+
+      <div class="imagen-placeholder">
+        FOTO — ENTREZARROS
+      </div>
+
+
+      <h3>
+        La casa en el río
+      </h3>
+
+      <div class="imagen-placeholder">
+        FOTO — CASA / QUEBRADAS / CASCADAS
+      </div>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          GODOYA ANTIOQUENSIS
+        </div>
+
+        <div class="imagen-placeholder">
+          PHRAGMIPEDIUM SCHLIMII
+        </div>
+
+        <div class="imagen-placeholder">
+          GALLINAS
+        </div>
+
+        <div class="imagen-placeholder">
+          VIDA COTIDIANA
+        </div>
+
+      </div>
+
+
+      <h3>
+        La que ve más
+      </h3>
+
+      <p class="intro">
+        iNaturalist · Merlin · eBird · Happywhale
+      </p>
+
+      <div class="frase">
+        Solo podemos conservar aquello que conocemos y amamos.
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         3. GESTIONANDO MIS EMOCIONES
+         ========================= -->
+
+    <section id="emociones">
+
+      <div class="numero">03</div>
+
+      <h2>
+        Gestionando mis emociones
+      </h2>
+
+      <div class="texto">
+
+        <p>
+          Eso es justamente. Así le doy trámite a lo que veo
+          y siento. A lo que vibra en mi interior y sale de
+          alguna forma.
+        </p>
+
+        <div class="imagen-placeholder">
+          FOTO — MANUSCRITOS / ESCRITURA
+        </div>
+
+        <p>
+          Aquí irá el texto completo de Martha sobre escribir,
+          sus relatos, sus novelas y la manera en que la escritura
+          se convirtió en una forma de darle trámite a lo que vive.
+        </p>
+
+      </div>
+
+
+      <h3>
+        Mis novelas
+      </h3>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          MARÍA FLORES
+        </div>
+
+        <div class="imagen-placeholder">
+          LA HE VISTO
+        </div>
+
+      </div>
+
+
+      <h3>
+        Cuando mi cuerpo me habla
+      </h3>
+
+      <div class="imagen-placeholder">
+        PORTADA DEL LIBRO
+      </div>
+
+
+      <h3>
+        Escritos con sabor a bosque y selva
+      </h3>
+
+      <div class="imagen-placeholder">
+        AUDIO / PODCAST
+      </div>
+
+
+      <h3>
+        Mi voz
+      </h3>
+
+      <p class="intro">
+        World Pulse forma parte de esta historia de recuperar
+        y sacar la propia voz.
+      </p>
+
+      <div class="imagen-placeholder">
+        IMAGEN / ENLACE WORLD PULSE
+      </div>
+
+
+      <h3>
+        Blog
+      </h3>
+
+      <div class="imagen-placeholder">
+        ENTRADAS DEL BLOG
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         4. DISEÑAR PARA INTERPRETAR
+         ========================= -->
+
+    <section id="diseno">
+
+      <div class="numero">04</div>
+
+      <h2>
+        Diseñar para interpretar
+      </h2>
+
+      <div class="texto">
+
+        <p>
+          Al graduarme de la universidad, comencé a sentir
+          mi proyecto casi de vida.
+        </p>
+
+        <div class="imagen-placeholder">
+          FOTO / DOCUMENTO — SENTIR
+        </div>
+
+        <p>
+          Aquí irá el texto completo sobre SENTIR,
+          Fundación SENTIR y los proyectos de interpretación,
+          diseño y divulgación.
+        </p>
+
+      </div>
+
+
+      <h3>
+        SENTIR
+      </h3>
+
+      <div class="imagen-placeholder">
+        MATERIAL HISTÓRICO — SENTIR
+      </div>
+
+
+      <h3>
+        Acuario Explora
+      </h3>
+
+      <div class="imagen-placeholder">
+        FOTO / DOCUMENTO — MUSEOGRAFÍA
+      </div>
+
+
+      <h3>
+        Parque Arví
+      </h3>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          SENDEROS
+        </div>
+
+        <div class="imagen-placeholder">
+          GUÍAS
+        </div>
+
+        <div class="imagen-placeholder">
+          SEÑALÉTICA
+        </div>
+
+        <div class="imagen-placeholder">
+          PROYECTO FINLANDIA
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         5. CAPTANDO LA LUZ QUE VEO
+         ========================= -->
+
+    <section id="luz">
+
+      <div class="numero">05</div>
+
+      <h2>
+        Captando la luz que veo
+      </h2>
+
+      <p class="intro">
+        Todo lo que veo tiene luz.
+      </p>
+
+      <div class="imagen-placeholder">
+        FOTO DE APERTURA — LUZ
+      </div>
+
+
+      <h3>
+        Naturaleza
+      </h3>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          BOSQUES
+        </div>
+
+        <div class="imagen-placeholder">
+          ÁRBOLES
+        </div>
+
+        <div class="imagen-placeholder">
+          ORQUÍDEAS
+        </div>
+
+        <div class="imagen-placeholder">
+          RÍOS
+        </div>
+
+      </div>
+
+
+      <h3>
+        Ballenas
+      </h3>
+
+      <div class="imagen-placeholder">
+        GALERÍA — BALLENAS JOROBADAS
+      </div>
+
+
+      <h3>
+        Territorios y comunidades
+      </h3>
+
+      <div class="imagen-placeholder">
+        GALERÍA — TERRITORIOS
+      </div>
+
+
+      <h3>
+        Fotografía de aventura
+      </h3>
+
+      <div class="imagen-placeholder">
+        GALERÍA — AVENTURA
+      </div>
+
+
+      <h3>
+        Exposiciones
+      </h3>
+
+      <div class="galeria">
+
+        <div class="imagen-placeholder">
+          PARALELOS A UN MISMO EJE MÓVIL
+        </div>
+
+        <div class="imagen-placeholder">
+          TOCANDO TIERRA
+        </div>
+
+        <div class="imagen-placeholder">
+          ECOSISTEMAS ENTRAMADOS
+        </div>
+
+        <div class="imagen-placeholder">
+          DIVERSAS POR NATURALEZA
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         6. CONTACTO
+         ========================= -->
+
+    <section id="contacto">
+
+      <div class="numero">06</div>
+
+      <h2>
+        Contacto
+      </h2>
+
+      <div class="contacto">
+
+        <p>
+          Escríbeme.
+        </p>
+
+        <p>
+          <a href="mailto:martha.llano@icloud.com">
+            martha.llano@icloud.com
+          </a>
+        </p>
+
+        <div class="imagen-placeholder">
+          FOTO FINAL — HORIZONTE / BOSQUE / PUERTA ABIERTA
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       PIE
+       ========================= -->
+
+  <footer>
+
+    <strong>Martha Llano</strong>
+
+    <br><br>
+
+    Escribir · Diseñar · Fotografiar · Conservar
+
+  </footer>
+
+</div>
+
+</body>
+</html>    .topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
