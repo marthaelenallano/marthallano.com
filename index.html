@@ -5,10 +5,9 @@
   <title>Martha Llano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -20,7 +19,7 @@
     body {
       margin: 0;
       background: #fafafa;
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       color: #222;
       line-height: 1.75;
     }
@@ -31,7 +30,6 @@
       padding: 28px 28px 60px;
     }
 
-
     /* =========================
        CABECERA
        ========================= */
@@ -40,8 +38,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 18px;
-      padding: 10px 0 28px;
+      gap: 22px;
+      padding: 8px 0 28px;
       border-bottom: 1px solid #e8e8e8;
       position: sticky;
       top: 0;
@@ -51,10 +49,12 @@
 
     .nombre h1 {
       margin: 0;
-      font-family: "Goudy Old Style", "Goudy Oldstyle", "Goudy", Georgia, serif;
+      font-family: 'DM Sans', sans-serif;
       color: #2f5d3a;
-      font-size: 2rem;
+      font-size: 3rem;
+      line-height: 1;
       font-weight: 400;
+      letter-spacing: -0.045em;
       white-space: nowrap;
     }
 
@@ -85,7 +85,6 @@
       color: #2f5d3a;
     }
 
-
     /* =========================
        REDES SOCIALES
        ========================= */
@@ -114,42 +113,20 @@
       color: #2f5d3a !important;
     }
 
-
     /* =========================
        PORTADA
        ========================= */
 
     .hero {
-      min-height: 78vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 90px 0 110px;
-    }
-
-    .hero h2 {
-      max-width: 850px;
-      margin: 0 0 30px;
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(2.5rem, 6vw, 5.5rem);
-      font-weight: 400;
-      line-height: 1.12;
-      color: #2f5d3a;
-    }
-
-    .hero p {
-      max-width: 680px;
-      font-size: 1.15rem;
-      color: #555;
+      padding: 55px 0 95px;
     }
 
     .hero-image {
       width: 100%;
-      max-height: 620px;
+      height: min(72vh, 720px);
       object-fit: cover;
-      margin-top: 45px;
+      display: block;
     }
-
 
     /* =========================
        SECCIONES
@@ -158,14 +135,6 @@
     section {
       padding: 110px 0;
       border-top: 1px solid #e8e8e8;
-    }
-
-    .numero {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 14px;
     }
 
     h2 {
@@ -201,7 +170,6 @@
       margin-bottom: 1.8em;
     }
 
-
     /* =========================
        ESPACIOS PARA IMÁGENES
        ========================= */
@@ -233,7 +201,6 @@
       min-height: 260px;
     }
 
-
     /* =========================
        FRASES / PAUSAS
        ========================= */
@@ -248,7 +215,6 @@
       color: #2f5d3a;
       text-align: center;
     }
-
 
     /* =========================
        CONTACTO
@@ -271,7 +237,6 @@
       text-decoration: underline;
     }
 
-
     /* =========================
        FOOTER
        ========================= */
@@ -284,7 +249,6 @@
       color: #777;
     }
 
-
     /* =========================
        MÓVIL
        ========================= */
@@ -293,25 +257,23 @@
 
       .topbar {
         position: static;
-        align-items: flex-start;
         gap: 18px;
       }
 
-      nav {
-        align-items: flex-start;
+      .nombre h1 {
+        font-size: 2.5rem;
       }
 
       .menu-principal {
         gap: 15px;
       }
 
-      .social-icon {
-        margin-left: -5px;
+      .hero {
+        padding: 35px 0 75px;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 70px 0 90px;
+      .hero-image {
+        height: 55vh;
       }
 
       section {
@@ -325,9 +287,7 @@
       .imagen-placeholder {
         min-height: 240px;
       }
-
     }
-
   </style>
 </head>
 
@@ -350,32 +310,17 @@
 
       <div class="menu-principal">
 
-        <a href="#mundo">
-          El mundo que estoy dejando
-        </a>
+        <a href="#mundo">El mundo que estoy dejando</a>
 
-        <a href="#dos-mundos">
-          Entre dos mundos
-        </a>
+        <a href="#dos-mundos">Entre dos mundos</a>
 
-        <a href="#emociones">
-          Gestionando mis emociones
-        </a>
+        <a href="#emociones">Gestionando mis emociones</a>
 
-        <a href="#diseno">
-          Diseñar para interpretar
-        </a>
+        <a href="#diseno">Diseñar para interpretar</a>
 
-        <a href="#luz">
-          Captando la luz que veo
-        </a>
+        <a href="#luz">Captando la luz que veo</a>
 
-        <a href="#contacto">
-          Contacto
-        </a>
-
-
-        <!-- INSTAGRAM -->
+        <a href="#contacto">Contacto</a>
 
         <a
           class="social-icon"
@@ -386,32 +331,11 @@
           title="Instagram"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5">
-            </rect>
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4">
-            </circle>
-
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="1">
-            </circle>
-
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
           </svg>
         </a>
-
-
-        <!-- LINKEDIN -->
 
         <a
           class="social-icon"
@@ -422,15 +346,10 @@
           title="LinkedIn"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-
             <path d="M5 8.5V19"></path>
-
             <path d="M5 5.5V5.5"></path>
-
             <path d="M10 19V11"></path>
-
             <path d="M10 14.5C10 12.5 11.3 11 13.2 11C15.3 11 16 12.5 16 14.5V19"></path>
-
           </svg>
         </a>
 
@@ -449,16 +368,6 @@
 
     <div class="hero">
 
-      <h2>
-        El mundo que estoy dejando
-      </h2>
-
-      <p>
-        Escribo para entender lo que vivo.
-        Fotografío para detener lo que veo.
-        Conservo para que pueda continuar.
-      </p>
-
       <div class="imagen-placeholder hero-image">
         FOTO DE PORTADA
       </div>
@@ -467,12 +376,10 @@
 
 
     <!-- =========================
-         1. EL MUNDO QUE ESTOY DEJANDO
+         EL MUNDO QUE ESTOY DEJANDO
          ========================= -->
 
     <section id="mundo">
-
-      <div class="numero">01</div>
 
       <h2>
         El mundo que estoy dejando
@@ -509,12 +416,10 @@
 
 
     <!-- =========================
-         2. ENTRE DOS MUNDOS
+         ENTRE DOS MUNDOS
          ========================= -->
 
     <section id="dos-mundos">
-
-      <div class="numero">02</div>
 
       <h2>
         Entre dos mundos
@@ -631,12 +536,10 @@
 
 
     <!-- =========================
-         3. GESTIONANDO MIS EMOCIONES
+         GESTIONANDO MIS EMOCIONES
          ========================= -->
 
     <section id="emociones">
-
-      <div class="numero">03</div>
 
       <h2>
         Gestionando mis emociones
@@ -724,12 +627,10 @@
 
 
     <!-- =========================
-         4. DISEÑAR PARA INTERPRETAR
+         DISEÑAR PARA INTERPRETAR
          ========================= -->
 
     <section id="diseno">
-
-      <div class="numero">04</div>
 
       <h2>
         Diseñar para interpretar
@@ -801,12 +702,10 @@
 
 
     <!-- =========================
-         5. CAPTANDO LA LUZ QUE VEO
+         CAPTANDO LA LUZ QUE VEO
          ========================= -->
 
     <section id="luz">
-
-      <div class="numero">05</div>
 
       <h2>
         Captando la luz que veo
@@ -901,12 +800,10 @@
 
 
     <!-- =========================
-         6. CONTACTO
+         CONTACTO
          ========================= -->
 
     <section id="contacto">
-
-      <div class="numero">06</div>
 
       <h2>
         Contacto
