@@ -61,10 +61,24 @@
     nav {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .menu-principal {
+      display: flex;
+      align-items: center;
       justify-content: flex-start;
       gap: 25px;
       flex-wrap: wrap;
-      width: 100%;
+    }
+
+    .redes {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      white-space: nowrap;
     }
 
     nav a {
@@ -263,7 +277,17 @@
       }
 
       nav {
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-start;
+        gap: 15px;
+      }
+
+      .menu-principal {
+        gap: 15px;
+      }
+
+      .redes {
         gap: 15px;
       }
 
@@ -305,12 +329,26 @@
     </div>
 
     <nav>
-      <a href="#mundo">El mundo que estoy dejando</a>
-      <a href="#dos-mundos">Entre dos mundos</a>
-      <a href="#emociones">Gestionando mis emociones</a>
-      <a href="#diseno">Diseñar para interpretar</a>
-      <a href="#luz">Captando la luz que veo</a>
-      <a href="#contacto">Contacto</a>
+
+      <div class="menu-principal">
+        <a href="#mundo">El mundo que estoy dejando</a>
+        <a href="#dos-mundos">Entre dos mundos</a>
+        <a href="#emociones">Gestionando mis emociones</a>
+        <a href="#diseno">Diseñar para interpretar</a>
+        <a href="#luz">Captando la luz que veo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="redes">
+        <a href="TU_INSTAGRAM" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+
+        <a href="TU_LINKEDIN" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      </div>
+
     </nav>
 
   </header>
@@ -796,7 +834,6 @@
         <p>
           <a href="mailto:martha.llano@icloud.com">
             martha.llano@icloud.com
-            wapp 3006592767
           </a>
         </p>
 
