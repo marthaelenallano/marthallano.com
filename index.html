@@ -251,6 +251,50 @@
       margin-bottom: 0;
     }
 
+    .titulo-seccion h2.titulo-capitulo {
+      margin: 0;
+      color: #2f5d3a;
+      font-family: "DM Sans", sans-serif;
+      font-size: 2.35rem;
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.045em;
+    }
+
+    .contenido.contenido-capitulo {
+      max-width: none;
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .foto-capitulo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: #f4f4f2;
+      border: 1px dashed #c8c8c8;
+      color: #999;
+      text-align: center;
+    }
+
+    img.foto-capitulo {
+      padding: 0;
+      border: 0;
+      object-fit: cover;
+    }
+
+    .contenido-capitulo .cita {
+      max-width: 100%;
+      margin: 45px 0 0;
+      text-align: left;
+    }
+
 
     /* =========================================================
        GALERÍAS
@@ -414,6 +458,20 @@
       .hero {
         padding-top: 24px;
         padding-bottom: 38px;
+      }
+
+      .titulo-seccion h2.titulo-capitulo {
+        font-size: 2rem;
+      }
+
+      .contenido.contenido-capitulo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 32px;
+      }
+
+      .foto-capitulo {
+        aspect-ratio: 4 / 3;
       }
 
       .titulo-seccion h2 {
@@ -609,69 +667,58 @@
     >
 
       <div class="titulo-seccion">
-
-        <h2>
-          Lo que siento
-        </h2>
-
+        <h2 class="titulo-capitulo">Lo que siento</h2>
       </div>
 
+      <div class="contenido contenido-capitulo">
 
-      <div class="contenido">
-
-        <p>
-          De pequeña me veía siendo una escritora; tenía tantas emociones
-          en mi interior que mentalmente, mientras todo transcurría, yo iba
-          escribiendo esas historias mentalmente. Lo que me abrumaba, lo que
-          me gustaba, lo que no me gustaba tanto, los colores vívidos y
-          brillantes de la naturaleza, un cielo azul mientras me tendía boca
-          arriba a ver el cielo, las estrellas fugaces y las no tan fugaces…
-        </p>
-
-        <p>
-          Siempre que cierro los ojos y me veo hacia adentro, me veo sentada
-          en aquella sillita azul, en una ventana que nunca he sabido dónde
-          es y que he perseguido toda mi vida, en esa calma y serenidad que,
-          aunque me ha costado mucho, hoy sé que la he encontrado. Porque la
-          ventana, la silla, ese horizonte y la paz que sentía en mi alma,
-          estaban en mí, no en ninguna parte.
-        </p>
-
-        <p>
-          Soy escritora por naturaleza, no sigo reglas, normas, métrica,
-          porque mi corazón tiene un ritmo así tal cual lo escribo y lo lees.
-          Sin pausa, sin puntos ni comas, como mi vida. Veo números en todo,
-          siento que la naturaleza es una gran composición matemática y busco
-          la belleza que hay en ella por todos lados.
-        </p>
-
-        <p>
-          Es mi compañera y mi guía; el mundo verde, así como escribir, han
-          sido mi camino y mi salvación. Cuando he estado perdida, ambas me
-          han encontrado. Me han tomado de la mano en mi camino y son mis
-          bastones, literal.
-        </p>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — NATURALEZA
-          </div>
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — EL ROBLEDAL
-          </div>
-
+        <div class="foto-capitulo">
+          Aquí irá la foto de la silla
         </div>
 
+        <div class="texto-capitulo">
 
-        <p class="cita">
-          “Yo solo espero que desde la distancia sea capaz de mantener en pie
-          un bosque centenario que no solo es bosque, es agua, es aire puro,
-          son semillas guardadas para que Zuly, la chica del futuro a quien
-          Anuk le escribe, tenga aún respuesta a su carta del 2198.”
-        </p>
+          <p>
+            De pequeña me veía siendo una escritora; tenía tantas emociones
+            en mi interior que mentalmente, mientras todo transcurría, yo iba
+            escribiendo esas historias mentalmente. Lo que me abrumaba, lo que
+            me gustaba, lo que no me gustaba tanto, los colores vívidos y
+            brillantes de la naturaleza, un cielo azul mientras me tendía boca
+            arriba a ver el cielo, las estrellas fugaces y las no tan fugaces…
+          </p>
+
+          <p>
+            Siempre que cierro los ojos y me veo hacia adentro, me veo sentada
+            en aquella sillita azul, en una ventana que nunca he sabido dónde
+            es y que he perseguido toda mi vida, en esa calma y serenidad que,
+            aunque me ha costado mucho, hoy sé que la he encontrado. Porque la
+            ventana, la silla, ese horizonte y la paz que sentía en mi alma,
+            estaban en mí, no en ninguna parte.
+          </p>
+
+          <p>
+            Soy escritora por naturaleza, no sigo reglas, normas, métrica,
+            porque mi corazón tiene un ritmo así tal cual lo escribo y lo lees.
+            Sin pausa, sin puntos ni comas, como mi vida. Veo números en todo,
+            siento que la naturaleza es una gran composición matemática y busco
+            la belleza que hay en ella por todos lados.
+          </p>
+
+          <p>
+            Es mi compañera y mi guía; el mundo verde, así como escribir, han
+            sido mi camino y mi salvación. Cuando he estado perdida, ambas me
+            han encontrado. Me han tomado de la mano en mi camino y son mis
+            bastones, literal.
+          </p>
+
+          <p class="cita">
+            “Yo solo espero que desde la distancia sea capaz de mantener en pie
+            un bosque centenario que no solo es bosque, es agua, es aire puro,
+            son semillas guardadas para que Zuly, la chica del futuro a quien
+            Anuk le escribe, tenga aún respuesta a su carta del 2198.”
+          </p>
+
+        </div>
 
       </div>
 
@@ -1269,9 +1316,9 @@
         <p>
           <a
             class="enlace"
-            href="mailto:martha@marthallano.com"
+            href="mailto:marthallano@marthallano.com"
           >
-            martha@marthallano.com
+            marthallano@marthallano.com
           </a>
         </p>
 
