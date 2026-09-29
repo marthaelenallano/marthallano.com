@@ -1,3 +1,6 @@
+Claro. Aquí tienes el HTML completo para copiar y pegar. Reemplacé únicamente el bloque de la foto de portada por el widget y añadí el CSS necesario para que ocupe todo el ancho y se integre con el fondo `#fafafa`. Conservé los enlaces y el `padding: 41px 0 52px` aprobado.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -185,24 +188,11 @@
       padding: 41px 0 52px;
     }
 
-    .hero-image {
+    .hero .elfsight-app-077df256-22f8-4051-862e-dd759894a503 {
       width: 100%;
-      height: 420px;
-
-      margin: 0;
-      padding: 0;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: #f4f4f2;
-      border: 1px dashed #c8c8c8;
-
-      color: #999;
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
-      text-align: center;
+      max-width: 100%;
+      min-width: 0;
+      background: #fafafa;
     }
 
 
@@ -429,10 +419,6 @@
         padding-bottom: 38px;
       }
 
-      .hero-image {
-        height: 260px;
-      }
-
       .titulo-seccion h2 {
         font-size: 2.05rem;
         line-height: 1.25;
@@ -610,9 +596,8 @@
 
     <div class="hero">
 
-      <div class="hero-image">
-        FOTO DE PORTADA
-      </div>
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-077df256-22f8-4051-862e-dd759894a503" data-elfsight-app-lazy></div>
 
     </div>
 
@@ -1311,3 +1296,4 @@
 
 </body>
 </html>
+```
