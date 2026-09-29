@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Martha Llano</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    /* =========================================================
+       BASE
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -33,12 +47,22 @@
       text-decoration: none;
     }
 
+
+    /* =========================================================
+       CONTENEDOR
+    ========================================================= */
+
     .contenedor {
       width: 100%;
       max-width: 1180px;
       margin: 0 auto;
       padding: 28px 28px 70px;
     }
+
+
+    /* =========================================================
+       ENCABEZADO
+    ========================================================= */
 
     .topbar {
       width: 100%;
@@ -55,14 +79,22 @@
       letter-spacing: -0.045em;
     }
 
+
+    /* =========================================================
+       NAVEGACIÓN
+    ========================================================= */
+
     .navegacion {
       width: 100%;
       margin-top: 27px;
+
       display: flex;
       align-items: center;
       justify-content: flex-start;
+
       white-space: nowrap;
       flex-wrap: nowrap;
+
       font-size: 0.92rem;
       line-height: 1;
       color: #595959;
@@ -73,6 +105,7 @@
       align-items: center;
       white-space: nowrap;
       flex: 0 0 auto;
+
       transition: color 0.2s ease;
     }
 
@@ -83,20 +116,32 @@
     .separador {
       display: inline-block;
       flex: 0 0 auto;
+
       margin: 0 17px;
+
       color: #bdbdbd;
       font-size: 0.48rem;
       line-height: 1;
     }
 
+
+    /* =========================================================
+       REDES SOCIALES
+       Permanecen en la misma línea de la navegación
+    ========================================================= */
+
     .social {
       display: inline-flex !important;
       align-items: center;
       justify-content: center;
+
       flex: 0 0 auto;
+
       margin-left: 18px;
+
       color: #777;
       line-height: 1;
+
       transition: color 0.2s ease;
     }
 
@@ -114,12 +159,26 @@
       display: block;
     }
 
+
+    /* =========================================================
+       RAYA PRINCIPAL
+       ESTA ES LA RAYA QUE VA DESPUÉS DE LOS BOTONES
+       Y ANTES DE LA FOTO
+    ========================================================= */
+
     .raya-principal {
       width: 100%;
       height: 1px;
+
       margin-top: 28px;
+
       background: #d8d8d8;
     }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
       width: 100%;
@@ -129,18 +188,27 @@
     .hero-image {
       width: 100%;
       height: 420px;
+
       margin: 0;
       padding: 0;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       background: #f4f4f2;
       border: 1px dashed #c8c8c8;
+
       color: #999;
       font-size: 0.85rem;
       letter-spacing: 0.04em;
       text-align: center;
     }
+
+
+    /* =========================================================
+       SECCIONES
+    ========================================================= */
 
     section {
       scroll-margin-top: 40px;
@@ -151,6 +219,12 @@
       padding: 0 0 100px;
     }
 
+
+    /* =========================================================
+       TÍTULOS
+       NO tienen raya debajo
+    ========================================================= */
+
     .titulo-seccion {
       width: 100%;
       margin: 0;
@@ -160,13 +234,20 @@
     .titulo-seccion h2 {
       margin: 0;
       padding: 0;
+
       color: #2f5d3a;
+
       font-family: "Libre Baskerville", serif;
       font-size: 3.25rem;
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: -0.035em;
     }
+
+
+    /* =========================================================
+       CONTENIDO
+    ========================================================= */
 
     .contenido {
       max-width: 900px;
@@ -183,6 +264,11 @@
       margin-bottom: 0;
     }
 
+
+    /* =========================================================
+       GALERÍAS
+    ========================================================= */
+
     .galeria {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -193,11 +279,14 @@
     .imagen-placeholder {
       width: 100%;
       min-height: 300px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       background: #f4f4f2;
       border: 1px dashed #c8c8c8;
+
       color: #999;
       font-size: 0.82rem;
       letter-spacing: 0.04em;
@@ -208,13 +297,20 @@
       min-height: 420px;
     }
 
+
+    /* =========================================================
+       BLOQUES
+    ========================================================= */
+
     .bloque {
       margin-top: 65px;
     }
 
     .bloque h3 {
       margin: 0 0 20px;
+
       color: #2f5d3a;
+
       font-family: "Libre Baskerville", serif;
       font-size: 1.7rem;
       font-weight: 400;
@@ -227,18 +323,31 @@
       line-height: 1.8;
     }
 
+
+    /* =========================================================
+       CITAS
+    ========================================================= */
+
     .cita {
       max-width: 850px;
       margin: 65px auto 0;
       padding: 35px 0;
+
       border-top: 1px solid #d8d8d8;
       border-bottom: 1px solid #d8d8d8;
+
       color: #2f5d3a;
+
       font-family: "Libre Baskerville", serif;
       font-size: 1.35rem;
       line-height: 1.65;
       text-align: center;
     }
+
+
+    /* =========================================================
+       ENLACES
+    ========================================================= */
 
     .enlace {
       color: #2f5d3a;
@@ -247,14 +356,26 @@
       text-underline-offset: 4px;
     }
 
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
     footer {
       padding-top: 30px;
       border-top: 1px solid #dedede;
+
       color: #888;
       font-size: 0.82rem;
     }
 
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
     @media (max-width: 1050px) {
+
       .navegacion {
         font-size: 0.86rem;
       }
@@ -273,7 +394,13 @@
       }
     }
 
+
+    /* =========================================================
+       MÓVIL
+    ========================================================= */
+
     @media (max-width: 700px) {
+
       .contenedor {
         padding: 22px 18px 55px;
       }
@@ -332,45 +459,125 @@
         min-height: 280px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
+
   <div class="contenedor">
+
+
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
 
     <header class="topbar">
 
       <h1 class="nombre">MARTHA LLANO</h1>
 
+
+      <!-- NAVEGACIÓN -->
+
       <nav class="navegacion">
 
-        <a href="#mundo">El mundo que estoy dejando</a>
-        <span class="separador">◆</span>
-
-        <a href="#dos-mundos">Entre dos mundos</a>
-        <span class="separador">◆</span>
-
-        <a href="#emociones">Gestionando mis emociones</a>
-        <span class="separador">◆</span>
-
-        <a href="#disenar">Diseñar para interpretar</a>
-        <span class="separador">◆</span>
-
-        <a href="#luz">Captando la luz que veo</a>
-        <span class="separador">◆</span>
-
-        <a href="#contacto">Contacto</a>
-
-        <a class="social" href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-            <circle cx="12" cy="12" r="4"></circle>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"></circle>
-          </svg>
+        <a href="#mundo">
+          El mundo que estoy dejando
         </a>
 
-        <a class="social" href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+        <span class="separador">◆</span>
+
+        <a href="#dos-mundos">
+          Entre dos mundos
+        </a>
+
+        <span class="separador">◆</span>
+
+        <a href="#emociones">
+          Gestionando mis emociones
+        </a>
+
+        <span class="separador">◆</span>
+
+        <a href="#disenar">
+          Diseñar para interpretar
+        </a>
+
+        <span class="separador">◆</span>
+
+        <a href="#luz">
+          Captando la luz que veo
+        </a>
+
+        <span class="separador">◆</span>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="social"
+          href="https://www.instagram.com/marthaelenallano/"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+            ></rect>
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            ></circle>
+
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="0.8"
+              fill="currentColor"
+              stroke="none"
+            ></circle>
+
+          </svg>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          class="social"
+          href="#"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+
             <path d="
               M5.2 8.2H2.1V21h3.1V8.2ZM3.65 3A1.8 1.8
               0 1 0 3.65 6.6 1.8 1.8 0 0 0 3.65 3ZM21.9
@@ -378,26 +585,55 @@
               2v-1.9h-3.1V21h3.1v-6.3c0-1.7.3-3.3 2.4-3.3
               2 0 2 1.9 2 3.4V21h3.1v-7.3Z
             "></path>
+
           </svg>
+
         </a>
 
       </nav>
+
+
+      <!-- ===================================================
+           ESTA ES LA RAYA CORRECTA
+           VA DESPUÉS DE TODA LA NAVEGACIÓN
+           Y ANTES DE LA FOTO
+      ==================================================== -->
 
       <div class="raya-principal"></div>
 
     </header>
 
+
+    <!-- =====================================================
+         FOTO DE PORTADA
+    ====================================================== -->
+
     <div class="hero">
+
       <div class="hero-image">
         FOTO DE PORTADA
       </div>
+
     </div>
 
-    <section id="mundo" class="seccion">
+
+    <!-- =====================================================
+         1. EL MUNDO QUE ESTOY DEJANDO
+    ====================================================== -->
+
+    <section
+      id="mundo"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>El mundo que estoy dejando</h2>
+
+        <h2>
+          El mundo que estoy dejando
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -434,7 +670,9 @@
           bastones, literal.
         </p>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — NATURALEZA
           </div>
@@ -442,7 +680,9 @@
           <div class="imagen-placeholder grande">
             IMAGEN — EL ROBLEDAL
           </div>
+
         </div>
+
 
         <p class="cita">
           “Yo solo espero que desde la distancia sea capaz de mantener en pie
@@ -452,13 +692,27 @@
         </p>
 
       </div>
+
     </section>
 
-    <section id="dos-mundos" class="seccion">
+
+    <!-- =====================================================
+         2. ENTRE DOS MUNDOS
+    ====================================================== -->
+
+    <section
+      id="dos-mundos"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>Entre dos mundos</h2>
+
+        <h2>
+          Entre dos mundos
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -484,7 +738,9 @@
           el territorio y muchos otros lugares.
         </p>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — ROBLES
           </div>
@@ -492,10 +748,16 @@
           <div class="imagen-placeholder">
             IMAGEN — ROBLE GUARDIÁN PEPE
           </div>
+
         </div>
 
+
         <div class="bloque">
-          <h3>Rosa de los Vientos</h3>
+
+          <h3>
+            Rosa de los Vientos
+          </h3>
+
           <p>
             Rosa de los Vientos es una casa taller construida hace treinta
             años con todo el amor y la dulzura que pude. En ella hoy deseo
@@ -503,28 +765,43 @@
             pensadores, creadores que deseen un espacio sutil y lleno de
             energía para la creación.
           </p>
+
         </div>
 
+
         <div class="bloque">
-          <h3>Casa de Madera</h3>
+
+          <h3>
+            Casa de Madera
+          </h3>
+
           <p>
             Casa de Madera es una pequeña casa de madera con la magia de poder
             ver el bosque desde el dosel, o sea, desde la parte alta. Ideal
             para estar en contemplación con las comodidades de tenerlo todo
             cerca: el parqueadero, la vía, las tiendas, los vecinos.
           </p>
+
         </div>
 
+
         <div class="bloque">
-          <h3>Casa Entrezarros</h3>
+
+          <h3>
+            Casa Entrezarros
+          </h3>
+
           <p>
             Casa Entrezarros es un refugio completamente adentro del bosque.
             Hecha con todo el respeto y sin tumbar un solo árbol. Pequeña en
             su interior, pero grande en su alrededor.
           </p>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — CASA DE MADERA
           </div>
@@ -532,10 +809,15 @@
           <div class="imagen-placeholder">
             IMAGEN — ENTREZARROS
           </div>
+
         </div>
 
+
         <div class="bloque">
-          <h3>La casa en el río</h3>
+
+          <h3>
+            La casa en el río
+          </h3>
 
           <p>
             Como parte de permitirle a otros llegar, yo me he desplazado a
@@ -556,9 +838,12 @@
             que con sus cascadas y su hermoso cauce de piedras me tienen
             atrapada. Mi hogar hoy es verde azul.
           </p>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — GODOYA ANTIOQUENSIS
           </div>
@@ -574,10 +859,15 @@
           <div class="imagen-placeholder">
             IMAGEN — GALLINAS
           </div>
+
         </div>
 
+
         <div class="bloque">
-          <h3>Observar</h3>
+
+          <h3>
+            Observar
+          </h3>
 
           <p>
             A donde vaya, siempre hago lo mismo. Observar. No en vano me
@@ -593,20 +883,36 @@
             especialmente a Mount Desert Rock, administrada por el College
             of the Atlantic.
           </p>
+
         </div>
+
 
         <p class="cita">
           “Solo podemos conservar aquello que conocemos y amamos”.
         </p>
 
       </div>
+
     </section>
 
-    <section id="emociones" class="seccion">
+
+    <!-- =====================================================
+         3. GESTIONANDO MIS EMOCIONES
+    ====================================================== -->
+
+    <section
+      id="emociones"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>Gestionando mis emociones</h2>
+
+        <h2>
+          Gestionando mis emociones
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -638,13 +944,25 @@
           Tengo miles, intento ordenarlas, aquí quedan muchas.
         </p>
 
-        <div class="bloque">
-          <h3>Una historia de amor prohibida</h3>
-          <p>La he visto.</p>
-        </div>
 
         <div class="bloque">
-          <h3>Mi voz</h3>
+
+          <h3>
+            Una historia de amor prohibida
+          </h3>
+
+          <p>
+            La he visto.
+          </p>
+
+        </div>
+
+
+        <div class="bloque">
+
+          <h3>
+            Mi voz
+          </h3>
 
           <p>
             Mi voz es importante, sacarle no fue tan fácil. Porque hay veces
@@ -659,9 +977,12 @@
             nuestro mundo. Pero pude hacerlo y empecé a sanar… lo sigo
             haciendo a cada día que logro dejar salir mi voz con mis escritos.
           </p>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — ESCRITOS
           </div>
@@ -669,16 +990,31 @@
           <div class="imagen-placeholder">
             IMAGEN — CUANDO MI CUERPO ME HABLA
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <section id="disenar" class="seccion">
+
+    <!-- =====================================================
+         4. DISEÑAR PARA INTERPRETAR
+    ====================================================== -->
+
+    <section
+      id="disenar"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>Diseñar para interpretar</h2>
+
+        <h2>
+          Diseñar para interpretar
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -703,14 +1039,22 @@
           turístico para el valle de Aburrá.
         </p>
 
+
         <div class="bloque">
-          <h3>SENTIR</h3>
+
+          <h3>
+            SENTIR
+          </h3>
+
           <p>
             Sentir realizó las siguiente ilustraciones y propuestas.
           </p>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — ACUARIO EXPLORA
           </div>
@@ -726,16 +1070,31 @@
           <div class="imagen-placeholder">
             IMAGEN — OTROS PROYECTOS
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <section id="luz" class="seccion">
+
+    <!-- =====================================================
+         5. CAPTANDO LA LUZ QUE VEO
+    ====================================================== -->
+
+    <section
+      id="luz"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>Captando la luz que veo</h2>
+
+        <h2>
+          Captando la luz que veo
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -745,51 +1104,90 @@
           partes, éste es mi recorrido:
         </p>
 
+
         <div class="bloque">
-          <h3>Paralelos a un mismo eje móvil</h3>
+
+          <h3>
+            Paralelos a un mismo eje móvil
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — PARALELOS A UN MISMO EJE MÓVIL
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Tocando tierra</h3>
+
+          <h3>
+            Tocando tierra
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — TOCANDO TIERRA
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Ecosistemas entramados</h3>
+
+          <h3>
+            Ecosistemas entramados
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — ECOSISTEMAS ENTRAMADOS
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Diversas por naturaleza</h3>
+
+          <h3>
+            Diversas por naturaleza
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder grande">
             IMAGEN — DIVERSAS POR NATURALEZA
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Naturaleza</h3>
+
+          <h3>
+            Naturaleza
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — NATURALEZA
           </div>
@@ -805,13 +1203,21 @@
           <div class="imagen-placeholder">
             IMAGEN — BALLENAS
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Territorios y comunidades</h3>
+
+          <h3>
+            Territorios y comunidades
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — TERRITORIOS
           </div>
@@ -819,13 +1225,21 @@
           <div class="imagen-placeholder">
             IMAGEN — COMUNIDADES
           </div>
+
         </div>
+
 
         <div class="bloque">
-          <h3>Aventura</h3>
+
+          <h3>
+            Aventura
+          </h3>
+
         </div>
 
+
         <div class="galeria">
+
           <div class="imagen-placeholder">
             IMAGEN — AVENTURA
           </div>
@@ -833,16 +1247,31 @@
           <div class="imagen-placeholder">
             IMAGEN — VIAJES
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <section id="contacto" class="seccion">
+
+    <!-- =====================================================
+         6. CONTACTO
+    ====================================================== -->
+
+    <section
+      id="contacto"
+      class="seccion"
+    >
 
       <div class="titulo-seccion">
-        <h2>Contacto</h2>
+
+        <h2>
+          Contacto
+        </h2>
+
       </div>
+
 
       <div class="contenido">
 
@@ -856,18 +1285,29 @@
         </p>
 
         <p>
-          <a class="enlace" href="mailto:martha@marthallano.com">
+          <a
+            class="enlace"
+            href="mailto:martha@marthallano.com"
+          >
             martha@marthallano.com
           </a>
         </p>
 
       </div>
+
     </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
       Martha Llano
     </footer>
 
+
   </div>
+
 </body>
 </html>
