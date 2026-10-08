@@ -1,309 +1,267 @@
-<div class="martha-site-header">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- =========================
-       LOGO MARTHA LLANO
-       ========================= -->
-  <div class="martha-logo">
+  <title>Martha Llano</title>
 
-    <svg viewBox="0 0 1184 1184"
-         xmlns="http://www.w3.org/2000/svg"
-         role="img"
-         aria-label="Martha Llano — diseño consciente sensible sostenible">
+  <style>
 
-      <!-- Líneas que forman la M -->
-      <line x1="20" y1="1115" x2="412" y2="10"
-            stroke="#D96524" stroke-width="17"
-            stroke-linecap="round"/>
+    * {
+      box-sizing: border-box;
+    }
 
-      <line x1="412" y1="10" x2="806" y2="1115"
-            stroke="#55B64B" stroke-width="17"
-            stroke-linecap="round"/>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #555555;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-      <line x1="350" y1="1115" x2="737" y2="10"
-            stroke="#8170B4" stroke-width="17"
-            stroke-linecap="round"/>
+    /* =========================
+       CABECERA
+       ========================= */
 
-      <line x1="737" y1="10" x2="1131" y2="1115"
-            stroke="#E4E500" stroke-width="17"
-            stroke-linecap="round"/>
-
-      <!-- Puntos -->
-      <circle cx="412" cy="10" r="10" fill="#333333"/>
-      <circle cx="737" cy="10" r="10" fill="#333333"/>
-      <circle cx="576" cy="474" r="10" fill="#333333"/>
-
-      <!-- Texto del logo -->
-      <text x="0" y="1150"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="39"
-            letter-spacing="9"
-            fill="#333333">
-        diseño
-      </text>
-
-      <circle cx="205" cy="1138" r="9" fill="#55B64B"/>
-
-      <text x="224" y="1150"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="39"
-            letter-spacing="8"
-            fill="#333333">
-        consciente
-      </text>
-
-      <circle cx="554" cy="1138" r="9" fill="#D96524"/>
-
-      <text x="575" y="1150"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="39"
-            letter-spacing="8"
-            fill="#333333">
-        sensible
-      </text>
-
-      <circle cx="763" cy="1138" r="9" fill="#8170B4"/>
-
-      <text x="784" y="1150"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="39"
-            letter-spacing="8"
-            fill="#333333">
-        sostenible
-      </text>
-
-    </svg>
-
-  </div>
+    .martha-header {
+      width: 100%;
+      background: #ffffff;
+      text-align: center;
+      padding: 25px 30px 0;
+    }
 
 
-  <!-- =========================
+    /* =========================
+       LOGO
+       ========================= */
+
+    .martha-logo {
+      width: 300px;
+      max-width: 55vw;
+      margin: 0 auto 12px;
+    }
+
+    .martha-logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+    /* =========================
        NOMBRE
-       ========================= -->
-  <div class="martha-name">
-    MARTHA LLANO
-  </div>
+       ========================= */
 
+    .martha-name {
+      color: #315f3f;
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin: 8px 0 25px;
+    }
+
+
+    /* =========================
+       MENÚ
+       ========================= */
+
+    .martha-menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+
+      padding: 0 0 25px;
+
+      border-bottom: 1px solid #dddddd;
+    }
+
+
+    /* =========================
+       BOTONES / ENLACES
+       ========================= */
+
+    .martha-menu a {
+      color: #555555;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 400;
+      white-space: nowrap;
+
+      transition: color 0.2s ease;
+    }
+
+    .martha-menu a:hover {
+      color: #315f3f;
+    }
+
+
+    /* =========================
+       SEPARADORES
+       ========================= */
+
+    .menu-separator {
+      color: #c9c9c9;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+
+    /* =========================
+       INSTAGRAM
+       ========================= */
+
+    .instagram {
+      font-size: 23px !important;
+      line-height: 1;
+      margin-left: 3px;
+    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 1000px) {
+
+      .martha-logo {
+        width: 260px;
+      }
+
+      .martha-name {
+        font-size: 30px;
+      }
+
+      .martha-menu {
+        gap: 10px;
+      }
+
+      .martha-menu a {
+        font-size: 15px;
+      }
+    }
+
+
+    /* =========================
+       CELULAR
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      .martha-header {
+        padding: 18px 15px 0;
+      }
+
+      .martha-logo {
+        width: 210px;
+        max-width: 70vw;
+      }
+
+      .martha-name {
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 18px;
+      }
+
+      .martha-menu {
+        gap: 8px;
+        padding-bottom: 18px;
+      }
+
+      .martha-menu a {
+        font-size: 14px;
+      }
+
+      .menu-separator {
+        font-size: 5px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
 
   <!-- =========================
-       MENÚ
+       CABECERA MARTHA LLANO
        ========================= -->
-  <nav class="martha-menu">
 
-    <a href="#lo-que-siento">
-      Lo que siento
-    </a>
+  <header class="martha-header">
 
-    <span class="menu-dot">◆</span>
-
-    <a href="#entre-dos-mundos">
-      Entre dos mundos
-    </a>
-
-    <span class="menu-dot">◆</span>
-
-    <a href="#gestionando-mis-emociones">
-      Gestionando mis emociones
-    </a>
-
-    <span class="menu-dot">◆</span>
-
-    <a href="#disenar-para-interpretar">
-      Diseñar para interpretar
-    </a>
-
-    <span class="menu-dot">◆</span>
-
-    <a href="#captando-la-luz">
-      Captando la luz que veo
-    </a>
-
-    <span class="menu-dot">◆</span>
-
-    <a href="#contacto">
-      Contacto
-    </a>
-
-    <a
-      class="instagram-link"
-      href="https://www.instagram.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram">
-      ◎
-    </a>
-
-  </nav>
-
-</div>
+    <!-- LOGO ORIGINAL -->
+    <div class="martha-logo">
+      <img
+        src="https://github.com/marthaelenallano/marthallano.com/blob/main/imagenes/LogoMartha.jpg?raw=true"
+        alt="Martha Llano">
+    </div>
 
 
-<style>
-
-/* =====================================
-   CONTENEDOR GENERAL
-   ===================================== */
-
-.martha-site-header {
-  width: 100%;
-  box-sizing: border-box;
-  background: #ffffff;
-  text-align: center;
-  padding: 25px 35px 0;
-}
+    <!-- NOMBRE -->
+    <div class="martha-name">
+      MARTHA LLANO
+    </div>
 
 
-/* =====================================
-   LOGO
-   ===================================== */
+    <!-- MENÚ ACTUAL -->
+    <nav class="martha-menu">
 
-.martha-logo {
-  width: 300px;
-  max-width: 55vw;
-  margin: 0 auto 12px;
-}
+      <a href="#lo-que-siento">
+        Lo que siento
+      </a>
 
-.martha-logo svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      <span class="menu-separator">◆</span>
 
 
-/* =====================================
-   NOMBRE MARTHA LLANO
-   ===================================== */
+      <a href="#entre-dos-mundos">
+        Entre dos mundos
+      </a>
 
-.martha-name {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 34px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #315f3f;
-  margin: 8px 0 25px;
-}
+      <span class="menu-separator">◆</span>
 
 
-/* =====================================
-   MENÚ
-   ===================================== */
+      <a href="#gestionando-mis-emociones">
+        Gestionando mis emociones
+      </a>
 
-.martha-menu {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 13px;
-
-  padding: 0 0 25px;
-
-  border-bottom: 1px solid #dddddd;
-
-  font-family: Arial, Helvetica, sans-serif;
-}
+      <span class="menu-separator">◆</span>
 
 
-/* =====================================
-   ENLACES
-   ===================================== */
+      <a href="#disenar-para-interpretar">
+        Diseñar para interpretar
+      </a>
 
-.martha-menu a {
-  color: #555555;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 400;
-  white-space: nowrap;
-
-  transition: color 0.2s ease;
-}
-
-.martha-menu a:hover {
-  color: #315f3f;
-}
+      <span class="menu-separator">◆</span>
 
 
-/* =====================================
-   SEPARADORES
-   ===================================== */
+      <a href="#captando-la-luz">
+        Captando la luz que veo
+      </a>
 
-.menu-dot {
-  color: #c9c9c9;
-  font-size: 6px;
-  line-height: 1;
-}
+      <span class="menu-separator">◆</span>
 
 
-/* =====================================
-   INSTAGRAM
-   ===================================== */
-
-.instagram-link {
-  font-size: 23px !important;
-  line-height: 1;
-  margin-left: 3px;
-}
+      <a href="#contacto">
+        Contacto
+      </a>
 
 
-/* =====================================
-   TABLET
-   ===================================== */
+      <a
+        class="instagram"
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        ◎
+      </a>
 
-@media (max-width: 1000px) {
+    </nav>
 
-  .martha-logo {
-    width: 260px;
-  }
+  </header>
 
-  .martha-name {
-    font-size: 30px;
-  }
-
-  .martha-menu {
-    gap: 10px;
-  }
-
-  .martha-menu a {
-    font-size: 15px;
-  }
-
-}
-
-
-/* =====================================
-   CELULAR
-   ===================================== */
-
-@media (max-width: 600px) {
-
-  .martha-site-header {
-    padding: 18px 15px 0;
-  }
-
-  .martha-logo {
-    width: 210px;
-    max-width: 70vw;
-  }
-
-  .martha-name {
-    font-size: 25px;
-    margin-top: 5px;
-    margin-bottom: 18px;
-  }
-
-  .martha-menu {
-    gap: 8px;
-    padding-bottom: 18px;
-  }
-
-  .martha-menu a {
-    font-size: 14px;
-  }
-
-  .menu-dot {
-    font-size: 5px;
-  }
-
-}
-
-</style>
+</body>
+</html>
