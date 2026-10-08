@@ -1,1349 +1,309 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Martha Llano</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-
-    /* =========================================================
-       BASE
-    ========================================================= */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #4a4a4a;
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.7;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    /* =========================================================
-       CONTENEDOR
-    ========================================================= */
-
-    .contenedor {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 28px 28px 70px;
-    }
-
-
-    /* =========================================================
-       ENCABEZADO
-    ========================================================= */
-
-    .topbar {
-      width: 100%;
-      padding: 8px 0 0;
-    }
-
-    .nombre {
-      margin: 0;
-      color: #2f5d3a;
-      font-family: "DM Sans", sans-serif;
-      font-size: 3rem;
-      font-weight: 400;
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-
-    /* =========================================================
-       NAVEGACIÓN
-    ========================================================= */
-
-    .navegacion {
-      width: 100%;
-      margin-top: 27px;
-
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      white-space: nowrap;
-      flex-wrap: nowrap;
-
-      font-size: 0.92rem;
-      line-height: 1;
-      color: #595959;
-    }
-
-    .navegacion a {
-      display: inline-flex;
-      align-items: center;
-      white-space: nowrap;
-      flex: 0 0 auto;
-
-      transition: color 0.2s ease;
-    }
-
-    .navegacion a:hover {
-      color: #2f5d3a;
-    }
-
-    .separador {
-      display: inline-block;
-      flex: 0 0 auto;
-
-      margin: 0 17px;
-
-      color: #bdbdbd;
-      font-size: 0.48rem;
-      line-height: 1;
-    }
-
-
-    /* =========================================================
-       REDES SOCIALES
-       Permanecen en la misma línea de la navegación
-    ========================================================= */
-
-    .social {
-      display: inline-flex !important;
-      align-items: center;
-      justify-content: center;
-
-      flex: 0 0 auto;
-
-      margin-left: 18px;
-
-      color: #777;
-      line-height: 1;
-
-      transition: color 0.2s ease;
-    }
-
-    .social:hover {
-      color: #2f5d3a;
-    }
-
-    .social + .social {
-      margin-left: 16px;
-    }
-
-    .social svg {
-      width: 17px;
-      height: 17px;
-      display: block;
-    }
-
-
-    /* =========================================================
-       RAYA PRINCIPAL
-       ESTA ES LA RAYA QUE VA DESPUÉS DE LOS BOTONES
-       Y ANTES DE LA FOTO
-    ========================================================= */
-
-    .raya-principal {
-      width: 100%;
-      height: 1px;
-
-      margin-top: 28px;
-
-      background: #d8d8d8;
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-      width: 100%;
-      padding: 41px 0 52px;
-    }
-
-    .hero .elfsight-app-077df256-22f8-4051-862e-dd759894a503 {
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-      background: #fafafa;
-    }
-
-
-    /* =========================================================
-       SECCIONES
-    ========================================================= */
-
-    section {
-      scroll-margin-top: 40px;
-    }
-
-    .seccion {
-      width: 100%;
-      padding: 0 0 100px;
-    }
-
-
-    /* =========================================================
-       TÍTULOS
-       NO tienen raya debajo
-    ========================================================= */
-
-    .titulo-seccion {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .titulo-seccion h2 {
-      margin: 0;
-      padding: 0;
-
-      color: #2f5d3a;
-
-      font-family: "Libre Baskerville", serif;
-      font-size: 3.25rem;
-      font-weight: 400;
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-    }
-
-
-    /* =========================================================
-       CONTENIDO
-    ========================================================= */
-
-    .contenido {
-      max-width: 900px;
-      margin-top: 42px;
-    }
-
-    .contenido p {
-      margin: 0 0 28px;
-      font-size: 1.02rem;
-      line-height: 1.85;
-    }
-
-    .contenido p:last-child {
-      margin-bottom: 0;
-    }
-
-    .titulo-seccion h2.titulo-capitulo {
-      margin: 0;
-      color: #2f5d3a;
-      font-family: "DM Sans", sans-serif;
-      font-size: 2.35rem;
-      font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.045em;
-    }
-
-    .contenido.contenido-capitulo {
-      max-width: none;
-      margin-top: 42px;
-      display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
-      gap: 34px;
-      align-items: start;
-    }
-
-    .foto-capitulo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      align-self: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: #f4f4f2;
-      border: 1px dashed #c8c8c8;
-      color: #999;
-      text-align: center;
-    }
-
-    img.foto-capitulo {
-      padding: 0;
-      border: 0;
-      object-fit: cover;
-    }
-
-      .contenido-capitulo .cita {
-      grid-column: 1 / -1;
-      max-width: 100%;
-      margin: 45px 0 0;
-      text-align: left;
-    }
-
-
-    /* =========================================================
-       GALERÍAS
-    ========================================================= */
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      margin-top: 45px;
-    }
-
-    .imagen-placeholder {
-      width: 100%;
-      min-height: 300px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: #f4f4f2;
-      border: 1px dashed #c8c8c8;
-
-      color: #999;
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
-      text-align: center;
-    }
-
-    .imagen-placeholder.grande {
-      min-height: 420px;
-    }
-
-
-    /* =========================================================
-       BLOQUES
-    ========================================================= */
-
-    .bloque {
-      margin-top: 65px;
-    }
-
-    .bloque h3 {
-      margin: 0 0 20px;
-
-      color: #2f5d3a;
-
-      font-family: "Libre Baskerville", serif;
-      font-size: 1.7rem;
-      font-weight: 400;
-      line-height: 1.35;
-    }
-
-    .bloque p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-
-    /* =========================================================
-       CITAS
-    ========================================================= */
-
-    .cita {
-      max-width: 850px;
-      margin: 65px auto 0;
-      padding: 35px 0;
-
-      border-top: 1px solid #d8d8d8;
-      border-bottom: 1px solid #d8d8d8;
-
-      color: #2f5d3a;
-
-      font-family: "Libre Baskerville", serif;
-      font-size: 1.35rem;
-      line-height: 1.65;
-      text-align: center;
-    }
-
-
-    /* =========================================================
-       ENLACES
-    ========================================================= */
-
-    .enlace {
-      color: #2f5d3a;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-      padding-top: 30px;
-      border-top: 1px solid #dedede;
-
-      color: #888;
-      font-size: 0.82rem;
-    }
-
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
-
-    @media (max-width: 1050px) {
-
-      .navegacion {
-        font-size: 0.86rem;
-      }
-
-      .separador {
-        margin-left: 11px;
-        margin-right: 11px;
-      }
-
-      .social {
-        margin-left: 13px;
-      }
-
-      .social + .social {
-        margin-left: 11px;
-      }
-    }
-
-
-    /* =========================================================
-       MÓVIL
-    ========================================================= */
-
-    @media (max-width: 700px) {
-
-      .contenedor {
-        padding: 22px 18px 55px;
-      }
-
-      .topbar {
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
-      .nombre {
-        font-size: 2.15rem;
-      }
-
-      .navegacion {
-        width: max-content;
-        margin-top: 20px;
-        font-size: 0.84rem;
-      }
-
-      .raya-principal {
-        margin-top: 22px;
-      }
-
-      .hero {
-        padding-top: 24px;
-        padding-bottom: 38px;
-      }
-
-      .titulo-seccion h2.titulo-capitulo {
-        font-size: 2rem;
-      }
-
-      .contenido.contenido-capitulo {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        margin-top: 32px;
-      }
-
-      .foto-capitulo {
-        aspect-ratio: 4 / 3;
-      }
-
-      .titulo-seccion h2 {
-        font-size: 2.05rem;
-        line-height: 1.25;
-      }
-
-      .contenido {
-        margin-top: 32px;
-      }
-
-      .contenido p {
-        font-size: 0.98rem;
-        line-height: 1.75;
-      }
-
-      .galeria {
-        grid-template-columns: 1fr;
-      }
-
-      .imagen-placeholder {
-        min-height: 230px;
-      }
-
-      .imagen-placeholder.grande {
-        min-height: 280px;
-      }
-    }
-
-  </style>
-</head>
-
-
-<body>
-
-  <div class="contenedor">
-
-
-    <!-- =====================================================
-         ENCABEZADO
-    ====================================================== -->
-
-    <header class="topbar">
-
-      <h1 class="nombre">MARTHA LLANO</h1>
-
-
-      <!-- NAVEGACIÓN -->
-
-      <nav class="navegacion">
-
-        <a href="#mundo">
-          Lo que siento
-        </a>
-
-        <span class="separador">◆</span>
-
-        <a href="#dos-mundos">
-          Entre dos mundos
-        </a>
-
-        <span class="separador">◆</span>
-
-        <a href="#emociones">
-          Gestionando mis emociones
-        </a>
-
-        <span class="separador">◆</span>
-
-        <a href="#disenar">
-          Diseñar para interpretar
-        </a>
-
-        <span class="separador">◆</span>
-
-        <a href="#luz">
-          Captando la luz que veo
-        </a>
-
-        <span class="separador">◆</span>
-
-        <a href="#contacto">
-          Contacto
-        </a>
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          class="social"
-          href="https://www.instagram.com/marthaelenallano/"
-          aria-label="Instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5"
-            ></rect>
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            ></circle>
-
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="0.8"
-              fill="currentColor"
-              stroke="none"
-            ></circle>
-
-          </svg>
-
-        </a>
-
-
-        <!-- LINKEDIN -->
-
-        <a
-          class="social"
-          href="https://co.linkedin.com/in/marthaelenallano"
-          aria-label="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-
-            <path d="
-              M5.2 8.2H2.1V21h3.1V8.2ZM3.65 3A1.8 1.8
-              0 1 0 3.65 6.6 1.8 1.8 0 0 0 3.65 3ZM21.9
-              13.7c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8
-              2v-1.9h-3.1V21h3.1v-6.3c0-1.7.3-3.3 2.4-3.3
-              2 0 2 1.9 2 3.4V21h3.1v-7.3Z
-            "></path>
-
-          </svg>
-
-        </a>
-
-      </nav>
-
-
-      <!-- ===================================================
-           ESTA ES LA RAYA CORRECTA
-           VA DESPUÉS DE TODA LA NAVEGACIÓN
-           Y ANTES DE LA FOTO
-      ==================================================== -->
-
-      <div class="raya-principal"></div>
-
-    </header>
-
-
-    <!-- =====================================================
-         FOTO DE PORTADA
-    ====================================================== -->
-
-    <div class="hero">
-
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div class="elfsight-app-077df256-22f8-4051-862e-dd759894a503" data-elfsight-app-lazy></div>
-
-    </div>
-
-
-        <!-- =====================================================
-         1. LO QUE SIENTO
-    ====================================================== -->
-
-    <section
-      id="mundo"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-        <h2 class="titulo-capitulo">Lo que siento</h2>
-      </div>
-
-      <div class="contenido contenido-capitulo">
-
-       <img
-  class="foto-capitulo"
-  src="imagenes/DSCN4466.JPG"
-  alt="La silla azul"
->
-
-        <div class="texto-capitulo">
-
-          <p>
-            De pequeña me veía siendo una escritora; tenía tantas emociones
-            en mi interior que, mientras todo transcurría, yo iba
-            escribiendo esas historias mentalmente. Lo que me abrumaba, lo que
-            me gustaba, lo que no me gustaba tanto, los colores vívidos y
-            brillantes de la naturaleza, un cielo azul mientras me tendía boca
-            arriba a ver el cielo, las estrellas fugaces y las no tan fugaces…hoy aún,
-            cuando algo dispara una emoción en mi interior, capturo ese instante 
-            en mi mente y luego regreso a él para escribirlo, siempre pongo una misma 
-            canción, hay veces cambio, pero siempre escribo para procesar eso que siento.
-            
-          </p>
-
-          <p>
-            Siempre que cierro los ojos y me veo hacia adentro, me veo sentada
-            en aquella sillita azul, en una ventana que nunca he sabido dónde
-            es y que he perseguido toda mi vida, en esa calma y serenidad que,
-            aunque me ha costado mucho, hoy sé que la he encontrado. Porque la
-            ventana, la silla, ese horizonte y la paz que sentía en mi alma,
-            estaban en mí, no en ninguna parte.
-          </p>
-
-          <p>
-            Soy escritora por naturaleza, no sigo reglas, normas, métrica,
-            porque mi corazón tiene un ritmo así tal cual lo escribo y lo lees.
-            Sin pausa, sin puntos ni comas, como mi vida. Veo números en todo,
-            siento que la naturaleza es una gran composición matemática y busco
-            la belleza que hay en ella por todos lados.
-          </p>
-
-          <p>
-            Es mi compañera y mi guía; el mundo verde, así como escribir, han
-            sido mi camino y mi salvación. Cuando he estado perdida, ambas me
-            han encontrado. Me han tomado de la mano en mi camino y son mis
-            bastones, literal.
-          </p>
-
-        </div>
-
-        <p class="cita" style="grid-column: 1 / -1;">
-          “Yo solo espero que desde la distancia sea capaz de mantener en pie
-          un bosque centenario que no solo es bosque, es agua, es aire puro,
-          son semillas guardadas para que Zuly, la chica del futuro a quien
-          Anuk le escribe, tenga aún respuesta a su carta del 2198.”
-        </p>
-
-      </div>
-
-    </section>
-    
-    <!-- =====================================================
-         2. ENTRE DOS MUNDOS
-    ====================================================== -->
-
-    <section
-      id="dos-mundos"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-
-        <h2>
-          Entre dos mundos
-        </h2>
-
-      </div>
-
-
-      <div class="contenido">
-
-        <p>
-          Hoy vivo entre dos lugares que considero importantes desde dos
-          perspectivas. La Reserva Natural El Robledal es mi iniciativa
-          privada de conservar porque lo que ya había era valioso.
-        </p>
-
-        <p>
-          Robles centenarios que, a pesar del crecimiento de un corregimiento
-          en un municipio pujante en el siglo 19, aún estaban de pie. Allí no
-          solo el roble, sino muchas otras especies se refugiaron y en un
-          cultivo de papa abandonado ocurrió la magia que la naturaleza sabe
-          hacer. Esconderse para prosperar.
-        </p>
-
-        <p>
-          Y lo logró, porque en el Robledal hay árboles de mucho más de cien
-          años echando buenas semillas cada dos años, y las cuales hemos
-          recogido y depositado la confianza en el vivero Robledales de EPM
-          para que de ellas lograran sembrar y repartir miles de robles para
-          el territorio y muchos otros lugares.
-        </p>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — ROBLES
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — ROBLE GUARDIÁN PEPE
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Rosa de los Vientos
-          </h3>
-
-          <p>
-            Rosa de los Vientos es una casa taller construida hace treinta
-            años con todo el amor y la dulzura que pude. En ella hoy deseo
-            recibir huéspedes conscientes, amorosos, artistas, soñadores y
-            pensadores, creadores que deseen un espacio sutil y lleno de
-            energía para la creación.
-          </p>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Casa de Madera
-          </h3>
-
-          <p>
-            Casa de Madera es una pequeña casa de madera con la magia de poder
-            ver el bosque desde el dosel, o sea, desde la parte alta. Ideal
-            para estar en contemplación con las comodidades de tenerlo todo
-            cerca: el parqueadero, la vía, las tiendas, los vecinos.
-          </p>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Casa Entrezarros
-          </h3>
-
-          <p>
-            Casa Entrezarros es un refugio completamente adentro del bosque.
-            Hecha con todo el respeto y sin tumbar un solo árbol. Pequeña en
-            su interior, pero grande en su alrededor.
-          </p>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — CASA DE MADERA
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — ENTREZARROS
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            La casa en el río
-          </h3>
-
-          <p>
-            Como parte de permitirle a otros llegar, yo me he desplazado a
-            otras tierras tibias en donde, después de un llamado en una de
-            mis caminatas con mi gran amigo Luis Efrén, y de dos años de irme
-            adaptando lentamente, he encontrado mi propósito en estas tierras.
-          </p>
-
-          <p>
-            Godoya antioqueña y Pragmipedium schlimii son dos de las razones
-            por las que estoy tan enamorada de este territorio, además de su
-            gente noble, que viene de sufrir desplazamientos y de haber vivido
-            muy de cerca la violencia hace 26 años de nuestro país.
-          </p>
-
-          <p>
-            La llamo la casa en el río, pero no es un río, son cuatro quebradas
-            que con sus cascadas y su hermoso cauce de piedras me tienen
-            atrapada. Mi hogar hoy es verde azul.
-          </p>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — GODOYA ANTIOQUENSIS
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — PHRAGMIPEDIUM SCHLIMII
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — QUEBRADAS
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — GALLINAS
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Observar
-          </h3>
-
-          <p>
-            A donde vaya, siempre hago lo mismo. Observar. No en vano me
-            dicen por ahí la que ve más. Pero no solo hablan de naturaleza.
-            Para observar y aprender, comparto mucho de lo que veo en una
-            maravillosa aplicación, iNaturalist.
-          </p>
-
-          <p>
-            Así mismo, en Merlin, eBird para aves y Happywhale para la
-            fotoidentificación de ballenas jorobadas, una especie importante
-            en mi vida en el Chocó, y por quienes llegué a Maine,
-            especialmente a Mount Desert Rock, administrada por el College
-            of the Atlantic.
-          </p>
-
-        </div>
-
-
-        <p class="cita">
-          “Solo podemos conservar aquello que conocemos y amamos”.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         3. GESTIONANDO MIS EMOCIONES
-    ====================================================== -->
-
-    <section
-      id="emociones"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-
-        <h2>
-          Gestionando mis emociones
-        </h2>
-
-      </div>
-
-
-      <div class="contenido">
-
-        <p>
-          Eso es justamente. Así le doy trámite a lo que veo y siento. A lo
-          que vibra en mi interior y sale de alguna forma.
-        </p>
-
-        <p>
-          Escribo para mi, por placer, algunas veces para otros, muchas veces
-          publica, otras se quedan mis palabras guardadas en mi computador,
-          antes en una servilleta, en cualquier papel, ni blanco tenía que
-          ser, solo era necesario un pedacito libre, un lugarcito para yo
-          expresarme, para que mi emoción se transformara en palabras y así
-          la liberara.
-        </p>
-
-        <p>
-          He escrito un par de novelas, María Flores, un sueño soñado que
-          tuve, que luego para defenderla fue una tienda, una marca, un
-          proyecto casi frustrado por cuenta de quienes no son capaces de
-          producir ideas sino robarlas; y La he visto, una historia mía muy
-          personal, esa que vivimos tú y yo y solo es nuestra.
-        </p>
-
-        <p>
-          Amo escribir relatos cortos, de lo que veo a diario, de eso que me
-          aprieta el pecho y que muchas veces me saca risas y otras lágrimas.
-          Tengo miles, intento ordenarlas, aquí quedan muchas.
-        </p>
-
-
-        <div class="bloque">
-
-          <h3>
-            Una historia de amor prohibida
-          </h3>
-
-          <p>
-            La he visto.
-          </p>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Mi voz
-          </h3>
-
-          <p>
-            Mi voz es importante, sacarle no fue tan fácil. Porque hay veces
-            lo que vivimos duele en lo más profundo. Pero desde que lo hice
-            no he parado. Worldpulse me devolvió mi voz a través de un escrito
-            profundamente íntimo y desgarrador.
-          </p>
-
-          <p>
-            Nunca supe cuán dañada había quedado después de aquella noche en
-            mi amado Chocó. Porque hablar de ellos es casi prohibido en
-            nuestro mundo. Pero pude hacerlo y empecé a sanar… lo sigo
-            haciendo a cada día que logro dejar salir mi voz con mis escritos.
-          </p>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — ESCRITOS
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — CUANDO MI CUERPO ME HABLA
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         4. DISEÑAR PARA INTERPRETAR
-    ====================================================== -->
-
-    <section
-      id="disenar"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-
-        <h2>
-          Diseñar para interpretar
-        </h2>
-
-      </div>
-
-
-      <div class="contenido">
-
-        <p>
-          Al graduarme de la universidad, comencé a sentir mi proyecto casi
-          de vida. Con él le di vida al sueño de divulgar información sobre
-          las especies y ecosistemas colombianos en peligro de extinción.
-        </p>
-
-        <p>
-          Luego entendí que los humanos teníamos que hacer parte de esa
-          divulgación y comencé a vincularme con las comunidades. De
-          diferentes lugares de Colombia.
-        </p>
-
-        <p>
-          Después de 8 años, este proyecto se convirtió en una fundación con
-          la que continué mi labor de divulgación, pero con la que además
-          puse mi pasión al servicio de otras empresas y proyectos que
-          disfruté mucho en mi viaje trabajando sola o en equipo:
-          El acuario de Explora, El Parque Arví, Una guía de desarrollo
-          turístico para el valle de Aburrá.
-        </p>
-
-
-        <div class="bloque">
-
-          <h3>
-            SENTIR
-          </h3>
-
-          <p>
-            Sentir realizó las siguiente ilustraciones y propuestas.
-          </p>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — ACUARIO EXPLORA
-          </div>
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — PARQUE ARVÍ
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — GUÍA DE DESARROLLO TURÍSTICO
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — OTROS PROYECTOS
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         5. CAPTANDO LA LUZ QUE VEO
-    ====================================================== -->
-
-    <section
-      id="luz"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-
-        <h2>
-          Captando la luz que veo
-        </h2>
-
-      </div>
-
-
-      <div class="contenido">
-
-        <p>
-          Todo lo que veo tiene luz. Una que hay veces todos vemos, otra a la
-          que me siento más sensible. La he perseguido sin parar por todas
-          partes, éste es mi recorrido:
-        </p>
-
-
-        <div class="bloque">
-
-          <h3>
-            Paralelos a un mismo eje móvil
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — PARALELOS A UN MISMO EJE MÓVIL
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Tocando tierra
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — TOCANDO TIERRA
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Ecosistemas entramados
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — ECOSISTEMAS ENTRAMADOS
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Diversas por naturaleza
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder grande">
-            IMAGEN — DIVERSAS POR NATURALEZA
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Naturaleza
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — NATURALEZA
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — BOSQUES
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — ORQUÍDEAS Y ANTURIOS
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — BALLENAS
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Territorios y comunidades
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — TERRITORIOS
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — COMUNIDADES
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Aventura
-          </h3>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — AVENTURA
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — VIAJES
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         6. CONTACTO
-    ====================================================== -->
-
-    <section
-      id="contacto"
-      class="seccion"
-    >
-
-      <div class="titulo-seccion">
-
-        <h2>
-          Contacto
-        </h2>
-
-      </div>
-
-
-      <div class="contenido">
-
-        <p>
-          Este espacio reúne mi recorrido, mis escritos, mis fotografías,
-          mis proyectos y aquello que todavía estoy construyendo.
-        </p>
-
-        <p>
-          Para escribirme:
-        </p>
-
-        <p>
-          <a
-            class="enlace"
-            href="mailto:marthallano@marthallano.com"
-          >
-            marthallano@marthallano.com
-          </a>
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-      Martha Llano
-    </footer>
-
+<div class="martha-site-header">
+
+  <!-- =========================
+       LOGO MARTHA LLANO
+       ========================= -->
+  <div class="martha-logo">
+
+    <svg viewBox="0 0 1184 1184"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Martha Llano — diseño consciente sensible sostenible">
+
+      <!-- Líneas que forman la M -->
+      <line x1="20" y1="1115" x2="412" y2="10"
+            stroke="#D96524" stroke-width="17"
+            stroke-linecap="round"/>
+
+      <line x1="412" y1="10" x2="806" y2="1115"
+            stroke="#55B64B" stroke-width="17"
+            stroke-linecap="round"/>
+
+      <line x1="350" y1="1115" x2="737" y2="10"
+            stroke="#8170B4" stroke-width="17"
+            stroke-linecap="round"/>
+
+      <line x1="737" y1="10" x2="1131" y2="1115"
+            stroke="#E4E500" stroke-width="17"
+            stroke-linecap="round"/>
+
+      <!-- Puntos -->
+      <circle cx="412" cy="10" r="10" fill="#333333"/>
+      <circle cx="737" cy="10" r="10" fill="#333333"/>
+      <circle cx="576" cy="474" r="10" fill="#333333"/>
+
+      <!-- Texto del logo -->
+      <text x="0" y="1150"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="39"
+            letter-spacing="9"
+            fill="#333333">
+        diseño
+      </text>
+
+      <circle cx="205" cy="1138" r="9" fill="#55B64B"/>
+
+      <text x="224" y="1150"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="39"
+            letter-spacing="8"
+            fill="#333333">
+        consciente
+      </text>
+
+      <circle cx="554" cy="1138" r="9" fill="#D96524"/>
+
+      <text x="575" y="1150"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="39"
+            letter-spacing="8"
+            fill="#333333">
+        sensible
+      </text>
+
+      <circle cx="763" cy="1138" r="9" fill="#8170B4"/>
+
+      <text x="784" y="1150"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="39"
+            letter-spacing="8"
+            fill="#333333">
+        sostenible
+      </text>
+
+    </svg>
 
   </div>
 
-</body>
-</html>
+
+  <!-- =========================
+       NOMBRE
+       ========================= -->
+  <div class="martha-name">
+    MARTHA LLANO
+  </div>
+
+
+  <!-- =========================
+       MENÚ
+       ========================= -->
+  <nav class="martha-menu">
+
+    <a href="#lo-que-siento">
+      Lo que siento
+    </a>
+
+    <span class="menu-dot">◆</span>
+
+    <a href="#entre-dos-mundos">
+      Entre dos mundos
+    </a>
+
+    <span class="menu-dot">◆</span>
+
+    <a href="#gestionando-mis-emociones">
+      Gestionando mis emociones
+    </a>
+
+    <span class="menu-dot">◆</span>
+
+    <a href="#disenar-para-interpretar">
+      Diseñar para interpretar
+    </a>
+
+    <span class="menu-dot">◆</span>
+
+    <a href="#captando-la-luz">
+      Captando la luz que veo
+    </a>
+
+    <span class="menu-dot">◆</span>
+
+    <a href="#contacto">
+      Contacto
+    </a>
+
+    <a
+      class="instagram-link"
+      href="https://www.instagram.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram">
+      ◎
+    </a>
+
+  </nav>
+
+</div>
+
+
+<style>
+
+/* =====================================
+   CONTENEDOR GENERAL
+   ===================================== */
+
+.martha-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  text-align: center;
+  padding: 25px 35px 0;
+}
+
+
+/* =====================================
+   LOGO
+   ===================================== */
+
+.martha-logo {
+  width: 300px;
+  max-width: 55vw;
+  margin: 0 auto 12px;
+}
+
+.martha-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* =====================================
+   NOMBRE MARTHA LLANO
+   ===================================== */
+
+.martha-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #315f3f;
+  margin: 8px 0 25px;
+}
+
+
+/* =====================================
+   MENÚ
+   ===================================== */
+
+.martha-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 13px;
+
+  padding: 0 0 25px;
+
+  border-bottom: 1px solid #dddddd;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================
+   ENLACES
+   ===================================== */
+
+.martha-menu a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.martha-menu a:hover {
+  color: #315f3f;
+}
+
+
+/* =====================================
+   SEPARADORES
+   ===================================== */
+
+.menu-dot {
+  color: #c9c9c9;
+  font-size: 6px;
+  line-height: 1;
+}
+
+
+/* =====================================
+   INSTAGRAM
+   ===================================== */
+
+.instagram-link {
+  font-size: 23px !important;
+  line-height: 1;
+  margin-left: 3px;
+}
+
+
+/* =====================================
+   TABLET
+   ===================================== */
+
+@media (max-width: 1000px) {
+
+  .martha-logo {
+    width: 260px;
+  }
+
+  .martha-name {
+    font-size: 30px;
+  }
+
+  .martha-menu {
+    gap: 10px;
+  }
+
+  .martha-menu a {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =====================================
+   CELULAR
+   ===================================== */
+
+@media (max-width: 600px) {
+
+  .martha-site-header {
+    padding: 18px 15px 0;
+  }
+
+  .martha-logo {
+    width: 210px;
+    max-width: 70vw;
+  }
+
+  .martha-name {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+  }
+
+  .martha-menu {
+    gap: 8px;
+    padding-bottom: 18px;
+  }
+
+  .martha-menu a {
+    font-size: 14px;
+  }
+
+  .menu-dot {
+    font-size: 5px;
+  }
+
+}
+
+</style>
