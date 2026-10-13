@@ -54,9 +54,9 @@
 
     .contenedor {
       width: 100%;
-      max-width: 1180px;
+      max-width: none;
       margin: 0 auto;
-      padding: 12px 28px 70px;
+      padding: 12px 2.5vw 70px;
     }
 
 
@@ -76,16 +76,16 @@
 
     .identidad {
       display: flex;
-      align-items: center;
-      gap: 14px;
+      align-items: flex-end;
+      gap: 22px;
       flex: 0 0 auto;
       min-width: max-content;
     }
 
     .logo-martha {
-      width: 92px;
+      width: 145px;
       height: auto;
-      max-height: 78px;
+      max-height: 130px;
       object-fit: contain;
       margin: 0;
       flex: 0 0 auto;
@@ -100,6 +100,7 @@
       line-height: 1.05;
       letter-spacing: -0.045em;
       white-space: nowrap;
+      padding-bottom: 8px;
     }
 
     .navegacion {
@@ -108,13 +109,16 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      align-self: flex-end;
+      padding-bottom: 15px;
       white-space: nowrap;
       flex-wrap: nowrap;
       flex: 1 1 auto;
       min-width: 0;
-      font-size: clamp(0.60rem, 0.68vw, 0.74rem);
-      line-height: 1;
-      color: #595959;
+      font-size: clamp(0.95rem, 1.0vw, 1.1rem);
+      line-height: 1.15;
+      font-weight: 500;
+      color: #454545;
     }
 
     .navegacion a {
@@ -132,7 +136,7 @@
     .separador {
       display: inline-block;
       flex: 0 0 auto;
-      margin: 0 clamp(4px, 0.5vw, 8px);
+      margin: 0 clamp(5px, 0.45vw, 8px);
       color: #bdbdbd;
       font-size: 0.48rem;
       line-height: 1;
@@ -405,8 +409,7 @@
 
     footer {
       padding-top: 30px;
-      border-top: 1px solid #dedede;
-
+      border-top: 0;
       color: #888;
       font-size: 0.82rem;
     }
@@ -424,14 +427,17 @@
 
       .identidad {
         flex: 0 0 auto;
+        align-items: flex-end;
+        gap: 10px;
       }
 
       .navegacion {
         flex: 1 1 100%;
         justify-content: flex-start;
+        align-self: auto;
         overflow-x: auto;
-        padding: 12px 0 8px;
-        font-size: 0.82rem;
+        padding: 14px 0 10px;
+        font-size: 0.98rem;
       }
 }
 
@@ -446,8 +452,8 @@
       }
 
       .logo-martha {
-        width: 58px;
-        max-height: 52px;
+        width: 70px;
+        max-height: 62px;
       }
 
       .identidad {
@@ -456,12 +462,17 @@
 
       .nombre {
         font-size: clamp(1.2rem, 5vw, 1.6rem);
+        padding-bottom: 6px;
+      }
+
+      .navegacion {
+        padding-bottom: 8px;
       }
 
       .navegacion {
         width: 100%;
         margin-top: 0;
-        font-size: 0.78rem;
+        font-size: 0.94rem;
       }
 
       .hero {
