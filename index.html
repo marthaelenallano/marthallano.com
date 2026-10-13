@@ -1399,7 +1399,8 @@
 
 
 
-  <!-- Música de bienvenida: reproducción automática, sin controles visibles. -->
+  <!-- Música de bienvenida: intenta iniciar sola y, si el navegador la bloquea,
+       comienza con el primer toque, clic o tecla del visitante; sin controles visibles. -->
   <audio id="musica-bienvenida" autoplay preload="auto" loop playsinline>
     <source src="musica/the_mountain-piano-piano-music-490009.mp3" type="audio/mpeg">
   </audio>
@@ -1408,13 +1409,29 @@
       const audio = document.getElementById('musica-bienvenida');
       if (!audio) return;
       audio.volume = 0.55;
+      let iniciado = false;
       function intentarReproducir() {
+        if (iniciado) return;
         const intento = audio.play();
-        if (intento && typeof intento.catch === 'function') intento.catch(function () {
-          // Algunos navegadores bloquean el sonido automático hasta que el visitante interactúa.
-          // No mostramos avisos ni controles, tal como se solicitó.
-        });
+        if (intento && typeof intento.then === 'function') {
+          intento.then(function () {
+            iniciado = true;
+            quitarEscuchas();
+          }).catch(function () {
+            // Safari y otros navegadores pueden bloquear el autoplay con sonido.
+          });
+        }
       }
+      function quitarEscuchas() {
+        document.removeEventListener('pointerdown', intentarReproducir);
+        document.removeEventListener('touchstart', intentarReproducir);
+        document.removeEventListener('keydown', intentarReproducir);
+        document.removeEventListener('click', intentarReproducir);
+      }
+      document.addEventListener('pointerdown', intentarReproducir, { passive: true });
+      document.addEventListener('touchstart', intentarReproducir, { passive: true });
+      document.addEventListener('keydown', intentarReproducir);
+      document.addEventListener('click', intentarReproducir);
       if (document.readyState === 'complete') intentarReproducir();
       else window.addEventListener('load', intentarReproducir, { once: true });
     })();
