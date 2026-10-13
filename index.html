@@ -550,9 +550,6 @@
       }
     }
 
-
-
-
   </style>
 </head>
 
@@ -709,9 +706,10 @@
 
     <div class="hero" id="inicio">
 
-     <div data-revukit-instagram="igw_773RUI5Y6bETVLqoUFDgIo2yHRl7ac8r"></div>
-<script async src="https://www.revukit.com/widgets/instagram/v1/embed.js"></script>
-      
+     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/25ddbcdb86a15f70aa8cdda7b832419d.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:95vw;max-width:1600px;border:0;overflow:hidden;display:block;margin:0 auto;"></iframe>
+    
+    </div>
+
     <!-- =====================================================
          1. LO QUE SIENTO
     ====================================================== -->
@@ -1395,46 +1393,6 @@
 
 
   </div>
-
-
-
-  <!-- Música de bienvenida: intenta iniciar sola y, si el navegador la bloquea,
-       comienza con el primer toque, clic o tecla del visitante; sin controles visibles. -->
-  <audio id="musica-bienvenida" autoplay preload="auto" loop playsinline>
-    <source src="musica/the_mountain-piano-piano-music-490009.mp3" type="audio/mpeg">
-  </audio>
-  <script>
-    (function () {
-      const audio = document.getElementById('musica-bienvenida');
-      if (!audio) return;
-      audio.volume = 0.55;
-      let iniciado = false;
-      function intentarReproducir() {
-        if (iniciado) return;
-        const intento = audio.play();
-        if (intento && typeof intento.then === 'function') {
-          intento.then(function () {
-            iniciado = true;
-            quitarEscuchas();
-          }).catch(function () {
-            // Safari y otros navegadores pueden bloquear el autoplay con sonido.
-          });
-        }
-      }
-      function quitarEscuchas() {
-        document.removeEventListener('pointerdown', intentarReproducir);
-        document.removeEventListener('touchstart', intentarReproducir);
-        document.removeEventListener('keydown', intentarReproducir);
-        document.removeEventListener('click', intentarReproducir);
-      }
-      document.addEventListener('pointerdown', intentarReproducir, { passive: true });
-      document.addEventListener('touchstart', intentarReproducir, { passive: true });
-      document.addEventListener('keydown', intentarReproducir);
-      document.addEventListener('click', intentarReproducir);
-      if (document.readyState === 'complete') intentarReproducir();
-      else window.addEventListener('load', intentarReproducir, { once: true });
-    })();
-  </script>
 
 </body>
 </html>
