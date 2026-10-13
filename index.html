@@ -70,7 +70,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 24px;
+      flex-wrap: nowrap;
     }
 
     .identidad {
@@ -78,7 +79,7 @@
       align-items: center;
       gap: 12px;
       flex: 0 0 auto;
-      min-width: 0;
+      min-width: max-content;
     }
 
     .logo-martha {
@@ -92,21 +93,16 @@
       margin: 0;
       color: #2f5d3a;
       font-family: "DM Sans", sans-serif;
-      font-size: 1.65rem;
+      font-size: clamp(1.25rem, 1.7vw, 1.65rem);
       font-weight: 400;
       line-height: 1.05;
       letter-spacing: -0.045em;
       white-space: nowrap;
     }
 
-
-    /* =========================================================
-       NAVEGACIÓN
-    ========================================================= */
-
     .navegacion {
       width: auto;
-      margin-top: 0;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -114,7 +110,7 @@
       flex-wrap: nowrap;
       flex: 1 1 auto;
       min-width: 0;
-      font-size: 0.73rem;
+      font-size: clamp(0.62rem, 0.72vw, 0.78rem);
       line-height: 1;
       color: #595959;
     }
@@ -124,7 +120,6 @@
       align-items: center;
       white-space: nowrap;
       flex: 0 0 auto;
-
       transition: color 0.2s ease;
     }
 
@@ -135,32 +130,20 @@
     .separador {
       display: inline-block;
       flex: 0 0 auto;
-
-      margin: 0 7px;
-
+      margin: 0 clamp(4px, 0.5vw, 8px);
       color: #bdbdbd;
       font-size: 0.48rem;
       line-height: 1;
     }
 
-
-    /* =========================================================
-       REDES SOCIALES
-       Permanecen en la misma línea de la navegación
-    ========================================================= */
-
     .social {
       display: inline-flex !important;
       align-items: center;
       justify-content: center;
-
       flex: 0 0 auto;
-
       margin-left: 9px;
-
       color: #777;
       line-height: 1;
-
       transition: color 0.2s ease;
     }
 
@@ -188,10 +171,13 @@
     .raya-principal {
       width: 100%;
       height: 1px;
-
-      margin-top: 28px;
-
+      margin-top: 18px;
       background: #d8d8d8;
+      flex: 0 0 100%;
+    }
+
+    .topbar {
+      flex-wrap: wrap;
     }
 
 
@@ -446,8 +432,8 @@
 
     @media (max-width: 1100px) {
       .topbar {
-        align-items: flex-start;
-        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
       }
 
       .identidad {
@@ -462,21 +448,8 @@
         font-size: 0.82rem;
       }
 
-      .separador {
-        margin-left: 9px;
-        margin-right: 9px;
-      }
-
-      .social {
-        margin-left: 10px;
-      }
-
-      .social + .social {
-        margin-left: 9px;
-      }
-
       .raya-principal {
-        margin-top: 12px;
+        margin-top: 8px;
       }
     }
 
@@ -487,6 +460,7 @@
 
       .topbar {
         gap: 8px;
+        align-items: center;
       }
 
       .logo-martha {
@@ -691,6 +665,15 @@
 
           </svg>
 
+        </a>
+
+        <!-- BOLSA DE COMPRAS: icono visual, listo para activar más adelante -->
+        <a class="social bolsa-compras" href="#tienda" aria-label="Tienda">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 8h14l1 13H4L5 8Z"></path>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+          </svg>
         </a>
 
       </nav>
