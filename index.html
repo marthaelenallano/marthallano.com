@@ -77,11 +77,11 @@
     .identidad {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 3px;
       flex: 0 0 auto;
-      width: max-content;
-      min-width: 0;
+      width: 145px;
+      min-width: 145px;
       margin-right: 28px;
     }
 
@@ -95,16 +95,17 @@
     }
 
     .nombre {
+      width: 100%;
       margin: 0;
       color: #2f5d3a;
       font-family: "DM Sans", sans-serif;
-      font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+      font-size: clamp(1.02rem, 1.15vw, 1.2rem);
       font-weight: 400;
       line-height: 1.05;
       letter-spacing: -0.045em;
       white-space: nowrap;
       padding-bottom: 0;
-      text-align: left;
+      text-align: center;
     }
 
     .navegacion {
@@ -426,17 +427,18 @@
 
     @media (max-width: 1100px) {
       .topbar {
-        align-items: flex-start;
+        align-items: center;
         flex-wrap: wrap;
         gap: 12px;
       }
 
       .identidad {
-        width: 100%;
-        flex-direction: row;
+        width: 145px;
+        min-width: 145px;
+        flex: 0 0 145px;
         align-items: center;
         margin-right: 0;
-        gap: 12px;
+        gap: 3px;
       }
 
       .logo-martha {
@@ -445,12 +447,14 @@
       }
 
       .nombre {
-        text-align: left;
+        width: 145px;
+        font-size: 1.1rem;
+        text-align: center;
       }
 
       .navegacion {
         flex: 1 1 100%;
-        justify-content: flex-start;
+        justify-content: center;
         align-self: auto;
         overflow-x: auto;
         padding: 12px 0 8px;
@@ -458,37 +462,24 @@
       }
     }
 
-      .identidad {
-        flex: 0 0 110px;
-        min-width: 110px;
-        max-width: 110px;
-        align-items: center;
-        gap: 2px;
-      }
-
-      .nombre {
-        font-size: 1rem;
-        padding-bottom: 0;
-      }
-
-      .navegacion {
-        flex: 1 1 100%;
-        justify-content: flex-start;
-        align-self: auto;
-        overflow-x: auto;
-        padding: 14px 0 10px;
-        font-size: 0.98rem;
-      }
-}
-
     @media (max-width: 700px) {
       .contenedor {
         padding: 18px 12px 45px;
       }
 
       .topbar {
+        justify-content: center;
         gap: 8px;
         align-items: center;
+      }
+
+      .identidad {
+        width: 110px;
+        min-width: 110px;
+        flex: 0 0 110px;
+        align-items: center;
+        gap: 2px;
+        margin: 0;
       }
 
       .logo-martha {
@@ -496,25 +487,21 @@
         max-height: 62px;
       }
 
-      .identidad {
-        gap: 2px;
-        flex-basis: 90px;
-        min-width: 90px;
-      }
-
       .nombre {
-        font-size: clamp(1.2rem, 5vw, 1.6rem);
-        padding-bottom: 6px;
-      }
-
-      .navegacion {
-        padding-bottom: 8px;
+        width: 110px;
+        font-size: 0.98rem;
+        padding-bottom: 0;
+        text-align: center;
       }
 
       .navegacion {
         width: 100%;
+        flex: 1 1 100%;
         margin-top: 0;
-        font-size: 0.94rem;
+        justify-content: center;
+        overflow-x: auto;
+        padding: 12px 0 8px;
+        font-size: 0.88rem;
       }
 
       .hero {
@@ -591,11 +578,7 @@
       <!-- NAVEGACIÓN -->
 
       <nav class="navegacion">
-
-        <a href="#inicio">Inicio</a>
-        <span class="separador">◆</span>
-
-        <a href="#mundo">
+<a href="#mundo">
           Lo que siento
         </a>
 
