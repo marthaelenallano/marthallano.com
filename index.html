@@ -56,7 +56,7 @@
       width: 100%;
       max-width: none;
       margin: 0 auto;
-      padding: 12px 2.5vw 70px;
+      padding: 12px 0 12px;
     }
 
 
@@ -79,8 +79,9 @@
       flex-direction: column;
       align-items: center;
       gap: 3px;
-      flex: 0 0 170px;
+      flex: 0 0 18vw;
       min-width: 170px;
+      max-width: 260px;
     }
 
     .logo-martha {
@@ -110,14 +111,15 @@
       width: auto;
       margin: 0;
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      align-items: flex-end;
+      justify-content: space-between;
       align-self: flex-end;
       padding-bottom: 4px;
       white-space: nowrap;
       flex-wrap: nowrap;
       flex: 1 1 auto;
       min-width: 0;
+      gap: clamp(7px, 0.65vw, 14px);
       font-size: clamp(0.95rem, 1.0vw, 1.1rem);
       line-height: 1.15;
       font-weight: 500;
@@ -139,7 +141,7 @@
     .separador {
       display: inline-block;
       flex: 0 0 auto;
-      margin: 0 clamp(5px, 0.45vw, 8px);
+      margin: 0;
       color: #bdbdbd;
       font-size: 0.48rem;
       line-height: 1;
@@ -184,7 +186,7 @@
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      padding: 24px 0 32px;
+      padding: 41px 0 41px;
     }
 
     .hero .lightwidget-widget {
@@ -431,6 +433,7 @@
       .identidad {
         flex: 0 0 110px;
         min-width: 110px;
+        max-width: 110px;
         align-items: center;
         gap: 2px;
       }
