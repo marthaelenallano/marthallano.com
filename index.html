@@ -70,21 +70,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 18px;
       flex-wrap: nowrap;
     }
 
     .identidad {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex: 0 0 auto;
       min-width: max-content;
     }
 
     .logo-martha {
-      width: 58px;
+      width: 92px;
       height: auto;
+      max-height: 78px;
+      object-fit: contain;
       margin: 0;
       flex: 0 0 auto;
     }
@@ -93,7 +95,7 @@
       margin: 0;
       color: #2f5d3a;
       font-family: "DM Sans", sans-serif;
-      font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+      font-size: clamp(1.15rem, 1.5vw, 1.5rem);
       font-weight: 400;
       line-height: 1.05;
       letter-spacing: -0.045em;
@@ -110,7 +112,7 @@
       flex-wrap: nowrap;
       flex: 1 1 auto;
       min-width: 0;
-      font-size: clamp(0.62rem, 0.72vw, 0.78rem);
+      font-size: clamp(0.60rem, 0.68vw, 0.74rem);
       line-height: 1;
       color: #595959;
     }
@@ -160,23 +162,7 @@
       height: 17px;
       display: block;
     }
-
-
-    /* =========================================================
-       RAYA PRINCIPAL
-       ESTA ES LA RAYA QUE VA DESPUÉS DE LOS BOTONES
-       Y ANTES DE LA FOTO
-    ========================================================= */
-
-    .raya-principal {
-      width: 100%;
-      height: 1px;
-      margin-top: 18px;
-      background: #d8d8d8;
-      flex: 0 0 100%;
-    }
-
-    .topbar {
+.topbar {
       flex-wrap: wrap;
     }
 
@@ -447,11 +433,7 @@
         padding: 12px 0 8px;
         font-size: 0.82rem;
       }
-
-      .raya-principal {
-        margin-top: 8px;
-      }
-    }
+}
 
     @media (max-width: 700px) {
       .contenedor {
@@ -464,7 +446,8 @@
       }
 
       .logo-martha {
-        width: 45px;
+        width: 58px;
+        max-height: 52px;
       }
 
       .identidad {
@@ -684,10 +667,7 @@
            VA DESPUÉS DE TODA LA NAVEGACIÓN
            Y ANTES DE LA FOTO
       ==================================================== -->
-
-      <div class="raya-principal"></div>
-
-    </header>
+</header>
 
 
     <!-- =====================================================
