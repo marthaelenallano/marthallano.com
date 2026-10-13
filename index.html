@@ -67,26 +67,37 @@
     .topbar {
       width: 100%;
       padding: 8px 0 0;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .identidad {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+      min-width: 0;
     }
 
     .logo-martha {
-      width: 165px;
+      width: 58px;
       height: auto;
-      margin: 0 auto 12px;
+      margin: 0;
+      flex: 0 0 auto;
     }
 
     .nombre {
-  margin: 0 auto;
-  color: #2f5d3a;
-  font-family: "DM Sans", sans-serif;
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.045em;
-  text-align: center;
-  width: fit-content;
-}
+      margin: 0;
+      color: #2f5d3a;
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.65rem;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      white-space: nowrap;
+    }
 
 
     /* =========================================================
@@ -94,17 +105,16 @@
     ========================================================= */
 
     .navegacion {
-      width: 100%;
-      margin-top: 27px;
-
+      width: auto;
+      margin-top: 0;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-
+      justify-content: flex-end;
       white-space: nowrap;
       flex-wrap: nowrap;
-
-      font-size: 0.92rem;
+      flex: 1 1 auto;
+      min-width: 0;
+      font-size: 0.73rem;
       line-height: 1;
       color: #595959;
     }
@@ -126,7 +136,7 @@
       display: inline-block;
       flex: 0 0 auto;
 
-      margin: 0 17px;
+      margin: 0 7px;
 
       color: #bdbdbd;
       font-size: 0.48rem;
@@ -146,7 +156,7 @@
 
       flex: 0 0 auto;
 
-      margin-left: 18px;
+      margin-left: 9px;
 
       color: #777;
       line-height: 1;
@@ -159,7 +169,7 @@
     }
 
     .social + .social {
-      margin-left: 16px;
+      margin-left: 8px;
     }
 
     .social svg {
@@ -190,8 +200,21 @@
     ========================================================= */
 
     .hero {
-      width: 100%;
-      padding: 41px 0 52px;
+      width: 95vw;
+      max-width: 1600px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 30px 0 32px;
+    }
+
+    .hero .lightwidget-widget {
+      display: block;
+      width: 95vw !important;
+      max-width: 1600px;
+      border: 0;
+      overflow: hidden;
+      margin: 0 auto;
     }
 
     .hero .elfsight-app-077df256-22f8-4051-862e-dd759894a503 {
@@ -211,8 +234,13 @@
     }
 
     .seccion {
+      display: none;
       width: 100%;
       padding: 0 0 100px;
+    }
+
+    .seccion:target {
+      display: block;
     }
 
 
@@ -413,66 +441,75 @@
 
 
     /* =========================================================
-       TABLET
+       TABLET Y MÓVIL
     ========================================================= */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1100px) {
+      .topbar {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .identidad {
+        flex: 0 0 auto;
+      }
 
       .navegacion {
-        font-size: 0.86rem;
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 12px 0 8px;
+        font-size: 0.82rem;
       }
 
       .separador {
-        margin-left: 11px;
-        margin-right: 11px;
+        margin-left: 9px;
+        margin-right: 9px;
       }
 
       .social {
-        margin-left: 13px;
+        margin-left: 10px;
       }
 
       .social + .social {
-        margin-left: 11px;
-      }
-    }
-
-
-    /* =========================================================
-       MÓVIL
-    ========================================================= */
-
-    @media (max-width: 700px) {
-
-      .contenedor {
-        padding: 22px 18px 55px;
-      }
-
-      .topbar {
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
-      .logo-martha {
-        width: 75px;
-      }
-
-      .nombre {
-        font-size: 2.15rem;
-      }
-
-      .navegacion {
-        width: max-content;
-        margin-top: 20px;
-        font-size: 0.84rem;
+        margin-left: 9px;
       }
 
       .raya-principal {
-        margin-top: 22px;
+        margin-top: 12px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .contenedor {
+        padding: 18px 12px 45px;
+      }
+
+      .topbar {
+        gap: 8px;
+      }
+
+      .logo-martha {
+        width: 45px;
+      }
+
+      .identidad {
+        gap: 8px;
+      }
+
+      .nombre {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+      }
+
+      .navegacion {
+        width: 100%;
+        margin-top: 0;
+        font-size: 0.78rem;
       }
 
       .hero {
-        padding-top: 24px;
-        padding-bottom: 38px;
+        padding-top: 22px;
+        padding-bottom: 28px;
       }
 
       .titulo-seccion h2.titulo-capitulo {
@@ -531,18 +568,22 @@
 
     <header class="topbar">
 
-      <img
-        class="logo-martha"
-        src="imagenes/LogoMartha.jpg"
-        alt="Logo Martha Llano"
-      >
-
-      <h1 class="nombre">MARTHA LLANO</h1>
+      <a class="identidad" href="#inicio" aria-label="Inicio">
+        <img
+          class="logo-martha"
+          src="imagenes/LogoMartha.jpg"
+          alt="Logo Martha Llano"
+        >
+        <h1 class="nombre">MARTHA LLANO</h1>
+      </a>
 
 
       <!-- NAVEGACIÓN -->
 
       <nav class="navegacion">
+
+        <a href="#inicio">Inicio</a>
+        <span class="separador">◆</span>
 
         <a href="#mundo">
           Lo que siento
@@ -670,9 +711,9 @@
          FOTO DE PORTADA
     ====================================================== -->
 
-    <div class="hero">
+    <div class="hero" id="inicio">
 
-     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/25ddbcdb86a15f70aa8cdda7b832419d.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:70%;border:0;overflow:hidden;display:block;margin:0 auto;"></iframe>
+     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/25ddbcdb86a15f70aa8cdda7b832419d.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:95vw;max-width:1600px;border:0;overflow:hidden;display:block;margin:0 auto;"></iframe>
     
     </div>
 
@@ -1356,7 +1397,7 @@
     ====================================================== -->
 
     <footer>
-      Martha Llano
+      MARTHA LLANO 2026
     </footer>
 
 
