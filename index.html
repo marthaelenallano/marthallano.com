@@ -552,30 +552,6 @@
 
 
 
-    /* Música de bienvenida */
-    .control-musica {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border: 1px solid rgba(47, 93, 58, 0.25);
-      border-radius: 999px;
-      background: rgba(250, 250, 250, 0.94);
-      color: #2f5d3a;
-      font: 500 0.88rem/1.2 "DM Sans", sans-serif;
-      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
-      cursor: pointer;
-      backdrop-filter: blur(8px);
-    }
-    .control-musica:hover { background: #fff; }
-    .control-musica:focus-visible { outline: 2px solid #2f5d3a; outline-offset: 3px; }
-    @media (max-width: 700px) {
-      .control-musica { right: 10px; bottom: 10px; padding: 9px 12px; font-size: 0.82rem; }
-    }
 
   </style>
 </head>
@@ -1423,50 +1399,24 @@
 
 
 
-  <!-- Música de bienvenida: si el navegador bloquea la reproducción automática,
-       la persona puede activarla con este control. -->
-  <audio id="musica-bienvenida" preload="auto" loop playsinline>
+  <!-- Música de bienvenida: reproducción automática, sin controles visibles. -->
+  <audio id="musica-bienvenida" autoplay preload="auto" loop playsinline>
     <source src="musica/the_mountain-piano-piano-music-490009.mp3" type="audio/mpeg">
   </audio>
-  <button class="control-musica" id="control-musica" type="button" aria-pressed="false" aria-label="Activar música de bienvenida">
-    <span aria-hidden="true">♫</span><span id="texto-control-musica">Activar música</span>
-  </button>
   <script>
     (function () {
       const audio = document.getElementById('musica-bienvenida');
-      const button = document.getElementById('control-musica');
-      const label = document.getElementById('texto-control-musica');
-      if (!audio || !button || !label) return;
-
-      function updateControl(playing) {
-        button.setAttribute('aria-pressed', String(playing));
-        button.setAttribute('aria-label', playing ? 'Pausar música de bienvenida' : 'Activar música de bienvenida');
-        label.textContent = playing ? 'Pausar música' : 'Activar música';
+      if (!audio) return;
+      audio.volume = 0.55;
+      function intentarReproducir() {
+        const intento = audio.play();
+        if (intento && typeof intento.catch === 'function') intento.catch(function () {
+          // Algunos navegadores bloquean el sonido automático hasta que el visitante interactúa.
+          // No mostramos avisos ni controles, tal como se solicitó.
+        });
       }
-
-      button.addEventListener('click', async function () {
-        if (!audio.paused) {
-          audio.pause();
-          updateControl(false);
-          return;
-        }
-        try {
-          await audio.play();
-          updateControl(true);
-        } catch (error) {
-          label.textContent = 'No se pudo reproducir';
-          updateControl(false);
-        }
-      });
-
-      audio.addEventListener('play', function () { updateControl(true); });
-      audio.addEventListener('pause', function () { updateControl(false); });
-
-      // Se intenta iniciar al abrir el sitio. Muchos navegadores bloquean
-      // el sonido automático; en ese caso queda disponible el botón visible.
-      window.addEventListener('load', function () {
-        audio.play().then(function () { updateControl(true); }).catch(function () { updateControl(false); });
-      });
+      if (document.readyState === 'complete') intentarReproducir();
+      else window.addEventListener('load', intentarReproducir, { once: true });
     })();
   </script>
 
