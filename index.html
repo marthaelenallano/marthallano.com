@@ -312,14 +312,12 @@
     .titulo-seccion h2 {
       margin: 0;
       padding: 0;
-
       color: #2f5d3a;
-
-      font-family: "Libre Baskerville", serif;
-      font-size: 3.25rem;
+      font-family: "DM Sans", sans-serif;
+      font-size: 2.35rem;
       font-weight: 400;
-      line-height: 1.2;
-      letter-spacing: -0.035em;
+      line-height: 1.15;
+      letter-spacing: -0.045em;
     }
 
 
@@ -342,15 +340,6 @@
       margin-bottom: 0;
     }
 
-    .titulo-seccion h2.titulo-capitulo {
-      margin: 0;
-      color: #2f5d3a;
-      font-family: "DM Sans", sans-serif;
-      font-size: 2.35rem;
-      font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.045em;
-    }
 
     .contenido.contenido-capitulo {
       max-width: none;
@@ -586,10 +575,6 @@
         padding-bottom: 28px;
       }
 
-      .titulo-seccion h2.titulo-capitulo {
-        font-size: 2rem;
-      }
-
       .contenido.contenido-capitulo {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -663,6 +648,12 @@
 
         <a href="#dos-mundos">
           Entre dos mundos
+        </a>
+
+        <span class="separador">◆</span>
+
+        <a href="#sostenibilidad">
+          La sostenibilidad empieza con casas
         </a>
 
         <span class="separador">◆</span>
@@ -924,67 +915,6 @@
         <div class="bloque">
 
           <h3>
-            Rosa de los Vientos
-          </h3>
-
-          <p>
-            Rosa de los Vientos es una casa taller construida hace treinta
-            años con todo el amor y la dulzura que pude. En ella hoy deseo
-            recibir huéspedes conscientes, amorosos, artistas, soñadores y
-            pensadores, creadores que deseen un espacio sutil y lleno de
-            energía para la creación.
-          </p>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Casa de Madera
-          </h3>
-
-          <p>
-            Casa de Madera es una pequeña casa de madera con la magia de poder
-            ver el bosque desde el dosel, o sea, desde la parte alta. Ideal
-            para estar en contemplación con las comodidades de tenerlo todo
-            cerca: el parqueadero, la vía, las tiendas, los vecinos.
-          </p>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
-            Casa Entrezarros
-          </h3>
-
-          <p>
-            Casa Entrezarros es un refugio completamente adentro del bosque.
-            Hecha con todo el respeto y sin tumbar un solo árbol. Pequeña en
-            su interior, pero grande en su alrededor.
-          </p>
-
-        </div>
-
-
-        <div class="galeria">
-
-          <div class="imagen-placeholder">
-            IMAGEN — CASA DE MADERA
-          </div>
-
-          <div class="imagen-placeholder">
-            IMAGEN — ENTREZARROS
-          </div>
-
-        </div>
-
-
-        <div class="bloque">
-
-          <h3>
             La casa en el río
           </h3>
 
@@ -1066,7 +996,85 @@
 
 
     <!-- =====================================================
-         3. GESTIONANDO MIS EMOCIONES
+         LA SOSTENIBILIDAD EMPIEZA CON CASAS
+    ====================================================== -->
+
+    <section id="sostenibilidad" class="seccion">
+
+      <div class="titulo-seccion">
+        <h2>La sostenibilidad empieza con casas</h2>
+      </div>
+
+      <div class="contenido">
+
+        <div class="bloque">
+
+          <h3>
+            Rosa de los Vientos
+          </h3>
+
+          <p>
+            Rosa de los Vientos es una casa taller construida hace treinta
+            años con todo el amor y la dulzura que pude. En ella hoy deseo
+            recibir huéspedes conscientes, amorosos, artistas, soñadores y
+            pensadores, creadores que deseen un espacio sutil y lleno de
+            energía para la creación.
+          </p>
+
+        </div>
+
+
+        <div class="bloque">
+
+          <h3>
+            Casa de Madera
+          </h3>
+
+          <p>
+            Casa de Madera es una pequeña casa de madera con la magia de poder
+            ver el bosque desde el dosel, o sea, desde la parte alta. Ideal
+            para estar en contemplación con las comodidades de tenerlo todo
+            cerca: el parqueadero, la vía, las tiendas, los vecinos.
+          </p>
+
+        </div>
+
+
+        <div class="bloque">
+
+          <h3>
+            Casa Entrezarros
+          </h3>
+
+          <p>
+            Casa Entrezarros es un refugio completamente adentro del bosque.
+            Hecha con todo el respeto y sin tumbar un solo árbol. Pequeña en
+            su interior, pero grande en su alrededor.
+          </p>
+
+        </div>
+
+
+        <div class="galeria">
+
+          <div class="imagen-placeholder">
+            IMAGEN — CASA DE MADERA
+          </div>
+
+          <div class="imagen-placeholder">
+            IMAGEN — ENTREZARROS
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. GESTIONANDO MIS EMOCIONES
     ====================================================== -->
 
     <section
@@ -1168,7 +1176,7 @@
 
 
     <!-- =====================================================
-         4. DISEÑAR PARA INTERPRETAR
+         5. DISEÑAR PARA INTERPRETAR
     ====================================================== -->
 
     <section
@@ -1248,7 +1256,7 @@
 
 
     <!-- =====================================================
-         5. CAPTANDO LA LUZ QUE VEO
+         6. CAPTANDO LA LUZ QUE VEO
     ====================================================== -->
 
     <section
@@ -1475,15 +1483,6 @@
 
 
   </div>
-
-
-  <script>
-    // Al abrir la página, comenzar siempre en Inicio.
-    // Las secciones se muestran únicamente cuando la persona pulsa su enlace.
-    if (window.location.hash && document.querySelector(window.location.hash + '.seccion')) {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
-  </script>
 
 </body>
 </html>
