@@ -614,65 +614,105 @@
 
   
 
-    /* Ajustes del encabezado: identidad arriba y navegación debajo, alineadas a la izquierda */
+    /* Ajustes finales: encabezado compacto y alineado */
     .topbar {
       display: flex !important;
       flex-direction: column !important;
       align-items: flex-start !important;
       justify-content: flex-start !important;
       gap: 0 !important;
-      flex-wrap: nowrap !important;
-      padding-top: 8px !important;
-    }
-    .identidad {
-      align-items: flex-start !important;
+      padding-top: 0 !important;
       margin: 0 !important;
     }
-    .nombre { text-align: left !important; }
+    .identidad {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      width: 125px !important;
+      min-width: 125px !important;
+      margin: 0 !important;
+      gap: 2px !important;
+    }
+    .logo-martha {
+      width: 105px !important;
+      max-height: 95px !important;
+      height: auto !important;
+      object-fit: contain !important;
+      margin: 0 !important;
+    }
+    .nombre {
+      width: 125px !important;
+      margin: 0 !important;
+      text-align: left !important;
+      font-size: 1.12rem !important;
+      line-height: 1.1 !important;
+    }
     .navegacion {
+      display: flex !important;
       width: 100% !important;
+      box-sizing: border-box !important;
       flex: 0 1 auto !important;
-      align-self: flex-start !important;
+      align-self: stretch !important;
       justify-content: flex-start !important;
       align-items: center !important;
       flex-wrap: wrap !important;
       white-space: normal !important;
       overflow: visible !important;
-      margin-top: 17px !important;
-      padding: 0 0 8px !important;
-      row-gap: 12px !important;
-      column-gap: clamp(8px, 1vw, 15px) !important;
+      margin: 14px 0 0 !important;
+      padding: 0 0 6px !important;
+      row-gap: 9px !important;
+      column-gap: 12px !important;
+      font-size: clamp(.82rem, .9vw, 1rem) !important;
+      line-height: 1.25 !important;
     }
-    .navegacion a { white-space: normal !important; }
+    .navegacion > a:not(.social) { white-space: normal !important; }
+    .navegacion .social {
+      flex: 0 0 auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+      white-space: nowrap !important;
+    }
+    .navegacion .bolsa-compras { margin-left: auto !important; }
+    .hero {
+      padding-top: 18px !important;
+      padding-bottom: 22px !important;
+    }
     .logo-robledal-home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 4px auto 0;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
     }
     .logo-robledal-home img {
-      display: block;
-      width: clamp(130px, 16vw, 205px);
-      max-width: 48%;
-      height: auto;
-      object-fit: contain;
+      display: block !important;
+      width: 125px !important;
+      max-width: 36% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      background: transparent !important;
     }
     @media (max-width: 700px) {
+      .contenedor { padding: 12px 14px 35px !important; }
       .topbar { align-items: flex-start !important; }
-      .identidad { align-items: flex-start !important; }
-      .logo-martha { width: 90px !important; max-height: 82px !important; }
-      .nombre { width: 145px !important; font-size: 1.08rem !important; text-align: left !important; }
+      .identidad { width: 112px !important; min-width: 112px !important; }
+      .logo-martha { width: 82px !important; max-height: 75px !important; }
+      .nombre { width: 112px !important; font-size: 1rem !important; }
       .navegacion {
         justify-content: flex-start !important;
-        margin-top: 15px !important;
-        padding: 0 0 8px !important;
-        row-gap: 10px !important;
+        margin-top: 12px !important;
+        padding: 0 0 5px !important;
+        row-gap: 9px !important;
         column-gap: 8px !important;
-        font-size: 0.88rem !important;
+        font-size: .86rem !important;
       }
-      .logo-robledal-home { margin-top: 0; }
-      .logo-robledal-home img { width: 145px; max-width: 55%; }
+      .navegacion .bolsa-compras { margin-left: 0 !important; }
+      .hero { width: 100% !important; padding-top: 14px !important; padding-bottom: 16px !important; }
+      .logo-robledal-home { margin-top: 0 !important; }
+      .logo-robledal-home img { width: 105px !important; max-width: 34% !important; }
     }
 </style>
 </head>
@@ -843,7 +883,7 @@
  <script src="https://wdg.fouita.com/widgets/0x561287.js"></script>
 
       <div class="logo-robledal-home">
-        <img src="imagenes/logorobledal.png" alt="Reserva Natural El Robledal" loading="lazy">
+        <img src="imagenes/logorobledaltransparente.png" alt="Reserva Natural El Robledal" loading="lazy">
       </div>
     </div>
 
