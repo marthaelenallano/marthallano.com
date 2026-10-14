@@ -135,8 +135,14 @@
       transition: color 0.2s ease;
     }
 
-    .navegacion a:hover {
-      color: #2f5d3a;
+    .navegacion a:hover,
+    .navegacion a:focus-visible {
+      color: #ffffff;
+      background-color: #2f5d3a;
+      border-radius: 5px;
+      padding: 5px 7px;
+      margin: -5px -7px;
+      outline: none;
     }
 
     .separador {
@@ -159,8 +165,12 @@
       transition: color 0.2s ease;
     }
 
-    .social:hover {
-      color: #2f5d3a;
+    .social:hover,
+    .social:focus-visible {
+      color: #ffffff;
+      background-color: #2f5d3a;
+      border-radius: 5px;
+      outline: none;
     }
 
     .social + .social {
@@ -172,6 +182,20 @@
       height: 17px;
       display: block;
     }
+
+    .enlace {
+      transition: color 0.2s ease, background-color 0.2s ease;
+      border-radius: 4px;
+    }
+
+    .enlace:hover,
+    .enlace:focus-visible {
+      color: #ffffff;
+      background-color: #2f5d3a;
+      padding: 2px 5px;
+      margin: -2px -5px;
+      outline: none;
+    }
 .topbar {
       flex-wrap: wrap;
     }
@@ -182,20 +206,12 @@
     ========================================================= */
 
     .hero {
-      width: min(92vw, 1180px);
-      max-width: 1180px;
+      width: 95vw;
+      max-width: 1600px;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
       padding: 30px 0 41px;
-      overflow: hidden;
-    }
-
-    /* Mantiene el feed de Instagram dentro de un ancho moderado en computador */
-    #ft5paqii5 {
-      width: 100%;
-      max-width: 1180px;
-      margin-inline: auto;
     }
 
     .hero .lightwidget-widget {
@@ -462,20 +478,11 @@
 
       .navegacion {
         flex: 1 1 100%;
-        min-width: 0;
         justify-content: center;
         align-self: auto;
-        flex-wrap: wrap;
-        overflow-x: visible;
-        white-space: normal;
+        overflow-x: auto;
         padding: 12px 0 8px;
         font-size: 0.94rem;
-      }
-
-      .navegacion a {
-        white-space: normal;
-        text-align: center;
-        max-width: 100%;
       }
     }
 
@@ -513,40 +520,12 @@
 
       .navegacion {
         width: 100%;
-        min-width: 0;
         flex: 1 1 100%;
         margin-top: 0;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px 14px;
-        overflow-x: visible;
-        white-space: normal;
+        overflow-x: auto;
         padding: 12px 0 8px;
         font-size: 0.88rem;
-      }
-
-      .navegacion .separador {
-        display: none;
-      }
-
-      .navegacion a {
-        white-space: normal;
-        overflow-wrap: anywhere;
-        text-align: center;
-        max-width: 100%;
-      }
-
-      .hero {
-        width: 100%;
-        max-width: 100%;
-        left: auto;
-        transform: none;
-      }
-
-      #ft5paqii5 {
-        width: 100%;
-        max-width: 100%;
       }
 
       .hero {
@@ -753,9 +732,9 @@
 
      
  
- <iframe src="https://emb.fouita.com/widget/0x561287/ft5paqii5" 
-title="Carousel Instagram Feed " width="100%" height="500" frameborder="0" >
-</iframe>
+ <div data-key="Carousel Instagram Feed " class="ft" id="ft5paqii5">
+ </div>
+ <script src="https://wdg.fouita.com/widgets/0x561287.js"></script>
  
     
     </div>
