@@ -137,11 +137,8 @@
 
     .navegacion a:hover,
     .navegacion a:focus-visible {
-      color: #ffffff;
-      background-color: #2f5d3a;
-      border-radius: 5px;
-      padding: 5px 7px;
-      margin: -5px -7px;
+      color: #2f8f46;
+      background-color: transparent;
       outline: none;
     }
 
@@ -167,9 +164,8 @@
 
     .social:hover,
     .social:focus-visible {
-      color: #ffffff;
-      background-color: #2f5d3a;
-      border-radius: 5px;
+      color: #2f8f46;
+      background-color: transparent;
       outline: none;
     }
 
@@ -190,10 +186,8 @@
 
     .enlace:hover,
     .enlace:focus-visible {
-      color: #ffffff;
-      background-color: #2f5d3a;
-      padding: 2px 5px;
-      margin: -2px -5px;
+      color: #2f8f46;
+      background-color: transparent;
       outline: none;
     }
 .topbar {
@@ -212,6 +206,55 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 30px 0 41px;
+    }
+
+    /* Widget de Instagram: una columna, formato vertical y adaptable a celulares.
+       El avance automático y la ocultación de flechas se configuran en Fouita. */
+    .hero #ft5paqii5,
+    .hero #ft5paqii5 .ft-container,
+    .hero #ft5paqii5 .ft-layout {
+      width: 100% !important;
+      max-width: 540px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      box-sizing: border-box;
+    }
+
+    .hero #ft5paqii5 .ft-card {
+      width: 100% !important;
+      max-width: 540px !important;
+      height: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      box-sizing: border-box;
+    }
+
+    .hero #ft5paqii5 .ft-card img,
+    .hero #ft5paqii5 .ft-card video,
+    .hero #ft5paqii5 .ft-popup-media img,
+    .hero #ft5paqii5 .ft-popup-media video {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      aspect-ratio: 4 / 5;
+      object-fit: contain !important;
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px 10px 28px !important;
+      }
+
+      .hero #ft5paqii5,
+      .hero #ft5paqii5 .ft-container,
+      .hero #ft5paqii5 .ft-layout,
+      .hero #ft5paqii5 .ft-card {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
 
     .hero .lightwidget-widget {
@@ -735,7 +778,6 @@
  <div data-key="Carousel Instagram Feed " class="ft" id="ft5paqii5">
  </div>
  <script src="https://wdg.fouita.com/widgets/0x561287.js"></script>
- 
  
     
     </div>
