@@ -1476,5 +1476,14 @@
 
   </div>
 
+
+  <script>
+    // Al abrir la página, comenzar siempre en Inicio.
+    // Las secciones se muestran únicamente cuando la persona pulsa su enlace.
+    if (window.location.hash && document.querySelector(window.location.hash + '.seccion')) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  </script>
+
 </body>
 </html>
