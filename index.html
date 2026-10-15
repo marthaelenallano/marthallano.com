@@ -1037,6 +1037,157 @@
       pointer-events: none;
     }
 
+  
+    /* Ajuste final guiado por las capturas: títulos en mayúscula, párrafos intactos */
+    .titulo-seccion h2,
+    .seccion h3,
+    .seccion .bloque h3 {
+      text-transform: uppercase !important;
+    }
+    .seccion p,
+    .seccion li,
+    .seccion blockquote,
+    .seccion figcaption {
+      text-transform: none !important;
+    }
+
+    /* Encabezado uniforme y sin botones montados */
+    .home-cover .topbar,
+    body:has(.seccion:target) .topbar {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-end !important;
+      justify-content: flex-start !important;
+      flex-wrap: nowrap !important;
+      gap: 20px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0 clamp(22px, 3vw, 46px) !important;
+    }
+    .home-cover .identidad,
+    body:has(.seccion:target) .topbar .identidad {
+      flex: 0 0 255px !important;
+      width: 255px !important;
+      min-width: 255px !important;
+      max-width: 255px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-end !important;
+      gap: 4px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .home-cover .logo-martha,
+    body:has(.seccion:target) .topbar .logo-martha {
+      display: block !important;
+      width: 100px !important;
+      max-width: 100px !important;
+      height: 112px !important;
+      max-height: 112px !important;
+      object-fit: contain !important;
+      object-position: left bottom !important;
+      margin: 0 0 0 17px !important;
+      padding: 0 !important;
+    }
+    .home-cover .nombre,
+    body:has(.seccion:target) .topbar .nombre {
+      display: block !important;
+      flex: none !important;
+      width: 255px !important;
+      max-width: 255px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: left !important;
+      white-space: nowrap !important;
+      font-size: 1.34rem !important;
+      line-height: 1.05 !important;
+      letter-spacing: .015em !important;
+    }
+    .home-cover .navegacion,
+    body:has(.seccion:target) .topbar .navegacion {
+      display: flex !important;
+      flex: 1 1 0 !important;
+      width: 0 !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      align-self: flex-end !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      gap: 4px !important;
+      margin: 0 !important;
+      padding: 0 0 3px !important;
+      font-size: clamp(10px, .78vw, 12px) !important;
+      line-height: 1.15 !important;
+      font-weight: 650 !important;
+      letter-spacing: .008em !important;
+      box-sizing: border-box !important;
+    }
+    .home-cover .navegacion > a:not(.social),
+    body:has(.seccion:target) .topbar .navegacion > a:not(.social) {
+      display: inline-flex !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      width: auto !important;
+      max-width: 100% !important;
+      font-size: inherit !important;
+      letter-spacing: inherit !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: clip !important;
+      margin: 0 !important;
+    }
+    .home-cover .separador,
+    body:has(.seccion:target) .topbar .separador {
+      flex: 0 0 auto !important;
+      margin: 0 1px !important;
+      font-size: 6px !important;
+    }
+    .home-cover .navegacion .social,
+    body:has(.seccion:target) .topbar .navegacion .social {
+      display: inline-flex !important;
+      flex: 0 0 17px !important;
+      width: 17px !important;
+      min-width: 17px !important;
+      max-width: 17px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 0 0 1px !important;
+      padding: 0 !important;
+    }
+    .home-cover .navegacion .social svg,
+    body:has(.seccion:target) .topbar .navegacion .social svg {
+      display: block !important;
+      width: 15px !important;
+      height: 15px !important;
+    }
+
+    @media (max-width: 1150px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        font-size: 12px !important;
+        gap: 7px !important;
+      }
+      .home-cover .navegacion > a:not(.social),
+      body:has(.seccion:target) .topbar .navegacion > a:not(.social) {
+        overflow: visible !important;
+      }
+    }
+
   </style>
 </head>
 
