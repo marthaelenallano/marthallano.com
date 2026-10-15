@@ -314,7 +314,7 @@
       padding: 0;
       color: #2f5d3a;
       font-family: "DM Sans", sans-serif;
-      font-size: 2.35rem;
+      font-size: clamp(1.55rem, 2.1vw, 1.85rem);
       font-weight: 400;
       line-height: 1.15;
       letter-spacing: -0.045em;
@@ -586,7 +586,7 @@
       }
 
       .titulo-seccion h2 {
-        font-size: 2.05rem;
+        font-size: 1.55rem;
         line-height: 1.25;
       }
 
@@ -834,6 +834,38 @@
       }
     }
 
+  
+    /* Portada: identidad y navegación en blanco sobre la fotografía */
+    .home-cover .nombre { color: #fff !important; }
+    .home-cover .navegacion,
+    .home-cover .navegacion a,
+    .home-cover .social { color: #fff !important; }
+    .home-cover .navegacion {
+      gap: clamp(4px, .45vw, 8px) !important;
+      font-size: clamp(.68rem, .78vw, .88rem) !important;
+      letter-spacing: .045em !important;
+    }
+    .home-cover .logo-martha {
+      content: url("imagenes/LogoMartha-portada-blanco.png") !important;
+      width: 100px !important;
+      max-height: 90px !important;
+      background: transparent !important;
+    }
+    body:has(.seccion:target) .topbar .logo-martha {
+      content: url("imagenes/LogoMartha.jpg") !important;
+      width: 100px !important;
+      max-height: 90px !important;
+    }
+    body:has(.seccion:target) .topbar .nombre { color: #2f5d3a !important; }
+    body:has(.seccion:target) .topbar .navegacion,
+    body:has(.seccion:target) .topbar .navegacion a,
+    body:has(.seccion:target) .topbar .social { color: #454545 !important; }
+    .titulo-seccion h2 {
+      font-size: clamp(1.55rem, 2.1vw, 1.85rem) !important;
+      line-height: 1.25 !important;
+      margin-top: 18px !important;
+    }
+
   </style>
 </head>
 
@@ -853,7 +885,7 @@
       <a class="identidad" href="#inicio" aria-label="Inicio">
         <img
           class="logo-martha"
-          src="imagenes/LogoMartha.jpg"
+          src="imagenes/LogoMartha-portada-blanco.png"
           alt="Logo Martha Llano"
         >
         <h1 class="nombre">MARTHA LLANO</h1>
