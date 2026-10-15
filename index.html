@@ -1012,6 +1012,31 @@
       }
     }
 
+  
+    /* Las secciones son contenido normal de la página, nunca ventanas superpuestas */
+    .seccion,
+    .seccion:target {
+      position: static !important;
+      inset: auto !important;
+      transform: none !important;
+      z-index: auto !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+    body::before,
+    body::after,
+    .overlay,
+    .modal-overlay,
+    .popup-overlay,
+    .lightbox-overlay {
+      pointer-events: none;
+    }
+
   </style>
 </head>
 
