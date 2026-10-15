@@ -722,11 +722,6 @@
     html, body, body * {
       font-family: var(--martha-font) !important;
     }
-    .seccion, .seccion h1, .seccion h2, .seccion h3,
-    .seccion p, .seccion li, .seccion blockquote,
-    .seccion figcaption, .seccion .boton, .seccion a {
-      text-transform: uppercase !important;
-    }
     .home-cover .topbar,
     body:has(.seccion:target) .topbar {
       display: flex !important;
@@ -864,6 +859,140 @@
       font-size: clamp(1.55rem, 2.1vw, 1.85rem) !important;
       line-height: 1.25 !important;
       margin-top: 18px !important;
+    }
+
+  
+    /* El contenido conserva mayúsculas y minúsculas normales; solo el menú va en mayúsculas. */
+    .seccion, .seccion p, .seccion li, .seccion blockquote,
+    .seccion h2, .seccion h3, .seccion a {
+      text-transform: none !important;
+    }
+    .navegacion, .navegacion a {
+      text-transform: uppercase !important;
+    }
+
+  
+    /* Ajuste de encabezado: identidad y menú en una sola línea, sin desbordamiento */
+    .home-cover .topbar,
+    body:has(.seccion:target) .topbar {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-end !important;
+      justify-content: flex-start !important;
+      flex-wrap: nowrap !important;
+      gap: 18px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding-left: clamp(22px, 3vw, 48px) !important;
+      padding-right: clamp(22px, 3vw, 48px) !important;
+    }
+    .home-cover .identidad,
+    body:has(.seccion:target) .topbar .identidad {
+      flex: 0 0 220px !important;
+      width: 220px !important;
+      min-width: 220px !important;
+      max-width: 220px !important;
+      align-items: flex-start !important;
+      margin: 0 !important;
+      gap: 4px !important;
+    }
+    .home-cover .logo-martha,
+    body:has(.seccion:target) .topbar .logo-martha {
+      display: block !important;
+      width: 88px !important;
+      max-width: 88px !important;
+      height: auto !important;
+      max-height: 82px !important;
+      object-fit: contain !important;
+      margin: 0 0 0 18px !important;
+    }
+    .home-cover .nombre,
+    body:has(.seccion:target) .topbar .nombre {
+      display: block !important;
+      width: auto !important;
+      max-width: 220px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 1.28rem !important;
+      line-height: 1.05 !important;
+      letter-spacing: .015em !important;
+      white-space: nowrap !important;
+      text-align: left !important;
+    }
+    .home-cover .navegacion,
+    body:has(.seccion:target) .topbar .navegacion {
+      flex: 1 1 auto !important;
+      width: auto !important;
+      min-width: 0 !important;
+      max-width: calc(100% - 238px) !important;
+      display: flex !important;
+      align-items: center !important;
+      align-self: flex-end !important;
+      justify-content: flex-start !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      gap: clamp(3px, .32vw, 5px) !important;
+      margin: 0 !important;
+      padding: 0 0 2px !important;
+      font-size: clamp(11px, .86vw, 13.5px) !important;
+      line-height: 1.1 !important;
+      font-weight: 650 !important;
+      letter-spacing: .012em !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+    }
+    .home-cover .navegacion > a:not(.social),
+    body:has(.seccion:target) .topbar .navegacion > a:not(.social) {
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      font-size: inherit !important;
+      letter-spacing: inherit !important;
+      white-space: nowrap !important;
+    }
+    .home-cover .separador,
+    body:has(.seccion:target) .topbar .separador {
+      flex: 0 0 auto !important;
+      margin: 0 1px !important;
+      font-size: 7px !important;
+    }
+    .home-cover .navegacion .social,
+    body:has(.seccion:target) .topbar .navegacion .social {
+      flex: 0 0 18px !important;
+      width: 18px !important;
+      min-width: 18px !important;
+      margin-left: 2px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .home-cover .navegacion .social svg,
+    body:has(.seccion:target) .topbar .navegacion .social svg {
+      display: block !important;
+      width: 16px !important;
+      height: 16px !important;
+      max-width: 16px !important;
+    }
+    .home-cover .navegacion .bolsa-compras,
+    body:has(.seccion:target) .topbar .navegacion .bolsa-compras {
+      margin-right: 0 !important;
+    }
+    @media (max-width: 1050px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar {
+        flex-wrap: wrap !important;
+        align-items: flex-start !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        font-size: 12px !important;
+        gap: 7px !important;
+      }
     }
 
   </style>
