@@ -716,7 +716,125 @@
       .home-cover .logo-robledal-home img { width: 90px !important; max-width: 30% !important; }
     }
 
-</style>
+
+    /* Ajuste final: encabezado uniforme y tipografía única */
+    :root { --martha-font: "DM Sans", Arial, sans-serif; }
+    html, body, body * {
+      font-family: var(--martha-font) !important;
+    }
+    .seccion, .seccion h1, .seccion h2, .seccion h3,
+    .seccion p, .seccion li, .seccion blockquote,
+    .seccion figcaption, .seccion .boton, .seccion a {
+      text-transform: uppercase !important;
+    }
+    .home-cover .topbar,
+    body:has(.seccion:target) .topbar {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-end !important;
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+      gap: clamp(12px, 1.5vw, 24px) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .home-cover .identidad,
+    body:has(.seccion:target) .topbar .identidad {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-end !important;
+      flex: 0 0 165px !important;
+      width: 165px !important;
+      min-width: 165px !important;
+      margin: 0 !important;
+      gap: 5px !important;
+    }
+    .home-cover .logo-martha,
+    body:has(.seccion:target) .topbar .logo-martha {
+      display: block !important;
+      width: 100px !important;
+      max-width: 100px !important;
+      max-height: 90px !important;
+      height: auto !important;
+      object-fit: contain !important;
+      margin: 0 !important;
+    }
+    .home-cover .nombre,
+    body:has(.seccion:target) .topbar .nombre {
+      width: 165px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: left !important;
+      white-space: nowrap !important;
+      font-family: var(--martha-font) !important;
+      font-size: 1.05rem !important;
+      line-height: 1.15 !important;
+      font-weight: 600 !important;
+      letter-spacing: .025em !important;
+    }
+    .home-cover .navegacion,
+    body:has(.seccion:target) .topbar .navegacion {
+      display: flex !important;
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      width: auto !important;
+      align-self: flex-end !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      margin: 0 !important;
+      padding: 0 0 2px !important;
+      gap: clamp(5px, .65vw, 12px) !important;
+      font-family: var(--martha-font) !important;
+      font-size: clamp(.58rem, .72vw, .82rem) !important;
+      line-height: 1.15 !important;
+      font-weight: 600 !important;
+      letter-spacing: .025em !important;
+      text-transform: uppercase !important;
+    }
+    .home-cover .navegacion a,
+    body:has(.seccion:target) .topbar .navegacion a {
+      font-family: var(--martha-font) !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+    }
+    .home-cover .separador,
+    body:has(.seccion:target) .topbar .separador { font-size: .42rem !important; }
+    .home-cover .social svg,
+    body:has(.seccion:target) .topbar .social svg { width: 17px !important; height: 17px !important; }
+    .logo-robledal-home { display: none !important; }
+
+    @media (max-width: 900px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar {
+        align-items: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+      }
+      .home-cover .identidad,
+      body:has(.seccion:target) .topbar .identidad {
+        flex: 0 0 125px !important;
+        width: 125px !important;
+        min-width: 125px !important;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .topbar .logo-martha { width: 78px !important; max-width: 78px !important; max-height: 70px !important; }
+      .home-cover .nombre,
+      body:has(.seccion:target) .topbar .nombre { width: 125px !important; font-size: .9rem !important; }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex: 1 1 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        white-space: normal !important;
+        font-size: .72rem !important;
+        gap: 9px !important;
+      }
+    }
+
+  </style>
 </head>
 
 
@@ -871,10 +989,7 @@
            Y ANTES DE LA FOTO
       ==================================================== -->
 </header>
-      <div class="logo-robledal-home">
-        <img src="imagenes/logorobledaltransparente.png" alt="Reserva Natural El Robledal" loading="lazy">
-      </div>
-    </div>
+</div>
 
     <!-- =====================================================
          1. LO QUE SIENTO
