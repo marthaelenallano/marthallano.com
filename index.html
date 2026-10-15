@@ -872,74 +872,82 @@
     }
 
   
-    /* Ajuste de encabezado: identidad y menú en una sola línea, sin desbordamiento */
+    /* Corrección definitiva del encabezado: ancho del nombre según la proyección de las líneas del logo */
     .home-cover .topbar,
     body:has(.seccion:target) .topbar {
       display: flex !important;
-      flex-direction: row !important;
+      flex-flow: row nowrap !important;
       align-items: flex-end !important;
       justify-content: flex-start !important;
-      flex-wrap: nowrap !important;
-      gap: 18px !important;
+      gap: 26px !important;
       width: 100% !important;
       max-width: 100% !important;
       box-sizing: border-box !important;
-      padding-left: clamp(22px, 3vw, 48px) !important;
-      padding-right: clamp(22px, 3vw, 48px) !important;
+      padding: 0 clamp(24px, 3.2vw, 50px) 0 !important;
     }
     .home-cover .identidad,
     body:has(.seccion:target) .topbar .identidad {
-      flex: 0 0 220px !important;
-      width: 220px !important;
-      min-width: 220px !important;
-      max-width: 220px !important;
+      display: flex !important;
+      flex: 0 0 255px !important;
+      width: 255px !important;
+      min-width: 255px !important;
+      max-width: 255px !important;
+      flex-direction: column !important;
       align-items: flex-start !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
       margin: 0 !important;
-      gap: 4px !important;
+      padding: 0 !important;
     }
     .home-cover .logo-martha,
     body:has(.seccion:target) .topbar .logo-martha {
       display: block !important;
-      width: 88px !important;
-      max-width: 88px !important;
-      height: auto !important;
-      max-height: 82px !important;
+      width: 100px !important;
+      max-width: 100px !important;
+      height: 112px !important;
+      max-height: 112px !important;
       object-fit: contain !important;
-      margin: 0 0 0 18px !important;
+      object-position: left bottom !important;
+      margin: 0 0 0 17px !important;
+      padding: 0 !important;
+      background: transparent !important;
     }
     .home-cover .nombre,
     body:has(.seccion:target) .topbar .nombre {
       display: block !important;
-      width: auto !important;
-      max-width: 220px !important;
+      flex: none !important;
+      width: 255px !important;
+      max-width: 255px !important;
+      box-sizing: border-box !important;
       margin: 0 !important;
       padding: 0 !important;
-      font-size: 1.28rem !important;
-      line-height: 1.05 !important;
-      letter-spacing: .015em !important;
-      white-space: nowrap !important;
       text-align: left !important;
+      white-space: nowrap !important;
+      font-size: 1.34rem !important;
+      line-height: 1.05 !important;
+      font-weight: 650 !important;
+      letter-spacing: .015em !important;
     }
     .home-cover .navegacion,
     body:has(.seccion:target) .topbar .navegacion {
-      flex: 1 1 auto !important;
-      width: auto !important;
-      min-width: 0 !important;
-      max-width: calc(100% - 238px) !important;
       display: flex !important;
-      align-items: center !important;
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      width: auto !important;
       align-self: flex-end !important;
+      align-items: center !important;
       justify-content: flex-start !important;
       flex-wrap: nowrap !important;
       white-space: nowrap !important;
-      gap: clamp(3px, .32vw, 5px) !important;
-      margin: 0 !important;
-      padding: 0 0 2px !important;
-      font-size: clamp(11px, .86vw, 13.5px) !important;
-      line-height: 1.1 !important;
-      font-weight: 650 !important;
-      letter-spacing: .012em !important;
       overflow: hidden !important;
+      gap: clamp(3px, .35vw, 6px) !important;
+      margin: 0 !important;
+      padding: 0 0 3px !important;
+      font-size: clamp(11px, .9vw, 14px) !important;
+      line-height: 1.12 !important;
+      font-weight: 650 !important;
+      letter-spacing: .018em !important;
       box-sizing: border-box !important;
     }
     .home-cover .navegacion > a:not(.social),
@@ -949,6 +957,7 @@
       font-size: inherit !important;
       letter-spacing: inherit !important;
       white-space: nowrap !important;
+      margin: 0 !important;
     }
     .home-cover .separador,
     body:has(.seccion:target) .topbar .separador {
@@ -958,30 +967,38 @@
     }
     .home-cover .navegacion .social,
     body:has(.seccion:target) .topbar .navegacion .social {
-      flex: 0 0 18px !important;
-      width: 18px !important;
-      min-width: 18px !important;
-      margin-left: 2px !important;
       display: inline-flex !important;
+      flex: 0 0 17px !important;
+      width: 17px !important;
+      min-width: 17px !important;
+      max-width: 17px !important;
       align-items: center !important;
       justify-content: center !important;
+      margin: 0 0 0 2px !important;
+      padding: 0 !important;
     }
     .home-cover .navegacion .social svg,
     body:has(.seccion:target) .topbar .navegacion .social svg {
       display: block !important;
       width: 16px !important;
       height: 16px !important;
-      max-width: 16px !important;
     }
-    .home-cover .navegacion .bolsa-compras,
-    body:has(.seccion:target) .topbar .navegacion .bolsa-compras {
-      margin-right: 0 !important;
+    /* No alterar la tipografía ni el uso de mayúsculas del contenido editorial */
+    .seccion p, .seccion h3, .seccion li, .seccion blockquote {
+      text-transform: none !important;
     }
-    @media (max-width: 1050px) {
+    /* Los títulos de sección mantienen tamaño moderado y separación del encabezado */
+    .titulo-seccion { margin-top: 24px !important; }
+    .titulo-seccion h2 {
+      font-size: clamp(1.55rem, 2vw, 1.85rem) !important;
+      line-height: 1.25 !important;
+      margin-top: 0 !important;
+    }
+    @media (max-width: 1100px) {
       .home-cover .topbar,
       body:has(.seccion:target) .topbar {
         flex-wrap: wrap !important;
-        align-items: flex-start !important;
+        gap: 14px !important;
       }
       .home-cover .navegacion,
       body:has(.seccion:target) .topbar .navegacion {
@@ -990,8 +1007,8 @@
         flex-wrap: wrap !important;
         white-space: normal !important;
         overflow: visible !important;
+        gap: 8px !important;
         font-size: 12px !important;
-        gap: 7px !important;
       }
     }
 
