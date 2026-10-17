@@ -1246,6 +1246,290 @@
       body:has(.seccion:target) .contenido.contenido-capitulo { margin-top: 22px; }
     }
 
+
+
+    /* REGLAS FINALES CONSOLIDADAS PARA LA ENTREGA */
+    .home-cover .topbar,
+    body:has(.seccion:target) .topbar {
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+      flex-wrap:nowrap;
+      gap:clamp(12px,1.15vw,20px);
+      width:100%;
+      min-width:0;
+    }
+    .home-cover .identidad,
+    body:has(.seccion:target) .topbar .identidad {
+      flex:0 0 205px;
+      width:205px;
+      min-width:205px;
+      align-items:flex-start;
+      gap:5px;
+      margin:0;
+    }
+    .home-cover .logo-martha,
+    body:has(.seccion:target) .topbar .logo-martha {
+      display:block;
+      width:150px;
+      max-width:150px;
+      height:122px;
+      max-height:122px;
+      margin:0;
+      object-fit:contain;
+      object-position:left bottom;
+    }
+    .home-cover .nombre,
+    body:has(.seccion:target) .topbar .nombre {
+      width:auto;
+      max-width:none;
+      margin:0;
+      padding:0;
+      font-family:"DM Sans",sans-serif;
+      font-size:clamp(1.02rem,1.15vw,1.18rem);
+      font-weight:600;
+      line-height:1.08;
+      letter-spacing:0;
+      text-align:left;
+      white-space:nowrap;
+    }
+    .identidad-pie {
+      display:flex;
+      align-items:baseline;
+      flex-wrap:nowrap;
+      gap:9px;
+      white-space:nowrap;
+    }
+    .titulo-activo {
+      display:none;
+      position:static;
+      margin:0;
+      font-family:"DM Sans",sans-serif;
+      font-size:clamp(.84rem,.9vw,.96rem);
+      font-weight:500;
+      line-height:1.08;
+      letter-spacing:0;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .home-cover .titulo-activo { color:#fff; }
+    body:has(.seccion:target) .titulo-activo { display:none !important; }
+    .home-cover .navegacion,
+    body:has(.seccion:target) .topbar .navegacion {
+      display:flex;
+      flex:1 1 0;
+      width:auto;
+      min-width:0;
+      margin:0 0 1px;
+      padding:0;
+      align-self:flex-end;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:nowrap;
+      gap:clamp(3px,.24vw,5px);
+      font-family:"DM Sans",sans-serif;
+      font-size:clamp(.68rem,.70vw,.82rem);
+      font-weight:600;
+      line-height:1.2;
+      letter-spacing:0;
+      text-transform:uppercase;
+      text-align:left;
+      white-space:nowrap;
+      text-shadow:none;
+      box-shadow:none;
+    }
+    .home-cover .navegacion a,
+    body:has(.seccion:target) .topbar .navegacion a {
+      display:inline-flex;
+      flex:0 1 auto;
+      min-width:0;
+      align-items:center;
+      white-space:nowrap;
+      text-shadow:none;
+      box-shadow:none;
+    }
+    .home-cover .navegacion a { text-shadow:0 1px 4px rgba(0,0,0,.65); }
+    .home-cover .navegacion,
+    .home-cover .navegacion a,
+    .home-cover .separador,
+    .home-cover .social { color:rgba(255,255,255,.97); }
+    body:has(.seccion:target) .topbar .navegacion,
+    body:has(.seccion:target) .topbar .navegacion a,
+    body:has(.seccion:target) .topbar .social { color:#454545; }
+    body:has(.seccion:target) .topbar .navegacion a,
+    body:has(.seccion:target) .topbar .navegacion,
+    body:has(.seccion:target) .topbar .social,
+    body:has(.seccion:target) .topbar .separador {
+      text-shadow:none !important;
+      box-shadow:none !important;
+    }
+    .home-cover .social,
+    body:has(.seccion:target) .topbar .social {
+      display:inline-flex;
+      flex:0 0 17px;
+      width:17px;
+      min-width:17px;
+      height:20px;
+      margin:0 0 0 3px;
+      align-items:center;
+      justify-content:center;
+    }
+    .home-cover .social svg,
+    body:has(.seccion:target) .topbar .social svg {
+      display:block;
+      width:17px;
+      height:17px;
+    }
+    .home-cover .bolsa-compras,
+    body:has(.seccion:target) .topbar .bolsa-compras { margin-right:2px; }
+
+    /* Títulos interiores: título principal primero, subtítulos después, texto normal. */
+    body:has(.seccion:target) .seccion:target > .titulo-seccion {
+      display:block !important;
+      width:100%;
+      margin:26px 0 0;
+      padding:0;
+      text-align:left;
+    }
+    body:has(.seccion:target) .seccion:target > .titulo-seccion h2 {
+      margin:0;
+      padding:0;
+      color:#2f5d3a;
+      font-family:"DM Sans",sans-serif;
+      font-size:clamp(1.5rem,2vw,1.9rem);
+      font-weight:500;
+      line-height:1.2;
+      letter-spacing:0;
+      text-transform:uppercase;
+      text-align:left;
+      text-shadow:none;
+    }
+    body:has(.seccion:target) .contenido,
+    body:has(.seccion:target) .contenido.contenido-capitulo {
+      width:100%;
+      max-width:none;
+      margin-top:28px;
+    }
+    body:has(.seccion:target) .bloque h3 {
+      margin:0 0 18px;
+      color:#2f5d3a;
+      font-family:"DM Sans",sans-serif;
+      font-size:clamp(1.12rem,1.35vw,1.3rem);
+      font-weight:500;
+      line-height:1.35;
+      text-transform:uppercase;
+      text-shadow:none;
+    }
+    body:has(.seccion:target) .contenido p {
+      font-size:1rem;
+      line-height:1.8;
+      text-transform:none;
+      text-shadow:none;
+    }
+    body:has(.seccion:target) .enlace { box-shadow:none; text-shadow:none; }
+
+    @media (min-width:921px) and (max-width:1250px) {
+      .home-cover .identidad,
+      body:has(.seccion:target) .topbar .identidad {
+        flex-basis:165px;
+        width:165px;
+        min-width:165px;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .topbar .logo-martha {
+        width:125px;
+        max-width:125px;
+        height:105px;
+        max-height:105px;
+      }
+      .home-cover .nombre,
+      body:has(.seccion:target) .topbar .nombre { font-size:1rem; }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        font-size:.62rem;
+        gap:3px;
+      }
+      .identidad-pie { gap:7px; }
+      .titulo-activo { font-size:.78rem; }
+    }
+    @media (max-width:920px) {
+      .home-cover { min-height:640px; }
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar {
+        align-items:flex-start;
+        flex-wrap:wrap;
+        gap:14px 18px;
+      }
+      .home-cover .identidad,
+      body:has(.seccion:target) .topbar .identidad {
+        flex:0 0 145px;
+        width:145px;
+        min-width:145px;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .topbar .logo-martha {
+        width:100px;
+        max-width:100px;
+        height:86px;
+        max-height:86px;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex:1 1 100%;
+        justify-content:flex-start;
+        flex-wrap:wrap;
+        white-space:normal;
+        font-size:.82rem;
+        line-height:1.4;
+        gap:10px 12px;
+      }
+      .home-cover .navegacion a,
+      body:has(.seccion:target) .topbar .navegacion a { white-space:normal; }
+      .identidad-pie { flex-wrap:wrap; row-gap:4px; }
+    }
+    @media (max-width:700px) {
+      .home-cover { min-height:680px; }
+      .home-cover .topbar { justify-content:center; padding:20px 16px 0; }
+      body:has(.seccion:target) .contenedor { padding:14px 16px 36px; }
+      .home-cover .identidad,
+      body:has(.seccion:target) .topbar .identidad {
+        flex:0 0 auto;
+        width:100%;
+        min-width:0;
+        align-items:center;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .topbar .logo-martha {
+        width:82px;
+        max-width:82px;
+        height:82px;
+        max-height:82px;
+        margin:0;
+        object-position:center;
+      }
+      .identidad-pie { justify-content:center; align-items:baseline; gap:8px; flex-wrap:wrap; white-space:normal; }
+      .home-cover .nombre,
+      body:has(.seccion:target) .topbar .nombre { font-size:1.05rem; text-align:center; }
+      .home-cover .titulo-activo { font-size:.88rem; white-space:normal; }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex:1 1 100%;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        font-size:.78rem;
+        gap:9px 10px;
+        line-height:1.4;
+        text-align:center;
+      }
+      .contenido.contenido-capitulo { grid-template-columns:minmax(0,1fr); gap:24px; }
+      body:has(.seccion:target) .seccion:target > .titulo-seccion { margin-top:20px; }
+      body:has(.seccion:target) .seccion:target > .titulo-seccion h2 { font-size:1.35rem; }
+      body:has(.seccion:target) .contenido,
+      body:has(.seccion:target) .contenido.contenido-capitulo { margin-top:22px; }
+      body:has(.seccion:target) .contenido p { text-align:left; }
+    }
+
   </style>
 </head>
 
@@ -1265,7 +1549,7 @@
       <a class="identidad" href="#inicio" aria-label="Inicio">
         <img
           class="logo-martha"
-          src="imagenes/LogoMartha-blanco.png"
+          src="imagenes/LogoMartha_blanco.png"
           alt="Logo Martha Llano"
         >
         <div class="identidad-pie">
