@@ -1024,6 +1024,69 @@
       .contenido p { text-align:left; }
     }
 
+
+    /* Afinación según la última revisión de Martha */
+    .home-cover .topbar,
+    body:has(.seccion:target) .topbar {
+      justify-content:flex-start;
+      gap:clamp(18px, 1.8vw, 28px);
+    }
+    .identidad-pie {
+      align-items:baseline;
+      gap:clamp(10px, .9vw, 14px);
+    }
+    .home-cover .nombre,
+    body:has(.seccion:target) .topbar .nombre {
+      line-height:1;
+    }
+    .titulo-activo {
+      position:relative;
+      top:4px;
+      font-size:clamp(.9rem, 1vw, 1rem);
+      letter-spacing:.01em;
+    }
+    .home-cover .navegacion,
+    body:has(.seccion:target) .topbar .navegacion {
+      flex:0 1 auto;
+      justify-content:flex-start;
+      margin-left:0;
+      gap:clamp(10px, .95vw, 15px);
+      font-size:clamp(.68rem, .72vw, .82rem);
+      letter-spacing:.025em;
+    }
+    .home-cover .navegacion a,
+    body:has(.seccion:target) .topbar .navegacion a {
+      flex:0 0 auto;
+    }
+    .home-cover .social,
+    body:has(.seccion:target) .topbar .social {
+      margin-left:clamp(3px, .35vw, 6px);
+    }
+    .home-cover .navegacion a { text-shadow:0 1px 5px rgba(0,0,0,.8); }
+
+    @media (max-width:1250px) and (min-width:921px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar { gap:16px; }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        gap:8px;
+        font-size:.62rem;
+      }
+      .identidad-pie { gap:8px; }
+      .titulo-activo { top:3px; font-size:.82rem; }
+    }
+    @media (max-width:920px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .topbar { gap:14px 18px; }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        flex:1 1 100%;
+        justify-content:flex-start;
+        gap:10px 14px;
+      }
+      .titulo-activo { top:2px; }
+    }
+
   </style>
 </head>
 
