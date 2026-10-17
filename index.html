@@ -1195,6 +1195,57 @@
       .titulo-activo { font-size: .78rem; }
     }
 
+
+    /* Ajuste tipográfico solicitado: enlaces algo mayores y espacios más compactos */
+    @media (min-width: 1181px) {
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        font-size: clamp(.72rem, .72vw, .92rem);
+        gap: clamp(3px, .24vw, 5px);
+        letter-spacing: 0;
+      }
+      .home-cover .separador,
+      body:has(.seccion:target) .topbar .separador {
+        font-size: .34rem;
+      }
+    }
+    @media (min-width: 921px) and (max-width: 1180px) {
+      .home-cover .navegacion,
+      body:has(.seccion:target) .topbar .navegacion {
+        font-size: .64rem;
+        gap: 3px;
+      }
+    }
+
+  
+
+    /* Jerarquía de páginas interiores: menú, título y subtítulos */
+    body:has(.seccion:target) .titulo-activo { display: none !important; }
+    body:has(.seccion:target) .seccion:target > .titulo-seccion {
+      display: block !important; width: 100%; margin: 26px 0 0; padding: 0; text-align: left;
+    }
+    body:has(.seccion:target) .seccion:target > .titulo-seccion h2 {
+      margin: 0; padding: 0; color: #2f5d3a; font-family: "DM Sans", sans-serif;
+      font-size: clamp(1.35rem, 1.65vw, 1.55rem); font-weight: 500; line-height: 1.2;
+      letter-spacing: 0; text-transform: uppercase; text-align: left; text-shadow: none;
+    }
+    body:has(.seccion:target) .topbar .navegacion a,
+    body:has(.seccion:target) .topbar .navegacion,
+    body:has(.seccion:target) .topbar .social { text-shadow: none !important; box-shadow: none !important; }
+    body:has(.seccion:target) .contenido,
+    body:has(.seccion:target) .contenido.contenido-capitulo { margin-top: 28px; }
+    body:has(.seccion:target) .bloque h3 {
+      font-size: clamp(1.12rem, 1.35vw, 1.28rem); font-weight: 500; line-height: 1.35;
+      text-transform: uppercase; text-shadow: none;
+    }
+    body:has(.seccion:target) .contenido p { font-size: 1rem; line-height: 1.8; text-shadow: none; }
+    @media (max-width: 700px) {
+      body:has(.seccion:target) .seccion:target > .titulo-seccion { margin-top: 20px; }
+      body:has(.seccion:target) .seccion:target > .titulo-seccion h2 { font-size: 1.3rem; }
+      body:has(.seccion:target) .contenido,
+      body:has(.seccion:target) .contenido.contenido-capitulo { margin-top: 22px; }
+    }
+
   </style>
 </head>
 
