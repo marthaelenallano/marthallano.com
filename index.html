@@ -2028,7 +2028,25 @@
       body:has(.seccion:target) .contenedor { padding:0 14px 34px !important; }
     }
 
-  </style>
+  
+    /* Ajuste fino solicitado: separadores centrados entre enlaces y espacio uniforme */
+    .home-cover .navegacion,
+    body:has(.seccion:target) .home-cover .navegacion {
+      gap: clamp(10px, 1vw, 14px) !important;
+    }
+    .home-cover .navegacion .separador,
+    body:has(.seccion:target) .home-cover .navegacion .separador {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 12px !important;
+      width: 12px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+      line-height: 1 !important;
+    }
+</style>
 </head>
 
 
