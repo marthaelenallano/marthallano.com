@@ -2046,6 +2046,21 @@
       text-align: center !important;
       line-height: 1 !important;
     }
+
+    /* Ajuste solicitado: correr la navegación a la izquierda y separar Instagram del último enlace */
+    .home-cover .navegacion,
+    body:has(.seccion:target) .home-cover .navegacion {
+      transform: translateX(-38px) !important;
+    }
+    .home-cover .navegacion a[href="#luz"],
+    body:has(.seccion:target) .home-cover .navegacion a[href="#luz"] {
+      margin-right: 10px !important;
+    }
+    .home-cover .navegacion .social,
+    body:has(.seccion:target) .home-cover .navegacion .social {
+      margin-left: 4px !important;
+    }
+
 </style>
 </head>
 
