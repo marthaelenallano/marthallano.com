@@ -2408,6 +2408,92 @@
       text-shadow: none !important;
     }
 
+
+    /* Corrección precisa solicitada: logo -15% y menú en una sola línea. */
+    @media (min-width: 1321px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .home-cover .topbar {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 0 !important;
+      }
+      .home-cover .topbar .identidad,
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        flex: 0 0 209px !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
+        margin: 0 8px 0 0 !important;
+      }
+      .home-cover .topbar .logo-martha,
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        display: block !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+      }
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        flex: 1 1 auto !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        display: flex !important;
+        flex-flow: row nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: clamp(5px, .45vw, 9px) !important;
+        margin: 0 5px 0 0 !important;
+        padding: 0 !important;
+        font-size: clamp(.61rem, .68vw, .76rem) !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .topbar .navegacion a,
+      body:has(.seccion:target) .home-cover .topbar .navegacion a {
+        flex: 0 1 auto !important;
+        min-width: 0 !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .topbar .social,
+      body:has(.seccion:target) .home-cover .topbar .social {
+        flex: 0 0 18px !important;
+        width: 18px !important;
+        min-width: 18px !important;
+        margin: 0 0 0 4px !important;
+      }
+    }
+    @media (min-width: 901px) and (max-width: 1320px) {
+      .home-cover .topbar .identidad,
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        flex: 0 0 177px !important;
+        width: 177px !important;
+        min-width: 177px !important;
+        max-width: 177px !important;
+        margin-right: 7px !important;
+      }
+      .home-cover .topbar .logo-martha,
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        width: 177px !important;
+        min-width: 177px !important;
+        max-width: 177px !important;
+        height: auto !important;
+        max-height: none !important;
+      }
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        gap: 4px !important;
+        margin: 0 3px 0 0 !important;
+        font-size: .59rem !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+    }
+
 </style>
 </head>
 
