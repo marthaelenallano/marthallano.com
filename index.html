@@ -13,7 +13,13 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
     rel="stylesheet"
   >
+/* === Ajustes: ampliar logo home + acercar y alinear menú === / .home-cover .topbar { align-items: flex-end !important; gap: 12px !important; } .home-cover .identidad { margin-right: 12px !important; justify-content: flex-end !important; } .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; height: auto !important; margin-left: 8px !important; margin-bottom: 2px !important; / baja el logo 2px para ajustar la base */ } .home-cover .navegacion { align-self: flex-end !important; margin-left: 4px !important; gap: 8px 10px !important; } .home-cover .navegacion a { display: inline-flex !important; align-items: center !important; padding-bottom: 2px !important; }
 
+/* Responsive: mantener proporciones en pantallas pequeñas */ @media (max-width: 920px) { .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; max-height: 150px !important; } .home-cover .identidad { margin-right: 8px !important; } }
+
+@media (max-width: 700px) { .home-cover .logo-martha { width: 114px !important; /* ≈ 82px * 1.4 */ max-width: 114px !important; max-height: 114px !important; margin-left: 0 !important; } .home-cover .topbar { align-items: center !important; flex-direction: column !important; gap: 16px !important; } }
+
+  
   <style>
 
     /* =========================================================
