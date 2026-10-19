@@ -2494,6 +2494,79 @@
       }
     }
 
+
+    /* AJUSTE FINAL BASADO EN LAS CAPTURAS: misma medida de logo en home e interiores. */
+    @media (min-width: 901px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .home-cover .topbar {
+        display: flex !important;
+        flex-flow: row nowrap !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+      }
+      .home-cover .topbar .identidad,
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        display: block !important;
+        flex: 0 0 209px !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
+        margin: 0 8px 0 0 !important;
+      }
+      .home-cover .topbar .logo-martha,
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        display: block !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        object-fit: contain !important;
+      }
+      .home-cover .topbar .identidad-pie,
+      body:has(.seccion:target) .home-cover .topbar .identidad-pie {
+        display: none !important;
+      }
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        display: flex !important;
+        flex: 1 1 0 !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        flex-flow: row nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: clamp(3px, .32vw, 6px) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: clamp(.57rem, .64vw, .72rem) !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .topbar .navegacion a,
+      body:has(.seccion:target) .home-cover .topbar .navegacion a {
+        flex: 0 1 auto !important;
+        min-width: 0 !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .topbar .navegacion .social,
+      body:has(.seccion:target) .home-cover .topbar .navegacion .social {
+        flex: 0 0 18px !important;
+        width: 18px !important;
+        min-width: 18px !important;
+        margin: 0 0 0 3px !important;
+      }
+    }
+    body:has(.seccion:target) .home-cover .topbar .navegacion,
+    body:has(.seccion:target) .home-cover .topbar .navegacion a,
+    body:has(.seccion:target) .home-cover .topbar .social {
+      color: #111 !important;
+      text-shadow: none !important;
+    }
+
 </style>
 </head>
 
