@@ -2842,12 +2842,14 @@
 
 
     /* ÚNICOS CAMBIOS SOLICITADOS: portada de escritorio y logo de portada móvil.
+       En escritorio se sube la navegación para alinearla con MARTHA LLANO.
        Las páginas interiores permanecen intactas. */
     @media (min-width: 701px) {
       .home-cover:not(:has(.seccion:target)) .topbar .navegacion {
         align-self: flex-end !important;
         margin-top: 0 !important;
         margin-bottom: 8px !important;
+        transform: translateY(-25px) !important;
       }
     }
     @media (max-width: 700px) {
