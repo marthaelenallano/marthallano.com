@@ -2649,6 +2649,63 @@
       }
     }
 
+
+
+    /* ÚNICO AJUSTE NUEVO: centrar y ampliar el logo en móvil, y subir/centrar el menú.
+       No modifica la presentación de escritorio. */
+    @media (max-width: 600px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .home-cover .topbar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+      }
+      .home-cover .topbar .identidad,
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .home-cover .topbar .logo-martha,
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        display: block !important;
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        transform: none !important;
+        object-fit: contain !important;
+      }
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+        flex-flow: row wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: -8px auto 0 !important;
+        padding: 0 8px !important;
+        gap: 8px 12px !important;
+        transform: none !important;
+      }
+      .home-cover .topbar .navegacion a,
+      body:has(.seccion:target) .home-cover .topbar .navegacion a {
+        text-align: center !important;
+      }
+    }
+
 </style>
 </head>
 
