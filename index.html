@@ -2249,6 +2249,45 @@
       }
     }
 
+    /* Ajuste solicitado por Martha: menú a la altura del logo y carrito en la misma línea. */
+    @media (min-width: 1101px) {
+      .home-cover .topbar,
+      body:has(.seccion:target) .home-cover .topbar {
+        align-items: center !important;
+        gap: 0 !important;
+      }
+      .home-cover .identidad,
+      body:has(.seccion:target) .home-cover .identidad {
+        margin-right: 18px !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .home-cover .navegacion {
+        flex: 1 1 auto !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        align-self: center !important;
+        justify-content: space-between !important;
+        gap: clamp(3px, .35vw, 6px) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: clamp(.60rem, .67vw, .78rem) !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .navegacion a,
+      body:has(.seccion:target) .home-cover .navegacion a {
+        flex: 0 1 auto !important;
+        white-space: nowrap !important;
+      }
+      .home-cover .social,
+      body:has(.seccion:target) .home-cover .social {
+        flex: 0 0 18px !important;
+        width: 18px !important;
+        min-width: 18px !important;
+        margin-left: 2px !important;
+      }
+    }
+
     /* En páginas interiores solo cambia el color: misma cabecera y tamaño. */
     body:has(.seccion:target) .home-cover .navegacion,
     body:has(.seccion:target) .home-cover .navegacion a,
