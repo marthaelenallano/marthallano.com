@@ -2567,6 +2567,37 @@
       text-shadow: none !important;
     }
 
+
+
+    /* Corrección final basada en las capturas: el logo interior debe verse
+       del mismo tamaño visual que el blanco del home. El asset a color tiene
+       una proporción visual distinta, por eso necesita un ancho menor. */
+    @media (min-width: 901px) {
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        flex: 0 0 134px !important;
+        width: 134px !important;
+        min-width: 134px !important;
+        max-width: 134px !important;
+        margin: 0 15px 0 0 !important;
+      }
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        display: block !important;
+        width: 134px !important;
+        min-width: 134px !important;
+        max-width: 134px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        object-fit: contain !important;
+      }
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        flex: 1 1 0 !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+      }
+    }
+
 </style>
 </head>
 
