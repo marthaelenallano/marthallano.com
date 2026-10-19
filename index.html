@@ -13,13 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
     rel="stylesheet"
   >
-/* === Ajustes: ampliar logo home + acercar y alinear menú === / .home-cover .topbar { align-items: flex-end !important; gap: 12px !important; } .home-cover .identidad { margin-right: 12px !important; justify-content: flex-end !important; } .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; height: auto !important; margin-left: 8px !important; margin-bottom: 2px !important; / baja el logo 2px para ajustar la base */ } .home-cover .navegacion { align-self: flex-end !important; margin-left: 4px !important; gap: 8px 10px !important; } .home-cover .navegacion a { display: inline-flex !important; align-items: center !important; padding-bottom: 2px !important; }
 
-/* Responsive: mantener proporciones en pantallas pequeñas */ @media (max-width: 920px) { .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; max-height: 150px !important; } .home-cover .identidad { margin-right: 8px !important; } }
-
-@media (max-width: 700px) { .home-cover .logo-martha { width: 114px !important; /* ≈ 82px * 1.4 */ max-width: 114px !important; max-height: 114px !important; margin-left: 0 !important; } .home-cover .topbar { align-items: center !important; flex-direction: column !important; gap: 16px !important; } }
-
-  
   <style>
 
     /* =========================================================
@@ -2038,9 +2032,7 @@
 </head>
 
 
-<body
-
-  <style> /* === OVERRIDE: ajustes del home / internas ================================================== */ /* Aumenta logo en home y acerca botones; alinea a la base de "MARTHA LLANO" */ .home-cover .topbar { align-items: flex-end !important; /* alinear los elementos por la base */ gap: 18px !important; /* reduzco un poco el espacio general */ } /* Identidad: empujar los elementos hacia abajo para que la palabra quede alineada */ .home-cover .identidad { margin-right: 12px !important; /* antes ~28px, lo reduzco para acercar botones */ display: flex !important; flex-direction: column !important; justify-content: flex-end !important; /* fuerza que el h1 quede abajo del contenedor */ } /* Logo: 40% más grande que 100px = 140px, con límites para no romper layout */ .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; height: auto !important; max-height: 150px !important; margin-left: 10px !important; display: block !important; } /* Asegura que la navegación se sitúe al mismo nivel (base) */ .home-cover .navegacion { align-self: flex-end !important; gap: 10px 12px !important; margin-left: 8px !important; /* reduce el espacio entre logo y primer link */ } /* Colores: home = blanco, internas = negro */ .home-cover .navegacion a, .home-cover .social { color: #ffffff !important; /* botones blancos en home */ } body:has(.seccion:target) .topbar .navegacion a, body:has(.seccion:target) .topbar .social { color: #000000 !important; /* botones negros en páginas internas */ } /* Hover en ambos casos: verde oscuro */ .navegacion a:hover, .navegacion a:focus, .social:hover, .social:focus { color: #2f5d3a !important; /* verde oscuro consistente */ outline: none; } /* Ajuste para que el link se alinee mejor con la base del texto */ .home-cover .navegacion a { display: inline-flex !important; align-items: center !important; padding-bottom: 4px !important; } /* --- Responsive: escalo proporcionalmente según breakpoints donde ya tenías reglas --- */ @media (min-width: 921px) and (max-width: 1250px) { .home-cover .logo-martha { width: 175px !important; /* 125px -> 175px (≈ +40%) en ese breakpoint */ max-width: 175px !important; max-height: 210px !important; } .home-cover .navegacion { gap: 8px 10px !important; } } @media (max-width: 920px) { .home-cover .logo-martha { width: 140px !important; max-width: 140px !important; max-height: 150px !important; } .home-cover .identidad { margin-right: 8px !important; } } @media (max-width: 700px) { /* En móvil mantenemos logo más pequeño y el layout centrado (no tocar la experiencia móvil) */ .home-cover .logo-martha { width: 114px !important; /* ≈ 82px * 1.4 */ max-width: 114px !important; max-height: 114px !important; margin-left: 0 !important; } .home-cover .topbar { align-items: center !important; flex-direction: column !important; gap: 16px !important; } .home-cover .identidad { width: auto !important; min-width: 0 !important; } } /* Si usas otro selector para botones (por ejemplo .btn), añade también: .home-cover .navegacion .btn { color: #fff !important; } body:has(.seccion:target) .topbar .navegacion .btn { color: #000 !important; } */ /* ========================================================================================= */ </style>
+<body>
 
   <div class="contenedor">
 
@@ -2055,7 +2047,7 @@
       <a class="identidad" href="#inicio" aria-label="Inicio">
         <img
           class="logo-martha"
-          src="imagenes/LogoMarthaWhite.png"
+          src="imagenes/LogoMartha_blanco.png"
           alt="Logo Martha Llano"
         >
         <div class="identidad-pie">
