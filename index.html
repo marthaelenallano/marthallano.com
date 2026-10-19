@@ -16,6 +16,92 @@
 
   <style>
 
+/* --- OVERRIDES: agrandar logo en portada y acercar botones --- */
+
+/* Escritorio grande */
+@media (min-width:1181px) {
+  .home-cover .identidad,
+  body:has(.seccion:target) .topbar .identidad {
+    flex: 0 0 220px;
+    width: 220px;
+    min-width: 220px;
+  }
+  .home-cover .logo-martha,
+  body:has(.seccion:target) .topbar .logo-martha {
+    width: 176px;
+    max-width: 176px;
+    height: auto;
+    max-height: 126px;
+  }
+  .home-cover .navegacion,
+  body:has(.seccion:target) .topbar .navegacion {
+    gap: clamp(6px, .5vw, 10px);
+  }
+}
+
+/* Escritorio / laptop (mediano) */
+@media (min-width:921px) and (max-width:1180px) {
+  .home-cover .identidad,
+  body:has(.seccion:target) .topbar .identidad {
+    flex-basis: 190px;
+    width: 190px;
+    min-width: 190px;
+  }
+  .home-cover .logo-martha,
+  body:has(.seccion:target) .topbar .logo-martha {
+    width: 150px;
+    max-width: 150px;
+    height: auto;
+    max-height: 122px;
+  }
+  .home-cover .navegacion,
+  body:has(.seccion:target) .topbar .navegacion {
+    gap: 6px;
+    font-size: .64rem;
+  }
+}
+
+/* Tablet (<= 920px) */
+@media (max-width:920px) {
+  .home-cover .identidad,
+  body:has(.seccion:target) .topbar .identidad {
+    flex: 0 0 145px;
+    width: 145px;
+    min-width: 145px;
+  }
+  .home-cover .logo-martha,
+  body:has(.seccion:target) .topbar .logo-martha {
+    width: 120px;
+    max-width: 120px;
+    height: auto;
+    max-height: 110px;
+  }
+  .home-cover .topbar,
+  body:has(.seccion:target) .topbar {
+    gap: 10px 12px;
+  }
+  .home-cover .navegacion,
+  body:has(.seccion:target) .topbar .navegacion {
+    gap: 8px 10px;
+  }
+}
+
+/* Móvil (<= 700px) */
+@media (max-width:700px) {
+  .home-cover .logo-martha,
+  body:has(.seccion:target) .topbar .logo-martha {
+    width: 96px;
+    max-width: 96px;
+    height: auto;
+    max-height: 96px;
+    object-position: center;
+  }
+  .home-cover .topbar { justify-content: center; padding: 18px 12px 0; }
+  .home-cover .navegacion,
+  body:has(.seccion:target) .topbar .navegacion { gap: 10px 12px; }
+}
+    
+
     /* =========================================================
        BASE
     ========================================================= */
