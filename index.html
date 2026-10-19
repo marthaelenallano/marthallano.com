@@ -2615,6 +2615,30 @@
       transform-origin: top left !important;
     }
 
+
+    /* Ajuste de medidas solicitado por Martha: logo y navegación. */
+    @media (min-width: 901px) {
+      /* Conserva el borde superior del logo y mantiene la escala solicitada de 2,5 cm. */
+      .home-cover .topbar .logo-martha,
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        transform: scale(0.78125) !important;
+        transform-origin: top left !important;
+      }
+
+      /* Da más espacio horizontal a la navegación reduciendo el margen derecho. */
+      .home-cover .topbar,
+      body:has(.seccion:target) .home-cover .topbar {
+        padding-right: 1.2vw !important;
+      }
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        transform: translateY(0.2cm) !important;
+      }
+    }
+
 </style>
 </head>
 
