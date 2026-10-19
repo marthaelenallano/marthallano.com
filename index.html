@@ -2139,7 +2139,134 @@
       body:has(.seccion:target) .contenedor { padding:0 14px 34px !important; }
     }
 
-  </style>
+  
+
+    /* AJUSTE PUNTUAL SOLICITADO POR MARTHA — logo y navegación
+       Se aplica al home y a las páginas interiores sin alterar su contenido. */
+    @media (min-width: 1101px) {
+      .home-cover .identidad,
+      body:has(.seccion:target) .home-cover .identidad {
+        flex: 0 0 246px !important;
+        width: 246px !important;
+        min-width: 246px !important;
+        max-width: 246px !important;
+        margin-right: 12px !important;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .home-cover .logo-martha {
+        width: 246px !important;
+        max-width: 246px !important;
+        height: auto !important;
+        max-height: none !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .home-cover .navegacion {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        align-content: flex-end !important;
+        gap: 7px 8px !important;
+        margin: 0 0 12px 0 !important;
+        padding: 0 !important;
+        font-size: clamp(.62rem, .68vw, .78rem) !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+      }
+      .home-cover .navegacion a,
+      body:has(.seccion:target) .home-cover .navegacion a {
+        white-space: nowrap !important;
+      }
+    }
+
+    /* En anchos medianos, el mismo tamaño relativo para home e interiores. */
+    @media (min-width: 601px) and (max-width: 1100px) {
+      .home-cover .identidad,
+      body:has(.seccion:target) .home-cover .identidad {
+        flex: 0 0 210px !important;
+        width: 210px !important;
+        min-width: 210px !important;
+        max-width: 210px !important;
+        margin: 0 0 12px 0 !important;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .home-cover .logo-martha {
+        width: 210px !important;
+        max-width: 210px !important;
+        height: auto !important;
+        max-height: none !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .home-cover .navegacion {
+        flex: 1 1 calc(100% - 222px) !important;
+        width: auto !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        gap: 9px 11px !important;
+        margin: 0 !important;
+        padding: 0 0 8px !important;
+        font-size: .78rem !important;
+        white-space: normal !important;
+      }
+      .home-cover .navegacion a,
+      body:has(.seccion:target) .home-cover .navegacion a {
+        white-space: normal !important;
+      }
+    }
+
+    /* En móvil se mantiene una cabecera apilada y proporcionada. */
+    @media (max-width: 600px) {
+      .home-cover .identidad,
+      body:has(.seccion:target) .home-cover .identidad {
+        flex: 0 0 174px !important;
+        width: 174px !important;
+        min-width: 174px !important;
+        max-width: 174px !important;
+        margin: 0 0 12px 0 !important;
+      }
+      .home-cover .logo-martha,
+      body:has(.seccion:target) .home-cover .logo-martha {
+        width: 174px !important;
+        max-width: 174px !important;
+        height: auto !important;
+        max-height: none !important;
+      }
+      .home-cover .navegacion,
+      body:has(.seccion:target) .home-cover .navegacion {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        gap: 9px 11px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: .75rem !important;
+        white-space: normal !important;
+      }
+      .home-cover .navegacion a,
+      body:has(.seccion:target) .home-cover .navegacion a {
+        white-space: normal !important;
+      }
+    }
+
+    /* En páginas interiores solo cambia el color: misma cabecera y tamaño. */
+    body:has(.seccion:target) .home-cover .navegacion,
+    body:has(.seccion:target) .home-cover .navegacion a,
+    body:has(.seccion:target) .home-cover .social {
+      color: #111 !important;
+      text-shadow: none !important;
+    }
+    body:has(.seccion:target) .home-cover .separador {
+      color: #bdbdbd !important;
+    }
+    body:has(.seccion:target) .home-cover .navegacion a:hover,
+    body:has(.seccion:target) .home-cover .navegacion a:focus-visible,
+    body:has(.seccion:target) .home-cover .social:hover,
+    body:has(.seccion:target) .home-cover .social:focus-visible {
+      color: #237b36 !important;
+    }
+
+</style>
 </head>
 
 
