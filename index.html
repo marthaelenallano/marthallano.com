@@ -2598,6 +2598,14 @@
       }
     }
 
+    /* Ajuste solicitado: aumentar 5% la tipografía de los botones de navegación. */
+    @media (min-width: 1101px) {
+      .home-cover .topbar .navegacion,
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        font-size: clamp(.5985rem, .672vw, .756rem) !important;
+      }
+    }
+
 </style>
 </head>
 
