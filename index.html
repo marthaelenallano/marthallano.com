@@ -2739,16 +2739,25 @@
       body:has(.seccion:target) .home-cover .topbar.menu-abierto .navegacion { display:flex !important; }
       body:has(.seccion:target) .home-cover .topbar .navegacion a { color:#fff !important; white-space:normal !important; text-align:center !important; }
       body:has(.seccion:target) .home-cover .topbar .navegacion .separador { display:none !important; }
-      /* Centrado real del logo interior, independiente del ancho del menú. */
-      body:has(.seccion:target) .home-cover .topbar { position:relative !important; }
+      /* Logo interior centrado en su propia fila, sin superponerse al contenido. */
+      body:has(.seccion:target) .home-cover .topbar {
+        position:relative !important;
+        display:grid !important;
+        grid-template-columns:1fr auto 1fr !important;
+        grid-template-areas:"espacio logo menu" "nav nav nav" !important;
+        align-items:start !important;
+        padding:14px 16px 0 !important;
+        min-height:220px !important;
+      }
       body:has(.seccion:target) .home-cover .topbar .identidad {
-        position:absolute !important; left:50% !important; top:14px !important;
-        transform:translateX(-50%) !important; margin:0 !important;
+        position:relative !important; left:auto !important; top:auto !important;
+        grid-area:logo !important; justify-self:center !important; align-self:start !important;
+        transform:none !important; margin:0 !important;
         width:190px !important; max-width:calc(100vw - 100px) !important;
       }
       body:has(.seccion:target) .home-cover .topbar .logo-martha {
         display:block !important; width:100% !important; max-width:100% !important;
-        margin:0 auto !important;
+        height:auto !important; margin:0 auto !important; transform:none !important;
       }
     }
     @media (max-width:380px) {
