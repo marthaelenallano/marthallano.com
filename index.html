@@ -2701,7 +2701,7 @@
         display:inline-flex; min-width:164px; min-height:48px; padding:12px 24px;
         justify-content:center; align-items:center; border:1px solid rgba(255,255,255,.9);
         border-radius:3px; color:#fff !important; background:rgba(0,0,0,.18);
-        text-decoration:none !important; text-transform:none; font-family:"DM Sans",sans-serif;
+        text-decoration:none !important; text-transform:uppercase; font-family:"DM Sans",sans-serif;
         font-size:.95rem; font-weight:500; letter-spacing:.01em; box-shadow:0 2px 12px rgba(0,0,0,.12);
       }
       .home-cover .boton-mis-escritos:hover, .home-cover .boton-mis-escritos:focus-visible { background:rgba(255,255,255,.15); }
@@ -2739,6 +2739,17 @@
       body:has(.seccion:target) .home-cover .topbar.menu-abierto .navegacion { display:flex !important; }
       body:has(.seccion:target) .home-cover .topbar .navegacion a { color:#fff !important; white-space:normal !important; text-align:center !important; }
       body:has(.seccion:target) .home-cover .topbar .navegacion .separador { display:none !important; }
+      /* Centrado real del logo interior, independiente del ancho del menú. */
+      body:has(.seccion:target) .home-cover .topbar { position:relative !important; }
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        position:absolute !important; left:50% !important; top:14px !important;
+        transform:translateX(-50%) !important; margin:0 !important;
+        width:190px !important; max-width:calc(100vw - 100px) !important;
+      }
+      body:has(.seccion:target) .home-cover .topbar .logo-martha {
+        display:block !important; width:100% !important; max-width:100% !important;
+        margin:0 auto !important;
+      }
     }
     @media (max-width:380px) {
       .home-cover .topbar .identidad, .home-cover .topbar .logo-martha { width:170px !important; }
@@ -2912,7 +2923,7 @@
 </header>
     <div class="portada-movil-contenido">
       <h2>Apasionada por capturar los instantes con mi mirada y transmitirlos con mi propia voz</h2>
-      <a class="boton-mis-escritos" href="#mundo">Mis escritos</a>
+      <a class="boton-mis-escritos" href="#mundo">MIS ESCRITOS</a>
     </div>
 </div>
 
