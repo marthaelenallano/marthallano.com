@@ -2779,15 +2779,13 @@
         background:rgba(18,28,21,.66) !important;
         backdrop-filter:blur(3px);
       }
-      /* ÚNICO CAMBIO: en móvil, el logo de páginas interiores usa el mismo
-         tamaño visual compacto de la portada; no se modifica el resto del diseño. */
       body:has(.seccion:target) .home-cover .topbar .identidad {
-        width:124px !important; max-width:calc(100vw - 100px) !important;
+        width:220px !important; max-width:calc(100vw - 100px) !important;
         justify-self:center !important; align-self:center !important;
         margin:0 !important;
       }
       body:has(.seccion:target) .home-cover .topbar .logo-martha {
-        width:124px !important; max-width:100% !important;
+        width:220px !important; max-width:100% !important;
       }
       body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa {
         align-self:center !important; justify-self:end !important;
@@ -2807,6 +2805,15 @@
       .home-cover .portada-movil-contenido h2 { font-size:1.3rem; }
     }
 
+
+
+/* Ajuste solicitado: en escritorio, los enlaces de las páginas interiores
+   quedan a la misma altura que la navegación de la portada. No altera móvil. */
+@media (min-width: 1101px) {
+  body:has(.seccion:target) .topbar .navegacion {
+    transform: translateY(52px);
+  }
+}
 
 </style>
 </head>
