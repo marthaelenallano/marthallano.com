@@ -2573,18 +2573,20 @@
        del mismo tamaño visual que el blanco del home. El asset a color tiene
        una proporción visual distinta, por eso necesita un ancho menor. */
     @media (min-width: 901px) {
+      /* En escritorio, la identidad interior ocupa el mismo ancho que en home,
+         de modo que la navegación comienza y queda alineada en la misma posición. */
       body:has(.seccion:target) .home-cover .topbar .identidad {
-        flex: 0 0 134px !important;
-        width: 134px !important;
-        min-width: 134px !important;
-        max-width: 134px !important;
-        margin: 0 15px 0 0 !important;
+        flex: 0 0 209px !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
+        margin: 0 8px 0 0 !important;
       }
       body:has(.seccion:target) .home-cover .topbar .logo-martha {
         display: block !important;
-        width: 134px !important;
-        min-width: 134px !important;
-        max-width: 134px !important;
+        width: 209px !important;
+        min-width: 209px !important;
+        max-width: 209px !important;
         height: auto !important;
         min-height: 0 !important;
         max-height: none !important;
@@ -2595,6 +2597,15 @@
         width: 0 !important;
         min-width: 0 !important;
         margin-left: 0 !important;
+      }
+    }
+
+    /* Tipografía en negrita para los enlaces de navegación en home e interiores,
+       únicamente en escritorio; no modifica el menú móvil. */
+    @media (min-width: 901px) {
+      .home-cover .topbar .navegacion a,
+      body:has(.seccion:target) .home-cover .topbar .navegacion a {
+        font-weight: 700 !important;
       }
     }
 
@@ -2805,15 +2816,6 @@
       .home-cover .portada-movil-contenido h2 { font-size:1.3rem; }
     }
 
-
-
-/* Ajuste solicitado: en escritorio, los enlaces de las páginas interiores
-   quedan a la misma altura que la navegación de la portada. No altera móvil. */
-@media (min-width: 1101px) {
-  body:has(.seccion:target) .topbar .navegacion {
-    transform: translateY(52px);
-  }
-}
 
 </style>
 </head>
