@@ -2651,60 +2651,73 @@
 
 
 
-    /* ÚNICO AJUSTE NUEVO: centrar y ampliar el logo en móvil, y subir/centrar el menú.
-       No modifica la presentación de escritorio. */
+    /* Ajustes exclusivos para la portada en móvil. Escritorio y secciones conservan su diseño. */
+    .menu-hamburguesa, .portada-movil-contenido { display:none; }
     @media (max-width: 600px) {
-      .home-cover .topbar,
-      body:has(.seccion:target) .home-cover .topbar {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        gap: 0 !important;
+      .home-cover:not(:has(~ .seccion:target)) .topbar {
+        display:grid !important; grid-template-columns:40px 1fr 40px !important;
+        grid-template-areas:"menu logo espacio" "nav nav nav" !important;
+        align-items:center !important; justify-content:initial !important;
+        gap:0 !important; padding:14px 16px 0 !important;
       }
-      .home-cover .topbar .identidad,
-      body:has(.seccion:target) .home-cover .topbar .identidad {
-        display: flex !important;
-        flex: 0 0 auto !important;
-        width: 200px !important;
-        min-width: 200px !important;
-        max-width: 200px !important;
-        margin: 0 auto !important;
-        justify-content: center !important;
-        align-items: center !important;
+      .home-cover .topbar .menu-hamburguesa {
+        grid-area:menu; display:flex !important; width:36px; height:36px; padding:8px 6px;
+        flex-direction:column; justify-content:center; gap:5px; border:1px solid rgba(255,255,255,.78);
+        border-radius:3px; background:rgba(0,0,0,.16); cursor:pointer; z-index:5;
       }
-      .home-cover .topbar .logo-martha,
-      body:has(.seccion:target) .home-cover .topbar .logo-martha {
-        display: block !important;
-        width: 200px !important;
-        min-width: 200px !important;
-        max-width: 200px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        transform: none !important;
-        object-fit: contain !important;
+      .home-cover .topbar .menu-hamburguesa span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; }
+      .home-cover .topbar .identidad {
+        grid-area:logo; display:flex !important; flex:0 0 auto !important; width:220px !important;
+        min-width:0 !important; max-width:100% !important; margin:0 auto !important;
+        justify-content:center !important; align-items:center !important;
       }
-      .home-cover .topbar .navegacion,
-      body:has(.seccion:target) .home-cover .topbar .navegacion {
-        display: flex !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        flex: 0 0 auto !important;
-        flex-flow: row wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        margin: -8px auto 0 !important;
-        padding: 0 8px !important;
-        gap: 8px 12px !important;
-        transform: none !important;
+      .home-cover .topbar .logo-martha {
+        display:block !important; width:220px !important; min-width:0 !important; max-width:100% !important;
+        height:auto !important; max-height:none !important; margin:0 auto !important;
+        transform:none !important; object-fit:contain !important; object-position:center !important;
       }
-      .home-cover .topbar .navegacion a,
-      body:has(.seccion:target) .home-cover .topbar .navegacion a {
-        text-align: center !important;
+      .home-cover .topbar .navegacion {
+        grid-area:nav; display:none !important; width:100% !important; max-width:100% !important;
+        min-width:0 !important; margin:12px auto 0 !important; padding:14px 10px !important;
+        flex-flow:column nowrap !important; justify-content:center !important; align-items:center !important;
+        gap:13px !important; background:rgba(10,18,13,.88); border:1px solid rgba(255,255,255,.3);
+        border-radius:4px; white-space:normal !important; font-size:.78rem !important; text-align:center !important;
       }
+      .home-cover .topbar.menu-abierto .navegacion { display:flex !important; }
+      .home-cover .topbar .navegacion a { white-space:normal !important; text-align:center !important; }
+      .home-cover .topbar .navegacion .separador { display:none !important; }
+      .home-cover .portada-movil-contenido {
+        display:flex !important; position:absolute; z-index:2; left:22px; right:22px; top:49%;
+        transform:translateY(-10%); flex-direction:column; align-items:center; text-align:center; gap:24px;
+      }
+      .home-cover .portada-movil-contenido h2 {
+        max-width:520px; margin:0; color:#fff; font-family:"DM Sans",sans-serif;
+        font-size:clamp(1.35rem,5.2vw,1.85rem); line-height:1.28; font-weight:500;
+        letter-spacing:-.025em; text-shadow:0 1px 10px rgba(0,0,0,.38);
+      }
+      .home-cover .boton-mis-escritos {
+        display:inline-flex; min-width:164px; min-height:48px; padding:12px 24px;
+        justify-content:center; align-items:center; border:1px solid rgba(255,255,255,.9);
+        border-radius:3px; color:#fff !important; background:rgba(0,0,0,.18);
+        text-decoration:none !important; text-transform:none; font-family:"DM Sans",sans-serif;
+        font-size:.95rem; font-weight:500; letter-spacing:.01em; box-shadow:0 2px 12px rgba(0,0,0,.12);
+      }
+      .home-cover .boton-mis-escritos:hover, .home-cover .boton-mis-escritos:focus-visible { background:rgba(255,255,255,.15); }
+      /* Cuando se está leyendo una sección, la cabecera mantiene su menú normal y no muestra el hero móvil. */
+      body:has(.seccion:target) .home-cover .topbar { display:flex !important; position:relative !important; padding:14px 16px 0 !important; }
+      body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa,
+      body:has(.seccion:target) .home-cover .portada-movil-contenido { display:none !important; }
+      body:has(.seccion:target) .home-cover .topbar .identidad { display:flex !important; width:150px !important; min-width:150px !important; max-width:150px !important; margin:0 auto !important; }
+      body:has(.seccion:target) .home-cover .topbar .logo-martha { width:150px !important; max-width:150px !important; }
+      body:has(.seccion:target) .home-cover .topbar .navegacion { display:flex !important; position:static !important; flex-flow:row wrap !important; margin:0 auto !important; padding:0 8px !important; background:transparent; border:0; gap:8px 12px !important; }
+      body:has(.seccion:target) .home-cover .topbar .navegacion .separador { display:none !important; }
     }
+    @media (max-width:380px) {
+      .home-cover .topbar .identidad, .home-cover .topbar .logo-martha { width:190px !important; }
+      .home-cover .portada-movil-contenido { left:18px; right:18px; }
+      .home-cover .portada-movil-contenido h2 { font-size:1.3rem; }
+    }
+
 
 </style>
 </head>
@@ -2722,6 +2735,10 @@
     <div class="home-cover" id="inicio">
     <header class="topbar">
 
+      <button class="menu-hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
       <a class="identidad" href="#inicio" aria-label="Inicio">
         <img
           class="logo-martha"
@@ -2737,7 +2754,7 @@
 
       <!-- NAVEGACIÓN -->
 
-      <nav class="navegacion">
+      <nav class="navegacion" id="menu-principal">
 <a href="#mundo">
           Lo que siento
         </a>
@@ -2864,6 +2881,10 @@
            Y ANTES DE LA FOTO
       ==================================================== -->
 </header>
+    <div class="portada-movil-contenido">
+      <h2>Apasionada por capturar los instantes con mi mirada y transmitirlos con mi propia voz</h2>
+      <a class="boton-mis-escritos" href="#mundo">Mis escritos</a>
+    </div>
 </div>
 
     <!-- =====================================================
@@ -3587,6 +3608,26 @@
   }
   window.addEventListener('hashchange', updateTitle);
   updateTitle();
+})();
+</script>
+<script>
+(function () {
+  const header = document.querySelector('.home-cover .topbar');
+  const button = document.querySelector('.home-cover .menu-hamburguesa');
+  const menu = document.getElementById('menu-principal');
+  if (!header || !button || !menu) return;
+  button.addEventListener('click', function () {
+    const open = header.classList.toggle('menu-abierto');
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  menu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      header.classList.remove('menu-abierto');
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
 })();
 </script>
 
