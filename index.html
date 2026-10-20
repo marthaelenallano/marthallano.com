@@ -2656,7 +2656,7 @@
     @media (max-width: 600px) {
       .home-cover:not(:has(~ .seccion:target)) .topbar {
         display:grid !important; grid-template-columns:40px 1fr 40px !important;
-        grid-template-areas:"menu logo espacio" "nav nav nav" !important;
+        grid-template-areas:"espacio logo menu" "nav nav nav" !important;
         align-items:center !important; justify-content:initial !important;
         gap:0 !important; padding:14px 16px 0 !important;
       }
@@ -2687,8 +2687,8 @@
       .home-cover .topbar .navegacion a { white-space:normal !important; text-align:center !important; }
       .home-cover .topbar .navegacion .separador { display:none !important; }
       .home-cover .portada-movil-contenido {
-        display:flex !important; position:absolute; z-index:2; left:22px; right:22px; top:49%;
-        transform:translateY(-10%); flex-direction:column; align-items:center; text-align:center; gap:24px;
+        display:flex !important; position:absolute; z-index:2; left:22px; right:22px; top:72%;
+        transform:translateY(-50%); flex-direction:column; align-items:center; text-align:center; gap:24px;
       }
       .home-cover .portada-movil-contenido h2 {
         max-width:520px; margin:0; color:#fff; font-family:"DM Sans",sans-serif;
@@ -2703,13 +2703,39 @@
         font-size:.95rem; font-weight:500; letter-spacing:.01em; box-shadow:0 2px 12px rgba(0,0,0,.12);
       }
       .home-cover .boton-mis-escritos:hover, .home-cover .boton-mis-escritos:focus-visible { background:rgba(255,255,255,.15); }
-      /* Cuando se está leyendo una sección, la cabecera mantiene su menú normal y no muestra el hero móvil. */
-      body:has(.seccion:target) .home-cover .topbar { display:flex !important; position:relative !important; padding:14px 16px 0 !important; }
-      body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa,
+      /* En las páginas interiores también usamos menú hamburguesa a la derecha. */
+      body:has(.seccion:target) .home-cover .topbar {
+        display:grid !important; position:relative !important;
+        grid-template-columns:1fr 150px 40px !important;
+        grid-template-areas:"espacio logo menu" "nav nav nav" !important;
+        align-items:center !important; gap:0 !important; padding:14px 16px 0 !important;
+      }
+      body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa {
+        grid-area:menu !important; display:flex !important; justify-self:end !important;
+        width:36px !important; height:36px !important; padding:8px 6px !important;
+        flex-direction:column !important; justify-content:center !important; gap:5px !important;
+        border:1px solid rgba(70,70,70,.65) !important; border-radius:3px !important;
+        background:rgba(255,255,255,.72) !important; cursor:pointer; z-index:5;
+      }
+      body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa span { background:#333 !important; }
       body:has(.seccion:target) .home-cover .portada-movil-contenido { display:none !important; }
-      body:has(.seccion:target) .home-cover .topbar .identidad { display:flex !important; width:150px !important; min-width:150px !important; max-width:150px !important; margin:0 auto !important; }
+      body:has(.seccion:target) .home-cover .topbar .identidad {
+        grid-area:logo !important; display:flex !important; width:150px !important;
+        min-width:0 !important; max-width:150px !important; margin:0 auto !important;
+      }
       body:has(.seccion:target) .home-cover .topbar .logo-martha { width:150px !important; max-width:150px !important; }
-      body:has(.seccion:target) .home-cover .topbar .navegacion { display:flex !important; position:static !important; flex-flow:row wrap !important; margin:0 auto !important; padding:0 8px !important; background:transparent; border:0; gap:8px 12px !important; }
+      body:has(.seccion:target) .home-cover .topbar .navegacion {
+        grid-area:nav !important; display:none !important; position:absolute !important;
+        top:58px !important; right:16px !important; z-index:10 !important;
+        width:min( calc(100vw - 32px), 340px) !important; max-width:calc(100vw - 32px) !important;
+        min-width:0 !important; margin:0 !important; padding:14px 10px !important;
+        flex-flow:column nowrap !important; justify-content:center !important; align-items:center !important;
+        gap:13px !important; background:rgba(10,18,13,.94) !important;
+        border:1px solid rgba(255,255,255,.3) !important; border-radius:4px !important;
+        white-space:normal !important; font-size:.78rem !important; text-align:center !important;
+      }
+      body:has(.seccion:target) .home-cover .topbar.menu-abierto .navegacion { display:flex !important; }
+      body:has(.seccion:target) .home-cover .topbar .navegacion a { color:#fff !important; white-space:normal !important; text-align:center !important; }
       body:has(.seccion:target) .home-cover .topbar .navegacion .separador { display:none !important; }
     }
     @media (max-width:380px) {
