@@ -1,10 +1,9 @@
-
 backend:
   name: github
   repo: marthaelenallano/marthallano.com
   branch: main
-  base_url: https://ddfa66eb-decap-proxy-martha.martha-llano.workers.dev
-  auth_endpoint: auth
+  base_url: https://decap-proxy-martha.martha-llano.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "imagenes/blog"
 public_folder: "/imagenes/blog"
