@@ -1,7 +1,7 @@
 ---
 title: Coherencia
 date: 2026-10-21T13:07:00.000-05:00
-image: /imagenes/blog/captura-de-pantalla-2026-10-21-a-las-5.46.24 a. m..png
+image: /imagenes/blog/captura-de-pantalla-2026-10-21-a-las-1.15.22 p. m..png
 ---
 Coherencia
 
