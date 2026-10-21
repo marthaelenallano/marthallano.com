@@ -1,0 +1,31 @@
+
+backend:
+  name: github
+  repo: marthaelenallano/marthallano.com
+  branch: main
+  base_url: https://ddfa66eb-decap-proxy-martha.martha-llano.workers.dev
+  auth_endpoint: auth
+
+media_folder: "imagenes/blog"
+public_folder: "/imagenes/blog"
+
+locale: "es"
+
+publish_mode: editorial_workflow
+
+site_url: https://marthallano.com
+display_url: https://marthallano.com
+
+collections:
+  - name: "emociones"
+    label: "Gestionando mis emociones"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen principal", name: "image", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
