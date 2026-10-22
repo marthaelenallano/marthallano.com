@@ -12,7 +12,7 @@ site_url: https://marthallano.com
 display_url: https://marthallano.com
 collections:
   - name: "emociones"
-    label: "Relatos"
+    label: "Mis relatos"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
