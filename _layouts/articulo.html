@@ -1,0 +1,49 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | Martha Llano</title>
+  <meta name="description" content="{{ page.excerpt | default: page.title | strip_html | strip_newlines | escape }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#fafaf8;color:#3e403d;font-family:"DM Sans",sans-serif;line-height:1.75}
+    a{color:inherit;text-decoration:none} .barra{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,5vw,72px);border-bottom:1px solid #e6e6e1;background:#fff}
+    .marca img{width:172px;height:auto;display:block} .volver{color:#2f5d3a;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+    main{width:min(100% - 40px,1000px);margin:0 auto;padding:58px 0 80px}.cabecera{max-width:780px;margin:0 auto 34px;text-align:center}
+    h1{margin:0;color:#2f5d3a;font-family:"Libre Baskerville",serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:400;line-height:1.2}
+    .fecha{margin:18px 0 0;color:#74776f;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase}
+    figure{margin:0 auto 48px;max-width:900px} figure img{display:block;width:100%;max-height:600px;object-fit:contain;background:#f0f0eb}
+    article{max-width:760px;margin:0 auto;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.9} article p{margin:0 0 1.55em} article p:last-child{margin-bottom:0}
+    .pie-articulo{max-width:760px;margin:54px auto 0;padding-top:24px;border-top:1px solid #d8ddd5;display:flex;justify-content:space-between;gap:20px;color:#2f5d3a;font-weight:600}
+    .pie-articulo a:hover,.volver:hover{color:#6b8d55}.pie-articulo span{color:#85877f;font-size:.85rem}
+    footer{text-align:center;padding:25px 20px 40px;color:#777;font-size:.85rem}
+    @media(max-width:600px){.barra{padding:14px 18px}.marca img{width:132px}.volver{font-size:.76rem}main{width:min(100% - 32px,1000px);padding:38px 0 56px}figure{margin-bottom:34px}.pie-articulo{flex-direction:column}.cabecera{margin-bottom:26px}}
+  </style>
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="/" aria-label="Martha Llano, inicio"><img src="/imagenes/LogoMartha.png" alt="Martha Llano"></a>
+    <a class="volver" href="/relatos/">Volver a Mis relatos</a>
+  </header>
+  <main>
+    <header class="cabecera">
+      <h1>{{ page.title | escape }}</h1>
+      <p class="fecha">{% assign mes = page.date | date: "%m" %}{% assign dia = page.date | date: "%-d" %}{% assign anio = page.date | date: "%Y" %}{{ dia }} de {% case mes %}{% when "01" %}enero{% when "02" %}febrero{% when "03" %}marzo{% when "04" %}abril{% when "05" %}mayo{% when "06" %}junio{% when "07" %}julio{% when "08" %}agosto{% when "09" %}septiembre{% when "10" %}octubre{% when "11" %}noviembre{% when "12" %}diciembre{% endcase %} de {{ anio }}</p>
+    </header>
+    {% if page.image %}<figure><img src="{{ page.image }}" alt="Imagen principal de {{ page.title | escape }}"></figure>{% endif %}
+    <article>{{ content }}</article>
+    <nav class="pie-articulo" aria-label="Navegación entre relatos">
+      {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% else %}<span>Estás leyendo el relato más reciente</span>{% endif %}
+      <a href="/relatos/">Todos mis relatos</a>
+      {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
+    </nav>
+  </main>
+  <footer>Martha Llano · Relatos</footer>
+</body>
+</html>
