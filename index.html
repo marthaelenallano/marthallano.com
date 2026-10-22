@@ -2992,7 +2992,7 @@
 </header>
     <div class="portada-movil-contenido">
       <h2>Apasionada por capturar los instantes con mi mirada y<br> transmitirlos con mi propia voz</h2>
-      <a class="boton-mis-escritos" href="/admin/#/collections/emociones">MIS RELATOS</a>
+      <a class="boton-mis-escritos" href="/2026/10/22/coherencia.html">MIS RELATOS</a>
     </div>
 </div>
 
@@ -3740,5 +3740,53 @@
 })();
 </script>
 
-</body>
-</html>
+<style>
+@media (min-width: 901px) {
+  .home-cover .topbar { display:grid !important; grid-template-columns:158px minmax(0,1fr) !important; align-items:end !important; column-gap:24px !important; flex-wrap:nowrap !important; }
+  .home-cover .topbar .menu-hamburguesa { display:none !important; }
+  .home-cover .topbar .identidad { grid-column:1 !important; align-self:end !important; width:158px !important; min-width:158px !important; max-width:158px !important; margin:0 !important; }
+  .home-cover .topbar .navegacion { grid-column:2 !important; align-self:end !important; justify-content:flex-start !important; margin:0 0 4px !important; transform:none !important; }
+}
+.home-cover .home-carousel { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.home-cover .home-carousel img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1.2s ease; }
+.home-cover .home-carousel img.is-active { opacity:1; }
+@media (prefers-reduced-motion: reduce) { .home-cover .home-carousel img { transition:none; } }
+</style>
+<script>
+(function () {
+  const cover = document.querySelector('.home-cover');
+  const button = document.querySelector('.home-cover .boton-mis-escritos');
+  if (button) button.href = '/2026/10/22/coherencia.html';
+  if (!cover) return;
+  const carousel = document.createElement('div');
+  carousel.className = 'home-carousel';
+  carousel.setAttribute('aria-hidden', 'true');
+  cover.insertBefore(carousel, cover.firstChild);
+  const api = 'https://api.github.com/repos/marthaelenallano/marthallano.com/contents/imagenes/galeria-home?ref=main';
+  fetch(api, { headers: { Accept: 'application/vnd.github+json' } })
+    .then(response => { if (!response.ok) throw new Error('Galería aún sin imágenes'); return response.json(); })
+    .then(files => {
+      const photos = files.filter(file => file.type === 'file' && ['.jpg','.jpeg','.png','.webp','.avif'].some(ext => file.name.toLowerCase().endsWith(ext)));
+      if (!photos.length) return;
+      photos.forEach((photo, index) => {
+        const image = document.createElement('img');
+        image.src = photo.download_url;
+        image.alt = '';
+        image.decoding = 'async';
+        if (index === 0) image.classList.add('is-active');
+        carousel.appendChild(image);
+      });
+      if (photos.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let active = 0;
+      window.setInterval(() => {
+        const slides = carousel.querySelectorAll('img');
+        slides[active].classList.remove('is-active');
+        active = (active + 1) % slides.length;
+        slides[active].classList.add('is-active');
+      }, 6500);
+    })
+    .catch(() => {});
+})();
+</script>
+
+</body></html>
