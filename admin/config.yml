@@ -4,20 +4,15 @@ backend:
   branch: main
   base_url: https://decap-proxy-martha.martha-llano.workers.dev
   auth_endpoint: /auth
-
 media_folder: "imagenes/blog"
 public_folder: "/imagenes/blog"
-
 locale: "es"
-
 publish_mode: editorial_workflow
-
 site_url: https://marthallano.com
 display_url: https://marthallano.com
-
 collections:
   - name: "emociones"
-    label: "Gestionando mis emociones"
+    label: "Relatos"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
