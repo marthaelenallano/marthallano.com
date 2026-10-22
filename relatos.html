@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /relatos/
+---
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis relatos | Martha Llano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fafaf8;color:#3e403d;font-family:"DM Sans",sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.barra{display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,72px);border-bottom:1px solid #e6e6e1;background:#fff}.marca img{display:block;width:172px;height:auto}.inicio{color:#2f5d3a;font-size:.9rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}main{width:min(100% - 40px,1100px);margin:0 auto;padding:62px 0 80px}h1{margin:0 0 12px;text-align:center;color:#2f5d3a;font:400 clamp(2.2rem,5vw,3.5rem)/1.2 "Libre Baskerville",serif}.intro{text-align:center;color:#74776f;margin:0 auto 42px;max-width:620px}.relatos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px}.tarjeta{overflow:hidden;background:#fff;border:1px solid #e7e7e1;border-radius:4px;transition:transform .2s,box-shadow .2s}.tarjeta:hover{transform:translateY(-3px);box-shadow:0 12px 28px #26301b18}.tarjeta img{display:block;width:100%;height:240px;object-fit:cover;background:#f0f0eb}.cuerpo{padding:22px 24px 26px}.fecha{margin:0 0 8px;color:#7d8178;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}h2{margin:0 0 10px;color:#2f5d3a;font:400 1.45rem/1.35 "Libre Baskerville",serif}.extracto{margin:0;color:#555950}.leer{display:inline-block;margin-top:16px;color:#2f5d3a;font-weight:600}.vacio{text-align:center;color:#74776f;padding:40px}footer{text-align:center;padding:25px 20px 40px;color:#777;font-size:.85rem}@media(max-width:600px){.barra{padding:14px 18px}.marca img{width:132px}.inicio{font-size:.76rem}main{padding:42px 0 56px;width:min(100% - 32px,1100px)}.tarjeta img{height:210px}.cuerpo{padding:19px}}
+</style>
+</head><body>
+<header class="barra"><a class="marca" href="/" aria-label="Martha Llano, inicio"><img src="/imagenes/LogoMartha.png" alt="Martha Llano"></a><a class="inicio" href="/">Volver al inicio</a></header>
+<main><h1>Mis relatos</h1><p class="intro">Historias, pensamientos y momentos que quiero compartir contigo.</p>
+<div class="relatos">{% for relato in site.posts %}<a class="tarjeta" href="{{ relato.url | relative_url }}">{% if relato.image %}<img src="{{ relato.image }}" alt="Imagen de {{ relato.title | escape }}" loading="lazy">{% endif %}<div class="cuerpo"><p class="fecha">{{ relato.date | date: "%d/%m/%Y" }}</p><h2>{{ relato.title | escape }}</h2><p class="extracto">{{ relato.excerpt | strip_html | strip_newlines | truncate: 180 }}</p><span class="leer">Leer relato →</span></div></a>{% else %}<p class="vacio">Pronto habrá relatos para leer.</p>{% endfor %}</div></main>
+<footer>Martha Llano · Mis relatos</footer></body></html>
