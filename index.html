@@ -921,8 +921,6 @@
   text-transform:none;
   text-align:right;
 }
-      text-decoration:none; text-underline-offset:4px;
-    }
     .home-cover .separador { font-size:.48em; opacity:.62; margin:0 -4px; }
     .home-cover .social { display:inline-flex; align-items:center; margin-left:2px; }
     .home-cover .social svg { width:17px; height:17px; }
@@ -3757,19 +3755,9 @@ body:has(.seccion:target) .home-cover .topbar .separador { color:#777 !important
 body:has(.seccion:target) .home-cover .topbar .navegacion a:hover,
 body:has(.seccion:target) .home-cover .topbar .navegacion a:focus-visible,
 body:has(.seccion:target) .home-cover .topbar .social:hover { color:#267a2d !important; }
-@media (max-width: 900px) {
-  body:has(.seccion:target) .home-cover .topbar { display:flex !important; flex-wrap:wrap !important; align-items:flex-start !important; gap:12px 18px !important; }
-  body:has(.seccion:target) .home-cover .topbar .identidad { flex:0 0 150px !important; width:150px !important; min-width:150px !important; max-width:150px !important; margin:0 !important; }
-  body:has(.seccion:target) .home-cover .topbar .logo-martha { width:150px !important; max-width:150px !important; height:auto !important; max-height:none !important; }
-  body:has(.seccion:target) .home-cover .topbar .navegacion { flex:1 1 calc(100% - 168px) !important; width:auto !important; flex-wrap:wrap !important; white-space:normal !important; justify-content:flex-start !important; transform:none !important; margin:0 !important; padding:0 0 8px !important; font-size:.82rem !important; gap:10px 12px !important; }
-  body:has(.seccion:target) .home-cover .topbar .navegacion a { white-space:normal !important; }
-}
-@media (max-width: 600px) {
-  body:has(.seccion:target) .home-cover .topbar { padding:18px 14px 0 !important; }
-  body:has(.seccion:target) .home-cover .topbar .identidad { flex:0 0 124px !important; width:124px !important; min-width:124px !important; max-width:124px !important; }
-  body:has(.seccion:target) .home-cover .topbar .logo-martha { width:124px !important; max-width:124px !important; height:90px !important; max-height:90px !important; }
-  body:has(.seccion:target) .home-cover .topbar .navegacion { flex:1 1 100% !important; width:100% !important; font-size:.8rem !important; gap:10px 12px !important; }
-}
+/* El carrusel ocupa todo .home-cover, que crece al mostrar una sección. */
+body:has(.seccion:target) .home-cover .home-carousel { display:none !important; }
+
 @media (min-width: 901px) {
   .home-cover .topbar { display:grid !important; grid-template-columns:158px minmax(0,1fr) !important; align-items:end !important; column-gap:24px !important; flex-wrap:nowrap !important; }
   .home-cover .topbar .menu-hamburguesa { display:none !important; }
