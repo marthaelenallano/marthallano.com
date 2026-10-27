@@ -10,40 +10,86 @@ layout: null
   <meta name="description" content="{{ page.excerpt | default: page.title | strip_html | strip_newlines | escape }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box} body{margin:0;background:#fafaf8;color:#3e403d;font-family:"DM Sans",sans-serif;line-height:1.75}
-    a{color:inherit;text-decoration:none} .barra{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,5vw,72px);border-bottom:1px solid #e6e6e1;background:#fff}
-    .marca img{width:172px;height:auto;display:block} .volver{color:#2f5d3a;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
-    main{width:min(100% - 40px,1000px);margin:0 auto;padding:58px 0 80px}.cabecera{max-width:780px;margin:0 auto 34px;text-align:center}
-    h1{margin:0;color:#2f5d3a;font-family:"Libre Baskerville",serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:400;line-height:1.2}
-    .fecha{margin:18px 0 0;color:#74776f;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase}
-    figure{margin:0 auto 48px;max-width:900px} figure img{display:block;width:100%;max-height:600px;object-fit:contain;background:#f0f0eb}
-    article{max-width:760px;margin:0 auto;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.9} article p{margin:0 0 1.55em} article p:last-child{margin-bottom:0}
-    .pie-articulo{max-width:760px;margin:54px auto 0;padding-top:24px;border-top:1px solid #d8ddd5;display:flex;justify-content:space-between;gap:20px;color:#2f5d3a;font-weight:600}
-    .pie-articulo a:hover,.volver:hover{color:#6b8d55}.pie-articulo span{color:#85877f;font-size:.85rem}
-    footer{text-align:center;padding:25px 20px 40px;color:#777;font-size:.85rem}
-    @media(max-width:600px){.barra{padding:14px 18px}.marca img{width:132px}.volver{font-size:.76rem}main{width:min(100% - 32px,1000px);padding:38px 0 56px}figure{margin-bottom:34px}.pie-articulo{flex-direction:column}.cabecera{margin-bottom:26px}}
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fafaf8; color: #3e403d; font-family: "DM Sans", sans-serif; line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    a:hover, a:focus-visible { color: #267a2d; text-decoration: underline; text-underline-offset: 4px; }
+    .salto { position: absolute; left: -10000px; top: auto; }
+    .salto:focus { left: 1rem; top: 1rem; z-index: 5; padding: .75rem 1rem; background: #fff; }
+    .barra { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 18px clamp(20px, 3vw, 50px); border-bottom: 1px solid #e6e6e1; background: #fff; }
+    .marca { flex: 0 0 auto; }
+    .marca img { display: block; width: 172px; max-height: 126px; object-fit: contain; object-position: left center; }
+    .navegacion { display: flex; flex: 1 1 auto; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px clamp(6px, 1vw, 14px); color: #454545; font-size: clamp(.68rem, .78vw, .88rem); font-weight: 600; line-height: 1.25; text-transform: uppercase; }
+    .navegacion a { white-space: nowrap; }
+    .separador { flex: 0 0 auto; color: #bdbdbd; font-size: .48em; }
+    .volver { flex: 0 0 auto; color: #2f5d3a; font-size: .82rem; font-weight: 600; letter-spacing: .025em; text-align: right; text-transform: uppercase; }
+    main { width: min(100% - 40px, 1168px); margin: 0 auto; padding: 54px 0 0; }
+    .cabecera { max-width: 900px; margin: 0 auto 34px; text-align: center; }
+    h1 { margin: 0; color: #2f5d3a; font-family: "DM Sans", sans-serif; font-size: clamp(1.45rem, 1.9vw, 1.8rem); font-weight: 500; line-height: 1.25; letter-spacing: .015em; text-transform: uppercase; }
+    .fecha { margin: 16px 0 0; color: #74776f; font-size: .92rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+    figure { max-width: 1000px; margin: 0 auto 42px; }
+    figure img { display: block; width: 100%; max-height: 600px; object-fit: contain; background: #f0f0eb; }
+    .contenido-relato { max-width: 900px; margin: 0 auto; font-size: 14pt; line-height: 1.8; }
+    .contenido-relato, .contenido-relato * { font-size: 14pt !important; }
+    .contenido-relato p { margin: 0 0 1.5em; }
+    .contenido-relato p:last-child { margin-bottom: 0; }
+    .contenido-relato img { display: block; max-width: 100%; height: auto; margin: 2rem auto; }
+    .pie-articulo { max-width: 900px; margin: 54px auto 0; padding-top: 24px; border-top: 1px solid #d8ddd5; display: flex; justify-content: space-between; gap: 20px; color: #2f5d3a; font-weight: 600; }
+    .pie-articulo span { color: #85877f; font-size: .85rem; }
+    footer { padding: 58px 20px 40px; color: #777; font-size: .9rem; text-align: center; }
+    footer p { margin: 0; }
+    @media (max-width: 1100px) {
+      .barra { flex-wrap: wrap; gap: 14px 18px; padding: 16px 22px; }
+      .marca img { width: 145px; max-height: 100px; }
+      .navegacion { flex: 1 1 100%; order: 3; justify-content: flex-start; gap: 10px 12px; font-size: .76rem; }
+      .volver { margin-left: auto; }
+      main { width: min(100% - 36px, 900px); padding-top: 40px; }
+    }
+    @media (max-width: 600px) {
+      .barra { padding: 14px 16px; gap: 12px; }
+      .marca img { width: 126px; max-height: 80px; }
+      .volver { max-width: 205px; font-size: .68rem; }
+      .navegacion { gap: 9px 12px; font-size: .68rem; }
+      .separador { display: none; }
+      main { width: min(100% - 32px, 560px); padding-top: 32px; }
+      .cabecera { margin-bottom: 26px; }
+      h1 { font-size: 1.35rem; }
+      .fecha { margin-top: 12px; font-size: .82rem; }
+      figure { margin-bottom: 32px; }
+      .pie-articulo { flex-direction: column; margin-top: 40px; }
+      footer { padding: 44px 16px 30px; }
+    }
   </style>
 </head>
 <body>
+  <a class="salto" href="#contenido">Saltar al relato</a>
   <header class="barra">
     <a class="marca" href="/" aria-label="Martha Llano, inicio"><img src="/imagenes/LogoMartha.png" alt="Martha Llano"></a>
-    <a class="volver" href="/relatos/">Volver a Mis relatos</a>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="/#mundo">Lo que siento</a><span class="separador" aria-hidden="true">◆</span>
+      <a href="/#dos-mundos">Entre dos mundos</a><span class="separador" aria-hidden="true">◆</span>
+      <a href="/#sostenibilidad">La sostenibilidad empieza con casas</a><span class="separador" aria-hidden="true">◆</span>
+      <a href="/#emociones">Gestionando mis emociones</a><span class="separador" aria-hidden="true">◆</span>
+      <a href="/#disenar">Diseñar para interpretar</a><span class="separador" aria-hidden="true">◆</span>
+      <a href="/#luz">Captando la luz que veo</a>
+    </nav>
+    <a class="volver" href="/relatos/">© 2026 Martha Llano · Volver a mis relatos</a>
   </header>
-  <main>
+  <main id="contenido">
     <header class="cabecera">
       <h1>{{ page.title | escape }}</h1>
       <p class="fecha">{% assign mes = page.date | date: "%m" %}{% assign dia = page.date | date: "%-d" %}{% assign anio = page.date | date: "%Y" %}{{ dia }} de {% case mes %}{% when "01" %}enero{% when "02" %}febrero{% when "03" %}marzo{% when "04" %}abril{% when "05" %}mayo{% when "06" %}junio{% when "07" %}julio{% when "08" %}agosto{% when "09" %}septiembre{% when "10" %}octubre{% when "11" %}noviembre{% when "12" %}diciembre{% endcase %} de {{ anio }}</p>
     </header>
     {% if page.image %}<figure><img src="{{ page.image }}" alt="Imagen principal de {{ page.title | escape }}"></figure>{% endif %}
-    <article>{{ content }}</article>
+    <article class="contenido-relato">{{ content }}</article>
     <nav class="pie-articulo" aria-label="Navegación entre relatos">
       {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% else %}<span>Estás leyendo el relato más reciente</span>{% endif %}
       <a href="/relatos/">Todos mis relatos</a>
       {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
     </nav>
   </main>
-  <footer>Martha Llano · Relatos</footer>
+  <footer><p>© 2026 Martha Llano · Relatos</p></footer>
 </body>
 </html>
