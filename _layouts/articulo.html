@@ -99,3 +99,21 @@ layout: null
 @media (min-width:921px){.barra .navegacion,.barra .volver{transform:translateY(-2.35cm)}}
 @media (max-width:920px){.barra .navegacion,.barra .volver{transform:none}}
 </style>
+
+<style>
+/* Cabecera de los relatos alineada a las medidas comprobadas del home. */
+@media (min-width: 901px) {
+  .barra { width: calc(100% + 4.6vw); margin-left: -2.3vw; padding: clamp(20px, 2.2vw, 30px) 1.2vw 0 2.3vw; height: auto; justify-content: flex-start; align-items: flex-end; gap: 24px; }
+  .marca { flex: 0 0 158px; width: 158px; height: 208px; }
+  .marca img { width: 185px; max-height: none; margin: 0; transform: scale(.78125); transform-origin: left top; }
+  .navegacion { flex: 1 1 auto; align-self: flex-end; justify-content: space-between; align-items: center; margin: 0 0 4px; transform: translateY(-2.35cm); }
+  .volver { align-self: flex-end; margin: 0 0 4px; transform: translateY(-2.35cm); }
+}
+@media (max-width: 600px) {
+  .barra { position: relative; display: block; width: 100%; height: 261px; padding: 14px 0 0; }
+  .marca { width: 220px; height: 247px; margin: 0 auto; }
+  .marca img { width: 220px; max-height: none; margin: 0; transform: none; }
+  .navegacion { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px; width: calc(100% - 24px); margin: 0 12px; font-size: 10px; transform: none; }
+  .volver { position: absolute; top: 18px; right: 16px; margin: 0; transform: none; }
+}
+</style>
