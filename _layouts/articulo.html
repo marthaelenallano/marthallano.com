@@ -18,13 +18,13 @@ layout: null
     a:hover, a:focus-visible { color: #267a2d; text-decoration: underline; text-underline-offset: 4px; }
     .salto { position: absolute; left: -10000px; top: auto; }
     .salto:focus { left: 1rem; top: 1rem; z-index: 5; padding: .75rem 1rem; background: #fff; }
-    .barra { display: flex; align-items: center; justify-content: space-between; gap: clamp(10px, 1vw, 24px); padding: clamp(22px, 3vw, 42px) clamp(22px, 3.2vw, 50px); border-bottom: 1px solid #e6e6e1; background: #fff; }
+    .barra { display: flex; align-items: flex-end; justify-content: space-between; gap: clamp(10px, 1vw, 24px); padding: clamp(20px, 3vw, 42px) clamp(22px, 3.2vw, 50px) 0; border-bottom: 1px solid #e6e6e1; background: #fff; }
     .marca { flex: 0 0 auto; }
-    .marca img { display: block; width: 220px; max-height: none; object-fit: contain; object-position: left center; }
-    .navegacion { display: flex; flex: 1 1 auto; align-items: center; justify-content: flex-end; flex-wrap: nowrap; gap: 8px clamp(6px, .65vw, 11px); color: #454545; font-size: clamp(.72rem, .78vw, .9rem); font-weight: 600; line-height: 1.25; text-transform: uppercase; }
+    .marca img { display: block; width: 140px; max-height: 126px; margin: 0 0 0 17px; object-fit: contain; object-position: left bottom; }
+    .navegacion { display: flex; flex: 1 1 auto; align-items: flex-end; justify-content: flex-end; flex-wrap: nowrap; gap: 8px clamp(6px, .65vw, 11px); color: #454545; font-size: clamp(.72rem, .78vw, .9rem); font-weight: 600; line-height: 1.25; text-transform: uppercase; }
     .navegacion a { white-space: nowrap; }
     .separador { flex: 0 0 auto; color: #bdbdbd; font-size: .48em; }
-    .volver { flex: 0 0 auto; align-self: center; margin-bottom: 0; color: #2f5d3a; font-size: clamp(.68rem, .72vw, .82rem); font-weight: 600; letter-spacing: .025em; text-align: right; text-transform: uppercase; white-space: nowrap; }
+    .volver { flex: 0 0 auto; align-self: flex-end; margin-bottom: 4px; color: #2f5d3a; font-size: clamp(.68rem, .72vw, .82rem); font-weight: 600; letter-spacing: .025em; text-align: right; text-transform: uppercase; white-space: nowrap; }
     main { width: min(100% - 40px, 1168px); margin: 0 auto; padding: 54px 0 0; }
     .cabecera { max-width: 900px; margin: 0 auto 34px; text-align: center; }
     h1 { margin: 0; color: #2f5d3a; font-family: "DM Sans", sans-serif; font-size: clamp(1.45rem, 1.9vw, 1.8rem); font-weight: 500; line-height: 1.25; letter-spacing: .015em; text-transform: uppercase; }
@@ -49,7 +49,7 @@ layout: null
     }
     @media (max-width: 600px) {
       .barra { padding: 14px 16px 0; gap: 12px; }
-      .marca img { width: 220px; max-height: none; }
+      .marca img { width: 96px; max-height: 96px; }
       .volver { max-width: 205px; font-size: .68rem; }
       .navegacion { gap: 9px 12px; font-size: .68rem; }
       .separador { display: none; }
