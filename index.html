@@ -3820,9 +3820,24 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
       }, 6500);
     })
     .catch(() => {});
-})();
-</script><style>
-
-</body>
-
+})();</script>
+<style>
+/* Encabezados de secciones: escala y alineación del home, sin modificar el home. */
+@media (min-width: 901px) {
+  body:has(.seccion:target) .home-cover .topbar { display:grid !important; grid-template-columns:158px minmax(0,1fr) !important; align-items:end !important; justify-content:initial !important; column-gap:24px !important; flex-wrap:nowrap !important; padding:clamp(20px,3vw,42px) clamp(22px,3.2vw,50px) 0 !important; }
+  body:has(.seccion:target) .home-cover .topbar .identidad { grid-column:1 !important; flex:0 0 158px !important; width:158px !important; min-width:158px !important; max-width:158px !important; align-self:end !important; margin:0 !important; }
+  body:has(.seccion:target) .home-cover .topbar .logo-martha { width:140px !important; max-width:140px !important; height:auto !important; max-height:126px !important; margin:0 0 0 17px !important; transform:none !important; object-fit:contain !important; object-position:left bottom !important; }
+  body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa { display:none !important; }
+  body:has(.seccion:target) .home-cover .topbar .navegacion { grid-column:2 !important; align-self:end !important; justify-content:flex-start !important; margin:0 0 4px !important; transform:translateY(-2.35cm) !important; flex-wrap:wrap !important; }
+}
+@media (min-width: 901px) and (max-width: 920px) { body:has(.seccion:target) .home-cover .topbar .logo-martha { width:120px !important; max-width:120px !important; max-height:110px !important; } }
+@media (min-width: 921px) and (max-width: 1180px) { body:has(.seccion:target) .home-cover .topbar .logo-martha { width:150px !important; max-width:150px !important; max-height:122px !important; } }
+@media (min-width: 1181px) { body:has(.seccion:target) .home-cover .topbar .logo-martha { width:176px !important; max-width:176px !important; max-height:126px !important; } }
+@media (max-width: 700px) {
+  body:has(.seccion:target) .home-cover .topbar .identidad { flex:0 0 110px !important; width:110px !important; min-width:110px !important; max-width:110px !important; margin:0 auto !important; align-items:center !important; }
+  body:has(.seccion:target) .home-cover .topbar .logo-martha { width:70px !important; max-width:70px !important; height:auto !important; max-height:62px !important; margin:0 !important; transform:none !important; object-position:center !important; }
+  body:has(.seccion:target) .home-cover .topbar .navegacion { background:rgba(255,255,255,.96) !important; color:#000 !important; }
+  body:has(.seccion:target) .home-cover .topbar .navegacion a { color:#000 !important; text-shadow:none !important; }
+}
+</style>
 </body></html>
