@@ -16,4 +16,4 @@ permalink: /relatos/
 <header class="barra"><a class="marca" href="/" aria-label="Martha Llano, inicio"><img src="/imagenes/LogoMartha.png" alt="Martha Llano"></a><a class="inicio" href="/">Volver al inicio</a></header>
 <main><h1>Mis relatos</h1><p class="intro">Historias, pensamientos y momentos que quiero compartir contigo.</p>
 <div class="relatos">{% for relato in site.posts %}<a class="tarjeta" href="{{ relato.url | relative_url }}">{% if relato.image %}<img src="{{ relato.image }}" alt="Imagen de {{ relato.title | escape }}" loading="lazy">{% endif %}<div class="cuerpo"><p class="fecha">{{ relato.date | date: "%d/%m/%Y" }}</p><h2>{{ relato.title | escape }}</h2><p class="extracto">{{ relato.excerpt | strip_html | strip_newlines | truncate: 180 }}</p><span class="leer">Leer relato →</span></div></a>{% else %}<p class="vacio">Pronto habrá relatos para leer.</p>{% endfor %}</div></main>
-<footer>Martha Llano · Mis relatos</footer></body></html>
+<footer>© 2026 Martha Llano · Mis relatos</footer></body></html>
