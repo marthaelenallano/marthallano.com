@@ -1,6 +1,7 @@
 ---
 layout: null
 ---
+<!-- Versión preparada: 2026-10-28 v6. Cambios limitados a la plantilla de artículo. -->
 <!doctype html>
 <html lang="es">
 <head>
@@ -26,7 +27,6 @@ layout: null
       justify-content: space-between;
       gap: clamp(18px, 2vw, 32px);
       padding: clamp(20px, 3vw, 42px) clamp(22px, 3.2vw, 50px) 0;
-      border-bottom: 1px solid #e5e5e0;
       background: transparent;
     }
 
@@ -42,6 +42,33 @@ layout: null
       object-position: left bottom;
     }
 
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 9px;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      color: #2f5d3a;
+      background: transparent;
+      cursor: pointer;
+    }
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+      position: relative;
+    }
+    .menu-toggle span::before { position: absolute; top: -7px; }
+    .menu-toggle span::after { position: absolute; top: 7px; }
+    .menu-toggle:focus-visible { outline: 2px solid #2f8f46; outline-offset: 3px; }
+
     .navegacion {
       display: flex;
       flex: 1 1 auto;
@@ -54,7 +81,7 @@ layout: null
       font-weight: 500;
       line-height: 1.45;
       letter-spacing: .01em;
-      text-transform: none;
+      text-transform: uppercase;
     }
 
     .navegacion a {
@@ -96,52 +123,99 @@ layout: null
     main { width: min(100% - 40px, 1168px); margin: 0 auto; padding: 54px 0 0; }
     .cabecera { max-width: 900px; margin: 0 auto 34px; text-align: center; }
     h1 { margin: 0; color: #2f5d3a; font-family: "DM Sans", sans-serif; font-size: clamp(1.45rem, 1.9vw, 1.8rem); font-weight: 500; line-height: 1.25; letter-spacing: .015em; text-transform: uppercase; }
-    .fecha { margin: 16px 0 0; color: #74776f; font-size: .92rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+    .fecha { margin: 24px auto 0; max-width: 900px; color: #85877f; font-size: .72rem; font-weight: 400; letter-spacing: .025em; text-transform: none; text-align: right; }
     figure { max-width: 1000px; margin: 0 auto 42px; }
     figure img { display: block; width: 100%; max-height: 600px; object-fit: contain; background: #f0f0eb; }
     .contenido-relato { max-width: 900px; margin: 0 auto; font-size: 14pt; line-height: 1.8; }
     .contenido-relato, .contenido-relato * { font-size: 14pt !important; }
+    @media (min-width: 921px) {
+      .contenido-relato, .contenido-relato * { font-size: 13pt !important; }
+    }
     .contenido-relato p { margin: 0 0 1.5em; }
     .contenido-relato p:last-child { margin-bottom: 0; }
     .contenido-relato img { display: block; max-width: 100%; height: auto; margin: 2rem auto; }
-    .pie-articulo { max-width: 900px; margin: 54px auto 0; padding-top: 24px; border-top: 1px solid #d8ddd5; display: flex; justify-content: space-between; gap: 20px; color: #2f5d3a; font-weight: 500; }
+    .pie-articulo { max-width: 900px; margin: 54px auto 0; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: #2f5d3a; font-weight: 500; }
     .pie-articulo span { color: #85877f; font-size: .85rem; }
-    footer { padding: 58px 20px 40px; color: #777; font-size: .9rem; text-align: center; }
-    footer p { margin: 0; }
+    .pie-articulo .copyright { flex: 0 0 auto; color: #85877f; font-size: .78rem; font-weight: 400; white-space: nowrap; }
+    footer { display: none; }
 
     @media (min-width:921px) and (max-width:1180px) {
       .marca img { width: 88px; max-height: 94px; }
     }
 
     @media (max-width: 920px) {
-      .barra { align-items: flex-start; flex-wrap: wrap; gap: 14px 18px; padding: 22px 22px 0; }
-      .marca img { width: 88px; max-height: 94px; }
-      .navegacion { flex: 1 1 100%; order: 3; justify-content: flex-start; flex-wrap: wrap; gap: 10px 12px; font-size: .76rem; }
-      .volver { align-self: center; margin: 0 0 0 auto; }
+      .barra {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 22px 0;
+      }
+      .marca img { width: 88px; max-height: 94px; height: auto; }
+      .menu-toggle { display: inline-flex; grid-column: 2; grid-row: 1; }
+      .volver { grid-column: 3; grid-row: 1; align-self: center; margin: 0; }
+      .navegacion {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 16px;
+        left: 16px;
+        z-index: 20;
+        flex: none;
+        order: initial;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 12px;
+        padding: 20px 16px;
+        border: 1px solid rgba(255,255,255,.22);
+        border-radius: 3px;
+        color: #fff;
+        background: rgba(25, 35, 29, .78);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 8px 24px rgba(0,0,0,.12);
+        font-size: .76rem;
+        line-height: 1.5;
+      }
+      .barra.menu-abierto .navegacion { display: flex; }
+      .navegacion a { color: #fff; justify-content: center; text-align: center; white-space: normal; }
+      .separador { display: none; }
+      .menu-toggle { color: #2f5d3a; }
+      .menu-toggle span,
+      .menu-toggle span::before,
+      .menu-toggle span::after { background: currentColor; }
       main { width: min(100% - 36px, 900px); padding-top: 40px; }
     }
 
     @media (max-width: 600px) {
-      .barra { padding: 18px 12px 0; gap: 12px; }
+      .barra { padding: 18px 12px 0; gap: 10px; }
       .marca img { width: 78px; max-height: 82px; }
-      .volver { max-width: 205px; font-size: .68rem; }
-      .navegacion { gap: 9px 12px; font-size: .68rem; }
-      .separador { display: none; }
+      .menu-toggle { width: 40px; height: 40px; }
+      .menu-toggle span,
+      .menu-toggle span::before,
+      .menu-toggle span::after { width: 22px; }
+      .volver { max-width: 70px; font-size: .68rem; white-space: nowrap; }
+      .navegacion { right: 12px; left: 12px; gap: 12px; font-size: .68rem; }
       main { width: min(100% - 32px, 560px); padding-top: 32px; }
       .cabecera { margin-bottom: 26px; }
       h1 { font-size: 1.35rem; }
-      .fecha { margin-top: 12px; font-size: .82rem; }
+      .fecha { margin-top: 20px; font-size: .72rem; }
       figure { margin-bottom: 32px; }
-      .pie-articulo { flex-direction: column; margin-top: 40px; }
-      footer { padding: 44px 16px 30px; }
+      .pie-articulo { flex-direction: column; align-items: flex-start; margin-top: 40px; gap: 12px; }
+      .pie-articulo .copyright { white-space: normal; }
     }
   </style>
 </head>
 <body>
   <a class="salto" href="#contenido">Saltar al relato</a>
-  <header class="barra">
+  <header class="barra" id="barra-principal">
     <a class="marca" href="/" aria-label="Martha Llano, inicio"><img src="/imagenes/LogoMartha.png" alt="Martha Llano"></a>
-    <nav class="navegacion" aria-label="Navegación principal">
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navegacion-principal"><span></span></button>
+    <nav class="navegacion" id="navegacion-principal" aria-label="Navegación principal">
       <a href="/#mundo">Lo que siento</a><span class="separador" aria-hidden="true">◆</span>
       <a href="/#dos-mundos">Entre dos mundos</a><span class="separador" aria-hidden="true">◆</span>
       <a href="/#sostenibilidad">La sostenibilidad empieza con casas</a><span class="separador" aria-hidden="true">◆</span>
@@ -154,16 +228,35 @@ layout: null
   <main id="contenido">
     <header class="cabecera">
       <h1>{{ page.title | escape }}</h1>
-      <p class="fecha">{% assign mes = page.date | date: "%m" %}{% assign dia = page.date | date: "%-d" %}{% assign anio = page.date | date: "%Y" %}{{ dia }} de {% case mes %}{% when "01" %}enero{% when "02" %}febrero{% when "03" %}marzo{% when "04" %}abril{% when "05" %}mayo{% when "06" %}junio{% when "07" %}julio{% when "08" %}agosto{% when "09" %}septiembre{% when "10" %}octubre{% when "11" %}noviembre{% when "12" %}diciembre{% endcase %} de {{ anio }}</p>
     </header>
     {% if page.image %}<figure><img src="{{ page.image }}" alt="Imagen principal de {{ page.title | escape }}"></figure>{% endif %}
     <article class="contenido-relato">{{ content }}</article>
+    <p class="fecha">{% assign mes = page.date | date: "%m" %}{% assign dia = page.date | date: "%-d" %}{% assign anio = page.date | date: "%Y" %}{{ dia }} de {% case mes %}{% when "01" %}enero{% when "02" %}febrero{% when "03" %}marzo{% when "04" %}abril{% when "05" %}mayo{% when "06" %}junio{% when "07" %}julio{% when "08" %}agosto{% when "09" %}septiembre{% when "10" %}octubre{% when "11" %}noviembre{% when "12" %}diciembre{% endcase %} de {{ anio }}</p>
     <nav class="pie-articulo" aria-label="Navegación entre relatos">
       {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% else %}<span>Estás leyendo el relato más reciente</span>{% endif %}
       <a href="/relatos/">Todos mis relatos</a>
       {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
+      <span class="copyright">© 2026 Martha Llano · Relatos</span>
     </nav>
   </main>
-  <footer><p>© 2026 Martha Llano · Relatos</p></footer>
+  <script>
+    (function () {
+      const barra = document.getElementById('barra-principal');
+      const boton = barra && barra.querySelector('.menu-toggle');
+      if (!barra || !boton) return;
+      boton.addEventListener('click', function () {
+        const abierto = barra.classList.toggle('menu-abierto');
+        boton.setAttribute('aria-expanded', String(abierto));
+        boton.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+      });
+      barra.querySelectorAll('.navegacion a').forEach(function (enlace) {
+        enlace.addEventListener('click', function () {
+          barra.classList.remove('menu-abierto');
+          boton.setAttribute('aria-expanded', 'false');
+          boton.setAttribute('aria-label', 'Abrir menú');
+        });
+      });
+    }());
+  </script>
 </body>
 </html>
