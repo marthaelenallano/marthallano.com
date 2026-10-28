@@ -3832,6 +3832,67 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
   }
 }
 
+
+
+/* AJUSTE V3 — SOLO ENCABEZADO MÓVIL DE PÁGINAS INTERIORES.
+   La portada (home) queda fuera de estas reglas. */
+@media (max-width: 700px) {
+  body:has(.seccion:target) .home-cover .topbar {
+    min-height: 142px !important;
+    padding: 12px 14px 0 !important;
+    grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) !important;
+    grid-template-areas: "espacio logo menu" "nav nav nav" !important;
+    align-items: start !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .identidad {
+    grid-area: logo !important;
+    justify-self: center !important;
+    align-self: start !important;
+    width: 116px !important;
+    min-width: 0 !important;
+    max-width: 116px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .logo-martha {
+    width: 116px !important;
+    min-width: 0 !important;
+    max-width: 116px !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa {
+    grid-area: menu !important;
+    justify-self: end !important;
+    align-self: start !important;
+    margin: 0 0 0 auto !important;
+    z-index: 30 !important;
+  }
+  /* Menú desplegado: contraste alto para que se lean bien enlaces e iconos. */
+  body:has(.seccion:target) .home-cover .topbar .navegacion,
+  body:has(.seccion:target) .home-cover .topbar.menu-abierto .navegacion {
+    background: rgba(10,18,13,.97) !important;
+    color: #fff !important;
+    border-color: rgba(255,255,255,.55) !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion a,
+  body:has(.seccion:target) .home-cover .topbar .navegacion a:visited,
+  body:has(.seccion:target) .home-cover .topbar .navegacion .social {
+    color: #fff !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion .social svg {
+    color: #fff !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+    opacity: 1 !important;
+  }
+}
+
 </style>
 <script>
 (function () {
