@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-<!-- Versión preparada: 2026-10-28 v7. Ajustes de encabezado y navegación del artículo. -->
+<!-- Versión preparada: 2026-10-28 v8. Tipografía y alineación final de encabezado. -->
 <!doctype html>
 <html lang="es">
 <head>
@@ -25,7 +25,7 @@ layout: null
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      gap: clamp(8px, 1vw, 16px);
+      gap: clamp(6px, .65vw, 10px);
       padding: clamp(20px, 3vw, 42px) clamp(18px, 2.8vw, 50px) 0;
       background: transparent;
     }
@@ -77,10 +77,10 @@ layout: null
       flex-wrap: nowrap;
       gap: clamp(4px, .55vw, 9px);
       color: #454545;
-      font-size: clamp(.60rem, .70vw, .80rem);
+      font-size: clamp(.65rem, .72vw, .82rem);
       font-weight: 500;
-      line-height: 1.45;
-      letter-spacing: .01em;
+      line-height: 1.2;
+      letter-spacing: .015em;
       text-transform: uppercase;
     }
 
@@ -111,9 +111,9 @@ layout: null
     .volver {
       flex: 0 0 auto;
       align-self: flex-end;
-      margin-bottom: 4px;
+      margin-bottom: 0;
       color: #202020;
-      font-size: clamp(.60rem, .70vw, .80rem);
+      font-size: clamp(.65rem, .72vw, .82rem);
       text-transform: uppercase;
       white-space: nowrap;
       font-weight: 600;
@@ -123,7 +123,7 @@ layout: null
     }
 
     main { width: min(100% - 40px, 1168px); margin: 0 auto; padding: 54px 0 0; }
-    .cabecera { max-width: none; margin: 0 0 34px; padding-left: clamp(30px, 3.6vw, 58px); text-align: left; }
+    .cabecera { max-width: 900px; margin: 0 auto 34px; padding-left: 0; text-align: center; }
     h1 { margin: 0; color: #2f5d3a; font-family: "DM Sans", sans-serif; font-size: clamp(1.45rem, 1.9vw, 1.8rem); font-weight: 500; line-height: 1.25; letter-spacing: .015em; text-transform: uppercase; }
     .fecha { margin: 24px auto 0; max-width: 900px; color: #85877f; font-size: .72rem; font-weight: 400; letter-spacing: .025em; text-transform: none; text-align: right; }
     figure { max-width: 1000px; margin: 0 auto 42px; }
