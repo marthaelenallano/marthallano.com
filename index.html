@@ -3910,6 +3910,19 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
   }
 }
 
+/* AJUSTE V5 — SOLO PÁGINAS INTERIORES EN MÓVIL:
+   bajar el botón hamburguesa para centrarlo verticalmente con el logo
+   y dar un poco más de aire antes del título. La portada no se modifica. */
+@media (max-width: 700px) {
+  body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa {
+    align-self: center !important;
+    margin-top: 0 !important;
+  }
+  body:has(.seccion:target) .seccion:target > .titulo-seccion {
+    margin-top: 28px !important;
+  }
+}
+
 </style>
 <script>
 (function () {
