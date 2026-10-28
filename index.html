@@ -66,6 +66,7 @@
     .logo-martha {
       display:block; width:100px; max-width:100px; height:112px; max-height:112px;
       margin:0 0 0 17px; object-fit:contain; object-position:left bottom;
+      filter: brightness(0) invert(1);
     }
     .nombre {
       display:block; width:220px; max-width:220px; margin:0; padding:0;
@@ -85,9 +86,9 @@
     }
     .navegacion a {
       display:inline-flex; align-items:center; flex:0 1 auto; min-width:0;
-      white-space:nowrap; color:inherit; transition:color .2s ease;
+      white-space:nowrap; color:#fff; transition:color .2s ease;
     }
-    .navegacion a:hover, .navegacion a:focus-visible { color:#2f8f46; outline:none; }
+    .navegacion a:hover, .navegacion a:focus-visible { color:#d9ead7; outline:none; }
     .home-cover .navegacion a:hover, .home-cover .navegacion a:focus-visible { color:#d9ead7; }
 
     .separador { flex:0 0 auto; color:#bdbdbd; font-size:.42rem; line-height:1; }
@@ -179,12 +180,6 @@
       .contenido p { text-align:left; hyphens:auto; }
     }
 
-    /* =========================================================
-       REGLAS DEL HOME SIN SEGUNDA PANTALLA
-       Se eliminó la lógica body:has(.seccion:target) para que la portada no
-       se comporte como otra página ni genere scroll artificial.
-    ========================================================= */
-
   </style>
 </head>
 <body>
@@ -215,44 +210,32 @@
 
     <section id="mundo" class="seccion">
       <div class="titulo-seccion"><h2>Lo que siento</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
 
     <section id="dos-mundos" class="seccion">
       <div class="titulo-seccion"><h2>Entre dos mundos</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
 
     <section id="sostenibilidad" class="seccion">
       <div class="titulo-seccion"><h2>La sostenibilidad empieza con casas</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
 
     <section id="emociones" class="seccion">
       <div class="titulo-seccion"><h2>Gestionando mis emociones</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
 
     <section id="disenar" class="seccion">
       <div class="titulo-seccion"><h2>Diseñar para interpretar</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
 
     <section id="luz" class="seccion">
       <div class="titulo-seccion"><h2>Captando la luz que veo</h2></div>
-      <div class="contenido">
-        <p>...</p>
-      </div>
+      <div class="contenido"><p>...</p></div>
     </section>
   </div>
 </body>
