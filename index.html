@@ -2836,13 +2836,17 @@
     /* Tarjetas de los cinco espacios: estilos limitados a esta sección */
     #sostenibilidad .espacios-grid {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 34px 22px;
       align-items: start;
     }
-    #sostenibilidad .espacio-card { min-width: 0; }
-    #sostenibilidad .espacio-card:nth-child(4) { grid-column: 2 / span 2; }
-    #sostenibilidad .espacio-card:nth-child(5) { grid-column: 4 / span 2; }
+    #sostenibilidad .espacio-card {
+      min-width: 0;
+      grid-column: span 2;
+    }
+    #sostenibilidad .espacio-card:nth-child(5) {
+      grid-column: 2 / span 2;
+    }
     #sostenibilidad .espacio-card img {
       display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
     }
@@ -2854,8 +2858,7 @@
     #sostenibilidad .espacio-card p { margin: 0; font-size: 1rem; line-height: 1.75; }
     @media (max-width: 760px) {
       #sostenibilidad .espacios-grid { grid-template-columns: 1fr; gap: 30px; }
-      #sostenibilidad .espacio-card:nth-child(4),
-      #sostenibilidad .espacio-card:nth-child(5) { grid-column: auto; }
+      #sostenibilidad .espacio-card { grid-column: 1 / -1; }
     }
 
 </style>
