@@ -2862,6 +2862,58 @@
     }
 
 </style>
+
+<style>
+/* Ajuste exclusivo para la sección de los cinco espacios en móvil */
+@media (max-width: 760px) {
+  #sostenibilidad .contenido.espacios-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 32px !important;
+    align-items: start !important;
+  }
+
+  #sostenibilidad .espacio-card {
+    display: block !important;
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    grid-column: 1 / -1 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  #sostenibilidad .espacio-card img {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+  }
+
+  #sostenibilidad .espacio-card h3,
+  #sostenibilidad .espacio-card p {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    box-sizing: border-box !important;
+  }
+}
+</style>
+
 </head>
 
 
