@@ -2830,6 +2830,35 @@
 /* Enlaces de instituciones: verde al pasar el cursor */
 .enlace-institucion:hover { color: #2f6b3b !important; }
 </style>
+
+<style>
+
+    /* Tarjetas de los cinco espacios: estilos limitados a esta sección */
+    #sostenibilidad .espacios-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 34px 22px;
+      align-items: start;
+    }
+    #sostenibilidad .espacio-card { min-width: 0; }
+    #sostenibilidad .espacio-card:nth-child(4) { grid-column: 2 / span 2; }
+    #sostenibilidad .espacio-card:nth-child(5) { grid-column: 4 / span 2; }
+    #sostenibilidad .espacio-card img {
+      display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    }
+    #sostenibilidad .espacio-card h3 {
+      margin: 18px 0 12px; color: #2f5d3a;
+      font-family: "DM Sans", sans-serif; font-size: 1.12rem;
+      font-weight: 500; line-height: 1.35; text-transform: uppercase;
+    }
+    #sostenibilidad .espacio-card p { margin: 0; font-size: 1rem; line-height: 1.75; }
+    @media (max-width: 760px) {
+      #sostenibilidad .espacios-grid { grid-template-columns: 1fr; gap: 30px; }
+      #sostenibilidad .espacio-card:nth-child(4),
+      #sostenibilidad .espacio-card:nth-child(5) { grid-column: auto; }
+    }
+
+</style>
 </head>
 
 
@@ -3213,40 +3242,37 @@
         <h2>La sostenibilidad empieza con casas</h2>
       </div>
 
-      <div class="contenido">
+      <div class="contenido espacios-grid">
 
-        <div class="bloque">
+        <article class="espacio-card">
+          <img src="imagenes/casa-taller-rosa.jpg" alt="Casa Taller Rosa de los Vientos">
           <h3>Casa Taller Rosa de los Vientos</h3>
           <p>Rosa de los Vientos es una casa taller construida hace treinta años con todo el amor y la dulzura que pude. En ella hoy deseo recibir huéspedes conscientes, amorosos, artistas, soñadores y pensadores, creadores que deseen un espacio sutil y lleno de energía para la creación.</p>
-        </div>
+        </article>
 
-        <div class="bloque">
+        <article class="espacio-card">
+          <img src="imagenes/casa-de-madera.jpg" alt="Casa de Madera">
           <h3>Casa de Madera</h3>
           <p>Casa de Madera es una pequeña casa con la magia de poder ver el bosque desde el dosel, o sea, desde la parte alta. Ideal para estar en contemplación con las comodidades de tenerlo todo cerca: el parqueadero, la vía, las tiendas, los vecinos.</p>
-        </div>
+        </article>
 
-        <div class="bloque">
+        <article class="espacio-card">
+          <img src="imagenes/loft-dosel.jpg" alt="Loft Dosel">
           <h3>Loft Dosel</h3>
           <p>Es una cabaña conexa a la Casa de Madera, las cuales comparten un deck, una huerta, el sol, un café, el parqueadero y el wifi. Ideal para compartir entre amigos, amigas o una pareja con una forma innovadora de construir una nueva forma de convivencia.</p>
-        </div>
+        </article>
 
-        <div class="bloque">
+        <article class="espacio-card">
+          <img src="imagenes/loft-entrezarros.jpg" alt="Loft Entrezarros">
           <h3>Loft Entrezarros</h3>
           <p>Loft Entrezarros es un refugio completamente adentro del bosque. Hecha con todo el respeto y sin tumbar un solo árbol. Pequeña en su interior, pero grande en su alrededor.</p>
-        </div>
+        </article>
 
-        <div class="bloque">
+        <article class="espacio-card">
+          <img src="imagenes/ancestral.jpg" alt="Un espacio Ancestral">
           <h3>Un espacio Ancestral</h3>
           <p>Es un lugar ideal para vivir momentos únicos y especiales adentro del bosque, al lado de Pepe, mi árbol guardián. Es un espacio para vivir una inmersión en un lugar en donde la magia de la niebla, las sombras, los matices, los verdes, los olores, las aves y toda la fauna y flora que lo componen hacen de las suyas para recolectarnos con el mundo natural, del cual hacemos parte. Somos naturaleza y en nuestro espacio Ancestral te reconocerás.</p>
-        </div>
-
-        <div class="galeria">
-          <div class="imagen-placeholder"><img src="imagenes/casa-taller-rosa.jpg" alt="Casa Taller Rosa de los Vientos" style="width:100%;height:100%;min-height:300px;object-fit:cover;"></div>
-          <div class="imagen-placeholder"><img src="imagenes/casa-de-madera.jpg" alt="Casa de Madera" style="width:100%;height:100%;min-height:300px;object-fit:cover;"></div>
-          <div class="imagen-placeholder"><img src="imagenes/loft-dosel.jpg" alt="Loft Dosel" style="width:100%;height:100%;min-height:300px;object-fit:cover;"></div>
-          <div class="imagen-placeholder"><img src="imagenes/loft-entrezarros.jpg" alt="Loft Entrezarros" style="width:100%;height:100%;min-height:300px;object-fit:cover;"></div>
-          <div class="imagen-placeholder"><img src="imagenes/ancestral.jpg" alt="Un espacio Ancestral" style="width:100%;height:100%;min-height:300px;object-fit:cover;"></div>
-        </div>
+        </article>
 
       </div>
 
