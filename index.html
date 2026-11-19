@@ -4122,34 +4122,90 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
 </style>
 
 <style>
-/* Páginas internas: misma geometría de escritorio que el home; cambia únicamente el contraste. */
+/* En páginas internas, replica la fila de escritorio del home y cambia solo el contraste. */
 @media (min-width: 901px) {
- body:has(.seccion:target) .home-cover .topbar { display:grid !important; grid-template-columns:158px minmax(0,1fr) !important; align-items:end !important; column-gap:24px !important; flex-wrap:nowrap !important; }
- body:has(.seccion:target) .home-cover .topbar .identidad { grid-column:1 !important; align-self:end !important; flex:0 0 158px !important; width:158px !important; min-width:158px !important; max-width:158px !important; margin:0 !important; margin-left:0 !important; }
- body:has(.seccion:target) .home-cover .topbar .logo-martha { width:150px !important; max-width:150px !important; height:122px !important; max-height:122px !important; margin:0 !important; object-fit:contain !important; object-position:left bottom !important; content:url("imagenes/LogoMartha.png") !important; }
- body:has(.seccion:target) .home-cover .topbar .navegacion { grid-column:2 !important; align-self:end !important; justify-content:space-between !important; margin:0 0 4px !important; transform:translateY(-2.35cm) !important; }
- body:has(.seccion:target) .home-cover .topbar .navegacion,
- body:has(.seccion:target) .home-cover .topbar .navegacion a,
- body:has(.seccion:target) .home-cover .topbar .social,
- body:has(.seccion:target) .home-cover .topbar .separador { color:#000 !important; }
- body:has(.seccion:target) .home-cover .topbar .isotipo-reserva img { filter:brightness(0) saturate(100%) !important; mix-blend-mode:normal !important; }
+  body:has(.seccion:target) .home-cover .topbar {
+    display:grid !important;
+    grid-template-columns:158px minmax(0,1fr) !important;
+    align-items:end !important;
+    column-gap:24px !important;
+    flex-wrap:nowrap !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .identidad {
+    grid-column:1 !important;
+    align-self:end !important;
+    width:158px !important;
+    min-width:158px !important;
+    max-width:158px !important;
+    margin:0 !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .logo-martha {
+    width:150px !important;
+    max-width:150px !important;
+    height:122px !important;
+    max-height:122px !important;
+    margin:0 !important;
+    object-fit:contain !important;
+    object-position:left bottom !important;
+    content:url("imagenes/LogoMartha.png") !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion {
+    grid-column:2 !important;
+    align-self:end !important;
+    justify-content:space-between !important;
+    margin:0 0 4px !important;
+    transform:translateY(-2.35cm) !important;
+    gap:clamp(6px, .5vw, 10px) !important;
+    position:relative !important;
+    left:clamp(-68px, -5vw, -24px) !important;
+    width:calc(100% + clamp(24px, 5vw, 68px)) !important;
+    min-width:0 !important;
+    flex:1 1 auto !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion-enlaces {
+    display:flex !important;
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    font-size:clamp(.69rem, .75vw, .87rem) !important;
+    gap:clamp(6px, .65vw, 11px) !important;
+    margin-right:clamp(20px, 2.1vw, 28px) !important;
+    transform:translateX(clamp(8px, .8vw, 12px)) !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion-enlaces > a { flex:0 0 auto !important; }
+  body:has(.seccion:target) .home-cover .topbar .navegacion-sociales {
+    display:flex !important;
+    flex:0 0 auto !important;
+    align-items:center !important;
+    gap:clamp(4px, .3vw, 7px) !important;
+    margin-left:clamp(10px, .9vw, 16px) !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion-sociales .social { margin:0 !important; }
+  body:has(.seccion:target) .home-cover .topbar .isotipo-reserva {
+    display:inline-flex !important;
+    width:46px !important;
+    height:46px !important;
+    flex:0 0 46px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .isotipo-reserva img {
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    filter:brightness(0) saturate(100%) !important;
+    mix-blend-mode:normal !important;
+  }
+  body:has(.seccion:target) .home-cover .topbar .navegacion,
+  body:has(.seccion:target) .home-cover .topbar .navegacion a,
+  body:has(.seccion:target) .home-cover .topbar .social { color:#000 !important; }
+  body:has(.seccion:target) .home-cover .topbar .separador { color:#777 !important; }
 }
-@media (max-width:600px) {
- body:has(.seccion:target) .home-cover .topbar { min-height:0 !important; align-items:center !important; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) !important; grid-template-areas:"espacio logo menu" "nav nav nav" !important; }
- body:has(.seccion:target) .home-cover .topbar .identidad { grid-area:logo !important; justify-self:center !important; align-self:center !important; width:220px !important; min-width:0 !important; max-width:100% !important; margin:0 auto !important; transform:none !important; }
- body:has(.seccion:target) .home-cover .topbar .logo-martha { display:block !important; width:220px !important; min-width:0 !important; max-width:100% !important; height:auto !important; max-height:none !important; margin:0 auto !important; object-position:center !important; content:url("imagenes/LogoMartha.png") !important; }
- body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa { grid-area:menu !important; align-self:center !important; justify-self:end !important; background:rgba(255,255,255,.82) !important; border-color:rgba(0,0,0,.75) !important; }
- body:has(.seccion:target) .home-cover .topbar .menu-hamburguesa span { background:#000 !important; }
- body:has(.seccion:target) .home-cover .topbar .isotipo-reserva-movil { display:inline-flex !important; grid-area:menu !important; width:48px !important; height:48px !important; justify-self:end !important; align-self:center !important; align-items:center !important; justify-content:center !important; margin:0 !important; z-index:31 !important; transform:translateY(-46px) !important; }
- body:has(.seccion:target) .home-cover .topbar .isotipo-reserva-movil img { display:block !important; width:70px !important; height:auto !important; max-width:none !important; flex:0 0 70px !important; object-fit:contain !important; filter:brightness(0) saturate(100%) !important; mix-blend-mode:normal !important; transform:translateX(6px) !important; }
- body:has(.seccion:target) .home-cover .topbar .navegacion,
- body:has(.seccion:target) .home-cover .topbar.menu-abierto .navegacion { background:rgba(255,255,255,.96) !important; border:1px solid rgba(0,0,0,.16) !important; color:#000 !important; -webkit-backdrop-filter:blur(3px) !important; backdrop-filter:blur(3px) !important; }
- body:has(.seccion:target) .home-cover .topbar .navegacion a,
- body:has(.seccion:target) .home-cover .topbar .navegacion a:visited,
- body:has(.seccion:target) .home-cover .topbar .navegacion .social,
- body:has(.seccion:target) .home-cover .topbar .navegacion .social svg { color:#000 !important; fill:currentColor !important; stroke:currentColor !important; }
-}
-@media (max-width:380px) { body:has(.seccion:target) .home-cover .topbar .identidad, body:has(.seccion:target) .home-cover .topbar .logo-martha { width:170px !important; max-width:170px !important; } }
+@media (max-width:900px) { body:has(.seccion:target) .home-cover .topbar .isotipo-reserva { display:none !important; } }
 </style>
 
 </body></html>
