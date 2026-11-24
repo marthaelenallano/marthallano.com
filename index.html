@@ -4224,7 +4224,7 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
 @media (min-width:901px) {
   #mundo:target { padding-bottom: 0 !important; min-height: 0 !important; scroll-margin-top: 220px !important; }
   body:has(#mundo:target) .contenedor { padding-bottom: 0 !important; }
-  #mundo .contenido.contenido-capitulo { margin-top: 8px !important; }
+  #mundo .contenido.contenido-capitulo { margin-top: 48px !important; }
   #mundo .mundo-titulo { margin-bottom: 20px; }
   #mundo img.foto-capitulo { max-height: 36vh; object-fit: contain; }
   #mundo .texto-capitulo p { font-size: clamp(.75rem, 1.05vw, .86rem) !important; line-height: 1.45 !important; margin-bottom: 10px !important; }
@@ -4234,15 +4234,16 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
 <script>
 (function () {
   function mostrarEncabezadoMundo() {
-    if (location.hash !== '#mundo' || !matchMedia('(min-width:901px)').matches) return;
+    if (!Array.from(document.querySelectorAll('.seccion[id]')).some(function (section) { return '#' + section.id === location.hash; })) return;
     requestAnimationFrame(function () {
-      if (location.hash === '#mundo') window.scrollTo({top:0,left:0,behavior:'instant'});
+      if (Array.from(document.querySelectorAll('.seccion[id]')).some(function (section) { return '#' + section.id === location.hash; })) window.scrollTo({top:0,left:0,behavior:'instant'});
     });
   }
   window.addEventListener('hashchange', mostrarEncabezadoMundo);
   window.addEventListener('load', mostrarEncabezadoMundo);
   document.addEventListener('click', function(e) {
-    if (e.target.closest('a[href="#mundo"]')) requestAnimationFrame(mostrarEncabezadoMundo);
+    var link = e.target.closest('a[href^="#"]');
+    if (link && Array.from(document.querySelectorAll('.seccion[id]')).some(function (section) { return '#' + section.id === link.getAttribute('href'); })) requestAnimationFrame(mostrarEncabezadoMundo);
   });
 })();
 </script>
