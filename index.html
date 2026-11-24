@@ -4258,4 +4258,35 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
   #dos-mundos:target > .titulo-seccion { margin-top:36px !important; }
 }
 </style>
+<style>
+@media (max-width:900px) {
+  html:has(.seccion:target) { scroll-behavior:auto !important; }
+  .seccion:target { scroll-margin-top: 100vh !important; }
+}
+</style>
+<script>
+(function () {
+  function esSeccion(hash) {
+    return Array.from(document.querySelectorAll('.seccion[id]')).some(function (s) { return '#' + s.id === hash; });
+  }
+  function arriba() {
+    if (!matchMedia('(max-width:900px)').matches || !esSeccion(location.hash)) return;
+    window.scrollTo(0,0);
+    requestAnimationFrame(function () { window.scrollTo(0,0); });
+  }
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || !matchMedia('(max-width:900px)').matches || !esSeccion(a.getAttribute('href'))) return;
+    e.preventDefault();
+    if (location.hash !== a.getAttribute('href')) {
+      history.pushState(null,'',a.getAttribute('href'));
+      window.dispatchEvent(new Event('hashchange'));
+    }
+    arriba();
+  });
+  window.addEventListener('hashchange', arriba);
+  window.addEventListener('pageshow', arriba);
+  window.addEventListener('load', arriba);
+})();
+</script>
 </body></html>
