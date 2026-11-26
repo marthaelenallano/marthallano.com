@@ -4310,4 +4310,47 @@ body:has(.seccion:target) .home-cover .home-carousel { display:none !important; 
 #sostenibilidad .espacio-card img + p { margin-top:14px !important; }
 @media(max-width:900px) { #sostenibilidad .espacios-grid { row-gap:36px !important; } }
 </style>
+<style>
+/* Márgenes y tipografía comunes, exclusivamente páginas interiores */
+body:has(.seccion:target) .seccion:target > :is(.contenido,.titulo-seccion) {
+  box-sizing:border-box !important;
+  width:auto !important;
+  max-width:none !important;
+  margin-left:var(--interior-izq, 0px) !important;
+  margin-right:var(--interior-der, 0px) !important;
+  min-width:0;
+}
+body:has(.seccion:target) .seccion:target .contenido p:not(.cita),
+body:has(.seccion:target) .seccion:target .bloque p:not(.cita) {
+  font-size:clamp(.75rem,1.05vw,.86rem) !important;
+  line-height:1.45 !important;
+  overflow-wrap:break-word !important;
+}
+@media(max-width:900px) {
+ body:has(.seccion:target) .seccion:target > :is(.contenido,.titulo-seccion) { margin-left:0 !important; margin-right:0 !important; }
+ body:has(.seccion:target) .seccion:target .contenido p:not(.cita),
+ body:has(.seccion:target) .seccion:target .bloque p:not(.cita) { font-size:.98rem !important; line-height:1.65 !important; }
+}
+</style>
+<script>
+(function(){
+ function alinearInterior(){
+  var sec=document.querySelector('.seccion:target');
+  if(!sec || !matchMedia('(min-width:901px)').matches) return;
+  var logo=document.querySelector('.home-cover .topbar .logo-martha');
+  var bellotas=document.querySelector('.home-cover .topbar .isotipo-reserva');
+  if(!logo || !bellotas) return;
+  var b=sec.getBoundingClientRect(), l=logo.getBoundingClientRect(), d=bellotas.getBoundingClientRect();
+  if(!l.width || !d.width || !b.width) return;
+  sec.style.setProperty('--interior-izq',Math.max(0,l.left-b.left)+'px');
+  sec.style.setProperty('--interior-der',Math.max(0,b.right-Math.min(d.right,document.documentElement.clientWidth-16))+'px');
+ }
+ function ajustar(){requestAnimationFrame(alinearInterior);}
+ window.addEventListener('load',ajustar);
+ window.addEventListener('resize',ajustar);
+ window.addEventListener('hashchange',ajustar);
+ if(document.fonts) document.fonts.ready.then(ajustar);
+ ajustar();
+})();
+</script>
 </body></html>
